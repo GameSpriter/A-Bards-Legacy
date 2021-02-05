@@ -9,3 +9,12 @@ todo
 ### Features
 
 todo
+
+### Our Team
+
+_A Bard's Legacy_ is designed by A Bard's Legacy Team
+
+Gameplay Programmer: Hakeem T. @HakeemThomas
+Gameplay Programmer: Noah M. @QuesadillaBomb
+Gameplay Programmer: Logan T. @SomeLog
+Gameplay Programmer: Jake L. @GameSpriter
