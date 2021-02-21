@@ -311,5 +311,7 @@ MonoBehaviour:
   gridWidth: 25
   gridHeight: 25
   threshold: 0.5
+  scale: 15
+  seed: 0
   tilePrefab: {fileID: 2022659208703611045, guid: 46a5f9013aa9e3748850fd8c2c8197dd,
     type: 3}
