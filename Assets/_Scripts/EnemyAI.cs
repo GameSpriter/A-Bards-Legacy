@@ -4,42 +4,44 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    float followRadius;
+    public GameObject player;
+    public GameObject enemy;
+    public Vector2 playerPosition;
+    public Vector2 enemyPosition;
+    Vector2 Destination;
+    float Distance;
+    float moveSpeed = 2f;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        checkForPlayer();
+        playerPosition = player.transform.position;
+        enemyPosition = enemy.transform.position;
     }
 
-    public bool distanceFromPlayer(float playerPosition, float enemyPosition)
+    void checkForPlayer()
     {
-        if (Mathf.Abs(playerPosition - enemyPosition) < followRadius)
+        Destination = GameObject.FindGameObjectWithTag("Player").transform.position;
+        Distance = Vector2.Distance(gameObject.transform.position, Destination);
+
+        if (Distance < 4 && Distance > 2)
         {
-            return true;
+            gameObject.transform.position = enemyPosition;
+            Debug.Log("Distance less than 4 and greater than 2");
+        }
+        else if (Distance < 2)
+        {
+            gameObject.transform.position = playerPosition * .5f;
+            Debug.Log("Distance less than 2");
         }
         else
         {
-            return false;
-        }
-    }
-
-    public bool distanceForAttack(float playerPosition, float enemyPosition)
-    {
-        if (Mathf.Abs(playerPosition - enemyPosition) < followRadius)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
+            Debug.Log("Distance greater than 4");
         }
     }
 }
