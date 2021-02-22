@@ -21,19 +21,19 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.anyKey)
         {
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.W))
             {
                 transform.Translate(0, speed * Time.deltaTime * smoothTime, 0);
             }
-            if (Input.GetKey(KeyCode.DownArrow))
+            if (Input.GetKey(KeyCode.S))
             {
                 transform.Translate(0, -speed * Time.deltaTime * smoothTime, 0);
             }
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.A))
             {
                 transform.Translate(-speed * Time.deltaTime * smoothTime, 0, 0);
             }
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.D))
             {
                 transform.Translate(speed * Time.deltaTime * smoothTime, 0, 0);
             }
