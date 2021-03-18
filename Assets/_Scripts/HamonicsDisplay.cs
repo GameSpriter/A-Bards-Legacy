@@ -11,12 +11,16 @@ public class HamonicsDisplay : MonoBehaviour
      * 
     */
 
-    public int numberOfSides;
-    public float polygonRadius;
-    public Vector2 polygonCenter;
+    public int numberOfSides = 4;
+    public float polygonRadius = 2;
+    public Vector3 polygonCenter;
+
+    //private int angle = (2 * Mathf.PI) / 180.0f;
+
     public LineRenderer lr;
 
-    private float detectRadius = 1.01f;
+    public float detectRadius = 1f;
+    public float width = 1f;
 
     private Vector2 mosPos;
 
@@ -33,6 +37,8 @@ public class HamonicsDisplay : MonoBehaviour
             lr = gameObject.GetComponent<LineRenderer>();
             lr.loop = true;
         }
+
+        detectRadius = polygonRadius;
     }
 
     void Update()
@@ -74,8 +80,7 @@ public class HamonicsDisplay : MonoBehaviour
     void DrawPolygon(Vector2 center, float radius, int numSides)
     {
         // The corner that is used to start the polygon (parallel to the X axis).
-        //Vector2 startCorner = (new Vector2(radius, 0) + center);
-        Vector2 startCorner = transform.localToWorldMatrix * (new Vector2(radius, 0) + center);
+        Vector2 startCorner = transform.TransformPoint(new Vector2(radius, radius));
 
         var points = new Vector3[numSides];
         points[0] = startCorner;
@@ -87,13 +92,17 @@ public class HamonicsDisplay : MonoBehaviour
             float cornerAngle = 2f * Mathf.PI / (float)numSides * i;
 
             // Get the X and Y coordinates of the corner point.
-            //Vector2 currentCorner = (new Vector2(Mathf.Cos(cornerAngle) * radius, Mathf.Sin(cornerAngle) * radius) + center);
-            Vector2 currentCorner = transform.localToWorldMatrix * (new Vector2(Mathf.Cos(cornerAngle) * radius, Mathf.Sin(cornerAngle) * radius) + center);
+            float x = (Mathf.Cos(cornerAngle) - Mathf.Sin(cornerAngle));
+            float y = (Mathf.Sin(cornerAngle) + Mathf.Cos(cornerAngle));
+            Vector2 currentCorner = transform.TransformPoint(new Vector2(x * radius, y * radius));
 
             points[i] = currentCorner;
         }
 
         lr.SetPositions(points);
+
+        lr.startWidth = width;
+        lr.endWidth = width;
     }
 
     /// <summary>
@@ -103,16 +112,21 @@ public class HamonicsDisplay : MonoBehaviour
     {
         for (int i = 0; i < lr.positionCount - 1; i++)
         {
+            //Debug.DrawLine(lr.GetPosition(i), lr.GetPosition(i + 1), Color.red);
+
             if ((Vector2.Distance(lr.GetPosition(i), mosPos) + Vector2.Distance(lr.GetPosition(i + 1), mosPos))
-                 <= Vector2.Distance(lr.GetPosition(i), lr.GetPosition(i + 1)) * detectRadius)
+                 <= Vector2.Distance(lr.GetPosition(i), lr.GetPosition(i + 1)) * detectRadius - width / 2.0f)
             {
                 Debug.Log("We did hit Line: " + (i + 1));
             }
         }
+        
+        //Debug.DrawLine(lr.GetPosition(0), lr.GetPosition(3), Color.red);
         if ((Vector2.Distance(lr.GetPosition(0), mosPos) + Vector2.Distance(lr.GetPosition(lr.positionCount - 1), mosPos))
-                <= Vector2.Distance(lr.GetPosition(0), lr.GetPosition(lr.positionCount - 1)) * detectRadius)
+                <= Vector2.Distance(lr.GetPosition(0), lr.GetPosition(lr.positionCount - 1)) * detectRadius - width / 2.0f)
         {
             Debug.Log("We did Line: " + (lr.positionCount));
         }
+        
     }
 }
