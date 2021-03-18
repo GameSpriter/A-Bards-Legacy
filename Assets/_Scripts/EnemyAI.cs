@@ -39,7 +39,7 @@ public class EnemyAI : MonoBehaviour
         else
         {
             inRange = false;
-            Debug.Log("Distance greater than 5");
+            //Debug.Log("Distance greater than 5");
         }
     }
 
@@ -50,12 +50,12 @@ public class EnemyAI : MonoBehaviour
         if (inRange == true && Distance < 5 && Distance > 3)
         {
             transform.position = enemyPosition;
-            Debug.Log("Distance less than 5 and greater than 3");
+            //Debug.Log("Distance less than 5 and greater than 3");
         }
         else if (inRange == true && Distance < 3)
         {
             transform.position = Vector2.MoveTowards(transform.position, playerPosition, enemySpeed);
-            Debug.Log("Distance less than 3, will now be moving towards player");
+            //Debug.Log("Distance less than 3, will now be moving towards player");
         }
         else
         {

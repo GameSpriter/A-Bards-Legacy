@@ -24,8 +24,8 @@ MonoBehaviour:
     _locationType: 0
     _globalDirectory: Assets
   _animationsTargetLocation:
-    _locationType: 1
-    _globalDirectory: Assets
+    _locationType: 2
+    _globalDirectory: Assets/Animations
   _animationControllersTargetLocation:
-    _locationType: 1
-    _globalDirectory: Assets
+    _locationType: 2
+    _globalDirectory: Assets/Animations
