@@ -7317,7 +7317,7 @@ GameObject:
   - component: {fileID: 946246731}
   - component: {fileID: 946246732}
   m_Layer: 0
-  m_Name: Bard_Idle_D_0
+  m_Name: Bard
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8732,13 +8732,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cfea4f1d635609499ea995ba67c94c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfSides: 4
-  polygonRadius: 2
-  polygonCenter: {x: 0, y: 0}
-  lr: {fileID: 0}
-  detectRadius: 1.01
-  mosPos: {x: 0, y: 0}
-  harmonicsMode: 0
 --- !u!4 &1113097259
 Transform:
   m_ObjectHideFlags: 0
@@ -12386,7 +12379,7 @@ GameObject:
   - component: {fileID: 1545774018}
   - component: {fileID: 1545774019}
   m_Layer: 0
-  m_Name: Chompy Boy_Idle_D_0
+  m_Name: Chompy Boy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
