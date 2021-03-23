@@ -80,6 +80,84 @@ TextureImporter:
   - first:
       213: -4685715663840039667
     second: Chompy Boy_Attack_U_8
+  - first:
+      213: 4070671849381856663
+    second: Chompy Boy 0
+  - first:
+      213: 6084802015713621141
+    second: Chompy Boy 1
+  - first:
+      213: 5632270048920663652
+    second: Chompy Boy 2
+  - first:
+      213: 1078381341955014142
+    second: Chompy Boy 3
+  - first:
+      213: 9107828717121747540
+    second: Chompy Boy 4
+  - first:
+      213: -1777353600473441669
+    second: Chompy Boy 5
+  - first:
+      213: -5663679173525293261
+    second: Chompy Boy 6
+  - first:
+      213: 3986251225252687287
+    second: Chompy Boy 7
+  - first:
+      213: -216851766821856087
+    second: Chompy Boy 8
+  - first:
+      213: 8085709818793828301
+    second: Chompy Boy 9
+  - first:
+      213: -8930934090797178833
+    second: Chompy Boy 10
+  - first:
+      213: -3223612447281355185
+    second: Chompy Boy 11
+  - first:
+      213: -1696938678000304594
+    second: Chompy Boy 12
+  - first:
+      213: -3370660144508017718
+    second: Chompy Boy 13
+  - first:
+      213: 5029320315180094984
+    second: Chompy Boy 14
+  - first:
+      213: 2577736863819130309
+    second: Chompy Boy 15
+  - first:
+      213: -8553208798187334042
+    second: Chompy Boy 16
+  - first:
+      213: -2301185312741858392
+    second: Chompy Boy 17
+  - first:
+      213: 4626154534875125396
+    second: Chompy Boy 18
+  - first:
+      213: 3739571850803874815
+    second: Chompy Boy 19
+  - first:
+      213: 5074590415929387273
+    second: Chompy Boy 20
+  - first:
+      213: -431916261509546805
+    second: Chompy Boy 21
+  - first:
+      213: 6131239008213444336
+    second: Chompy Boy 22
+  - first:
+      213: 8684281148611033915
+    second: Chompy Boy 23
+  - first:
+      213: -5895708210393043530
+    second: Chompy Boy 24
+  - first:
+      213: -8478154918494282418
+    second: Chompy Boy 25
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -153,7 +231,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chompy Boy_Idle_D_0
+      name: Chompy Boy 0
       rect:
         serializedVersion: 2
         x: 0
@@ -167,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 160a1d98811e02b50800000000000000
-      internalID: 6566495752213864545
+      spriteID: 795869bca7eed7830800000000000000
+      internalID: 4070671849381856663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chompy Boy_Idle_D_1
+      name: Chompy Boy 1
       rect:
         serializedVersion: 2
         x: 32
@@ -188,14 +266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49966e98357170910800000000000000
-      internalID: 1803435823348476308
+      spriteID: 594f033d13f817450800000000000000
+      internalID: 6084802015713621141
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chompy Boy_Idle_D_2
+      name: Chompy Boy 2
       rect:
         serializedVersion: 2
         x: 32
@@ -209,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 23cbde2a597d9ca40800000000000000
-      internalID: 5389075466809097266
+      spriteID: 466fcf8b4c7d92e40800000000000000
+      internalID: 5632270048920663652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chompy Boy_Idle_D_3
+      name: Chompy Boy 3
       rect:
         serializedVersion: 2
         x: 64
@@ -230,14 +308,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e93f261b2e31820e0800000000000000
-      internalID: -2294562145785678946
+      spriteID: efd33a3fd1e27fe00800000000000000
+      internalID: 1078381341955014142
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chompy Boy_Idle_U_0
+      name: Chompy Boy 4
       rect:
         serializedVersion: 2
         x: 96
@@ -251,14 +329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eca9d8475e2a4de20800000000000000
-      internalID: 3374501127193991886
+      spriteID: 45ab42f76f1856e70800000000000000
+      internalID: 9107828717121747540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chompy Boy_Idle_U_1
+      name: Chompy Boy 5
       rect:
         serializedVersion: 2
         x: 128
@@ -272,14 +350,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e8f412af6dccbc5d0800000000000000
-      internalID: -3041111899667083378
+      spriteID: b7ad48331529557e0800000000000000
+      internalID: -1777353600473441669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chompy Boy_Idle_U_2
+      name: Chompy Boy 6
       rect:
         serializedVersion: 2
         x: 128
@@ -293,14 +371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4352647f1e052f6a0800000000000000
-      internalID: -6416977587603102412
+      spriteID: 3373f349cc19661b0800000000000000
+      internalID: -5663679173525293261
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chompy Boy_Idle_U_3
+      name: Chompy Boy 7
       rect:
         serializedVersion: 2
         x: 0
@@ -314,14 +392,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fe74a7031c3ee0610800000000000000
-      internalID: 1589458137389877231
+      spriteID: 7bde6aa8e52025730800000000000000
+      internalID: 3986251225252687287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chompy Boy_Attack_D_0
+      name: Chompy Boy 8
       rect:
         serializedVersion: 2
         x: 0
@@ -335,14 +413,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d3eb90cebfa07eb50800000000000000
-      internalID: 6622273854184734269
+      spriteID: 9acdaad87769dfcf0800000000000000
+      internalID: -216851766821856087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chompy Boy_Attack_D_1
+      name: Chompy Boy 9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcf18128d36363070800000000000000
+      internalID: 8085709818793828301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chompy Boy 10
       rect:
         serializedVersion: 2
         x: 32
@@ -356,14 +455,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0c060c6aaae56feb0800000000000000
-      internalID: -4686454275197345600
+      spriteID: f20ab9533c2fe0480800000000000000
+      internalID: -8930934090797178833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chompy Boy_Attack_D_2
+      name: Chompy Boy 11
       rect:
         serializedVersion: 2
         x: 64
@@ -377,14 +476,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a0d4d7596d155df80800000000000000
-      internalID: -8082463974173618934
+      spriteID: f4664420f8d6343d0800000000000000
+      internalID: -3223612447281355185
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chompy Boy_Attack_D_3
+      name: Chompy Boy 12
       rect:
         serializedVersion: 2
         x: 96
@@ -398,14 +497,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 16482cd39127ef9c0800000000000000
-      internalID: -3891547575265622943
+      spriteID: e2ebb2c53434378e0800000000000000
+      internalID: -1696938678000304594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chompy Boy_Attack_D_4
+      name: Chompy Boy 13
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac3680405720931d0800000000000000
+      internalID: -3370660144508017718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chompy Boy 14
       rect:
         serializedVersion: 2
         x: 128
@@ -419,35 +539,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fb627c4545ce72fb0800000000000000
-      internalID: -4672506241429854529
+      spriteID: 80617ff1e2cbbc540800000000000000
+      internalID: 5029320315180094984
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chompy Boy_Attack_D_5
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 14a49e2bca9d6efd0800000000000000
-      internalID: -2312922022848935359
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chompy Boy_Attack_D_6
+      name: Chompy Boy 15
       rect:
         serializedVersion: 2
         x: 0
@@ -461,14 +560,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae356b5e9c6632000800000000000000
-      internalID: 9964641513264106
+      spriteID: 5c56e5c2506f5c320800000000000000
+      internalID: 2577736863819130309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chompy Boy_Attack_D_7
+      name: Chompy Boy 16
       rect:
         serializedVersion: 2
         x: 32
@@ -482,14 +581,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aabb23ce9bfaa3380800000000000000
-      internalID: -8990680493025215574
+      spriteID: 6665c463ae5ec4980800000000000000
+      internalID: -8553208798187334042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chompy Boy_Attack_D_8
+      name: Chompy Boy 17
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a3eca7762c8010e0800000000000000
+      internalID: -2301185312741858392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chompy Boy 18
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4965b4ff907633040800000000000000
+      internalID: 4626154534875125396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chompy Boy 19
       rect:
         serializedVersion: 2
         x: 64
@@ -503,56 +644,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bad1558e1e5707ff0800000000000000
-      internalID: -40402783520350805
+      spriteID: ffb073309c0a5e330800000000000000
+      internalID: 3739571850803874815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chompy Boy_Attack_U_0
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 96
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 272e532447e9fa850800000000000000
-      internalID: 6390500618426245746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chompy Boy_Attack_U_1
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 96
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: aae681f69f7c387d0800000000000000
-      internalID: -2917268259481293142
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chompy Boy_Attack_U_2
+      name: Chompy Boy 20
       rect:
         serializedVersion: 2
         x: 96
@@ -566,14 +665,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 535c46c50b09ad7c0800000000000000
-      internalID: -4045762228100217547
+      spriteID: 909a212d8119c6640800000000000000
+      internalID: 5074590415929387273
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chompy Boy_Attack_U_3
+      name: Chompy Boy 21
       rect:
         serializedVersion: 2
         x: 128
@@ -587,14 +686,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cc12df0a74f17c880800000000000000
-      internalID: -8590863371681848884
+      spriteID: bcc3204d276810af0800000000000000
+      internalID: -431916261509546805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chompy Boy_Attack_U_4
+      name: Chompy Boy 22
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f6a49da469861550800000000000000
+      internalID: 6131239008213444336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chompy Boy 23
       rect:
         serializedVersion: 2
         x: 0
@@ -608,35 +728,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 16c36b54a387e6590800000000000000
-      internalID: -7679068122947109791
+      spriteID: b3bf49081b3c48870800000000000000
+      internalID: 8684281148611033915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chompy Boy_Attack_U_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f4fdb536c3f0b5270800000000000000
-      internalID: 8240196695243874127
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chompy Boy_Attack_U_6
+      name: Chompy Boy 24
       rect:
         serializedVersion: 2
         x: 32
@@ -650,14 +749,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0b1b60e0f248c6a10800000000000000
-      internalID: 1904042080104526256
+      spriteID: 6bd2b249e9c3e2ea0800000000000000
+      internalID: -5895708210393043530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chompy Boy_Attack_U_7
+      name: Chompy Boy 25
       rect:
         serializedVersion: 2
         x: 64
@@ -671,29 +770,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9473d8b82174cc8e0800000000000000
-      internalID: -1671883216685025463
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chompy Boy_Attack_U_8
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d0da4520e6ef8feb0800000000000000
-      internalID: -4685715663840039667
+      spriteID: e4dda64550b875a80800000000000000
+      internalID: -8478154918494282418
       vertices: []
       indices: 
       edges: []
