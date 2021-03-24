@@ -38,7 +38,6 @@ public class EnemyAI : MonoBehaviour
         else
         {
             inRange = false;
-            Debug.Log("Distance greater than 5");
         }
     }
 
@@ -48,17 +47,13 @@ public class EnemyAI : MonoBehaviour
         {
             transform.position = enemyPosition;
         }
-        else if (inRange == true && (Distance < 3 && Distance > 2))
+        else if (inRange == true && (Distance < 3 && Distance > 1))
         {
             chasePlayer();
         }
         else if (inRange == true && Distance < 1)
         {
             meleeAttackPlayer();
-        }
-        else
-        {
-            checkForPlayer();
         }
     }
 
