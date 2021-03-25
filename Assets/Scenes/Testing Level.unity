@@ -7446,7 +7446,7 @@ GameObject:
   - component: {fileID: 946246731}
   - component: {fileID: 946246732}
   m_Layer: 0
-  m_Name: Bard_Idle_D_0
+  m_Name: Bard
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7491,7 +7491,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3300411361604178249, guid: 46fe8420cc98c5546833311caa626625,
+  m_Sprite: {fileID: 1131293588989074975, guid: 46fe8420cc98c5546833311caa626625,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7531,6 +7531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   smoothTime: 0.5
+  anim: {fileID: 946246732}
 --- !u!95 &946246732
 Animator:
   serializedVersion: 3
@@ -8552,10 +8553,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cfea4f1d635609499ea995ba67c94c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfSides: 4
-  polygonRadius: 2
-  polygonCenter: {x: 0, y: 0}
-  lr: {fileID: 0}
 --- !u!4 &1113097259
 Transform:
   m_ObjectHideFlags: 0
@@ -12202,7 +12199,7 @@ GameObject:
   - component: {fileID: 1545774018}
   - component: {fileID: 1545774019}
   m_Layer: 0
-  m_Name: Chompy Boy_Idle_D_0
+  m_Name: Chompy Boy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13754,6 +13751,7 @@ GameObject:
   - component: {fileID: 1821647341}
   - component: {fileID: 1821647340}
   - component: {fileID: 1821647339}
+  - component: {fileID: 1821647342}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -13779,7 +13777,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -13826,6 +13824,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1821647342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821647338}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 32
+  m_RefResolutionX: 320
+  m_RefResolutionY: 180
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1001 &1842934383
 PrefabInstance:
   m_ObjectHideFlags: 0
