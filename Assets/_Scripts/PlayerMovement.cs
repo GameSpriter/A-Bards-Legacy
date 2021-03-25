@@ -4,6 +4,51 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    float playerSpeed = 4f;
+
+    public Rigidbody2D rb;
+    public Animator anim;
+
+    Vector2 movement;
+
+    private SpriteRenderer spriteRenderer;
+
+    char lastKeyPressed;
+
+    void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    void Update()
+    {
+
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+
+        anim.SetFloat("Horizontal", movement.x);
+        anim.SetFloat("Vertical", movement.y);
+        anim.SetFloat("Speed", movement.sqrMagnitude);
+
+        if (Input.GetKeyDown(KeyCode.A) && !Input.GetKeyDown(KeyCode.D))
+        {
+            spriteRenderer.flipX = true;
+        }
+
+        else if(Input.GetKeyDown(KeyCode.D) && !Input.GetKeyDown(KeyCode.A))
+        {
+            spriteRenderer.flipX = false;
+        }
+    }
+
+    void FixedUpdate()
+    {
+        rb.MovePosition(rb.position + movement * playerSpeed * Time.fixedDeltaTime);
+    }
+
+    //Original movement code, keeping just in case something goes wrong with the note script
+    
+    /*
     [SerializeField]
     private float speed = 10.0f;
     [SerializeField]
@@ -69,4 +114,5 @@ public class PlayerMovement : MonoBehaviour
             }
         }   
     }
+    */
 }
