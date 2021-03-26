@@ -14,6 +14,8 @@ public class HamonicsDisplay : MonoBehaviour
      * 
     */
 
+    public GameObject playerpos, musicSheetPos;
+
     public int numberOfSides = 4;
     public float polygonRadius = 2;
     //public Vector3 polygonCenter;
@@ -43,11 +45,15 @@ public class HamonicsDisplay : MonoBehaviour
             lr.loop = true;
         }
 
+        musicSheetPos.transform.position = new Vector3(musicSheetPos.transform.position.x, 7.0f);
+
         detectRadius = 1.25f;
     }
 
     void Update()
     {
+        gameObject.transform.position = playerpos.transform.position;
+
         mosPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         lr.positionCount = numberOfSides;
@@ -67,20 +73,29 @@ public class HamonicsDisplay : MonoBehaviour
         }
 
         if (harmonicsMode)
-        {
+        {            
+                musicSheetPos.transform.position = Vector3.MoveTowards(musicSheetPos.transform.position,
+                    new Vector3(musicSheetPos.transform.position.x, 3.0f), 0.025f);            
+
             for (int i = 0; i < gameObject.transform.childCount; i++)
             {
                 gameObject.transform.GetChild(i).gameObject.SetActive(true);
             }
 
             gameObject.GetComponent<LineRenderer>().enabled = true;
+            /*
             if (Input.GetMouseButton(0) || Input.GetMouseButton(1))
             {
-                //DetectNoteInput();
+                DetectNoteInput();
             }
+            */
         }
         else 
         {
+            musicSheetPos.transform.position = Vector3.MoveTowards(musicSheetPos.transform.position,
+                   new Vector3(musicSheetPos.transform.position.x, 7.0f), 0.025f);
+
+
             for (int i = 0; i < gameObject.transform.childCount; i++)
             {
                 gameObject.transform.GetChild(i).gameObject.SetActive(false);

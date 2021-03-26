@@ -12,11 +12,12 @@ public class NoteSpawn : MonoBehaviour
     public List<GameObject> tempSpawnContainer = new List<GameObject>();
 
     public float incrementPosition = 0.0f;
+    private float offset = 9.0f;
     public bool endIsReached = false;
 
     // Start is called before the first frame update
     void Start()
-    {        
+    {
         //Set notes in designated positions on music sheet
         for (int i = 0; i < notes.Length; i++)
         {
@@ -26,24 +27,24 @@ public class NoteSpawn : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {        
+    {
         //Playing a note will happen once when touched
-        if (!mc[0].isHit && mc[0].GetInputNoteName == "Up Note") 
+        if (!mc[0].isHit && mc[0].GetInputNoteName == "Up Button") 
         {
             mc[0].isHit = true;
             noteSpawn(0);
         }
-        else if (!mc[1].isHit && mc[1].GetInputNoteName == "Right Note")
+        else if (!mc[1].isHit && mc[1].GetInputNoteName == "Right Button")
         {
             mc[1].isHit = true;
             noteSpawn(1);
         }
-        else if (!mc[2].isHit && mc[2].GetInputNoteName == "Left Note")
+        else if (!mc[2].isHit && mc[2].GetInputNoteName == "Left Button")
         {
             mc[2].isHit = true;
             noteSpawn(2);
         }
-        else if (!mc[3].isHit && mc[3].GetInputNoteName == "Down Note")
+        else if (!mc[3].isHit && mc[3].GetInputNoteName == "Down Button")
         {
             mc[3].isHit = true;
             noteSpawn(3);
@@ -60,7 +61,7 @@ public class NoteSpawn : MonoBehaviour
             tempSpawnContainer[tempSpawnContainer.Count - 1].transform.position.y);
         if (!endIsReached)
         {
-            if (incrementPosition < 8.0f)
+            if (incrementPosition < transform.position.x + offset)
             {
                 incrementPosition += 1.0f;
             }
