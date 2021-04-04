@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &99524406
 Transform:
   m_ObjectHideFlags: 0
@@ -267,7 +267,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectSprite: {fileID: -7240698021784831061, guid: 95a5340b1f003da499acbba4898e323c,
     type: 3}
-  isHit: 0
 --- !u!1 &119202446
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,7 +655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &808754891
 Transform:
   m_ObjectHideFlags: 0
@@ -782,7 +781,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectSprite: {fileID: 3346491015928849424, guid: 799e2dc3e2bb06047912fc25cf04af27,
     type: 3}
-  isHit: 0
 --- !u!1 &903023733
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,7 +982,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1059164099
 Transform:
   m_ObjectHideFlags: 0
@@ -1111,7 +1109,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectSprite: {fileID: 467772729400857524, guid: 161624bfb57a8114d824a1bbeb2cad89,
     type: 3}
-  isHit: 0
 --- !u!1 &1069454113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,7 +1238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1407664474
 Transform:
   m_ObjectHideFlags: 0
@@ -1368,7 +1365,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectSprite: {fileID: -2122760560739792377, guid: 0857bc83fde51b44d896153ffd3e51f4,
     type: 3}
-  isHit: 0
 --- !u!1 &1452836281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,7 +1413,6 @@ MonoBehaviour:
   - {fileID: 4250818420030029052, guid: 81d084472921ae646b8e5d732fcf87c7, type: 3}
   tempSpawnContainer: []
   incrementPosition: 0
-  endIsReached: 0
 --- !u!212 &1452836283
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1563,8 +1558,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467077721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.05, y: -0.39, z: 0}
-  m_LocalScale: {x: 9.78, y: 10.0125, z: 9.934989}
+  m_LocalPosition: {x: 0.04, y: -0.349, z: 0}
+  m_LocalScale: {x: 9.53, y: 9.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -1841,6 +1836,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab76259cd0e44744f985dc9b41936537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mc:
+  - {fileID: 808754895}
+  - {fileID: 99524410}
+  - {fileID: 1407664478}
+  - {fileID: 1059164103}
 --- !u!4 &2037480650
 Transform:
   m_ObjectHideFlags: 0
@@ -1895,7 +1895,6 @@ MonoBehaviour:
   notes: []
   tempSpawnContainer: []
   incrementPosition: 0
-  endIsReached: 0
 --- !u!212 &2078031618
 SpriteRenderer:
   m_ObjectHideFlags: 0

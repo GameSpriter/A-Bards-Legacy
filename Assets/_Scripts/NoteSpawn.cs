@@ -13,7 +13,8 @@ public class NoteSpawn : MonoBehaviour
 
     public float incrementPosition = 0.0f;
     private float offset = 9.0f;
-    public bool endIsReached = false;
+
+    public bool EndIsReached { get; set; } = false;
 
     // Start is called before the first frame update
     void Start()
@@ -29,24 +30,24 @@ public class NoteSpawn : MonoBehaviour
     void Update()
     {
         //Playing a note will happen once when touched
-        if (!mc[0].isHit && mc[0].GetInputNoteName == "Up Button") 
+        if (!mc[0].IsHit && mc[0].GetInputNoteName == "Up Button") 
         {
-            mc[0].isHit = true;
+            mc[0].IsHit = true;
             noteSpawn(0);
         }
-        else if (!mc[1].isHit && mc[1].GetInputNoteName == "Right Button")
+        else if (!mc[1].IsHit && mc[1].GetInputNoteName == "Right Button")
         {
-            mc[1].isHit = true;
+            mc[1].IsHit = true;
             noteSpawn(1);
         }
-        else if (!mc[2].isHit && mc[2].GetInputNoteName == "Left Button")
+        else if (!mc[2].IsHit && mc[2].GetInputNoteName == "Left Button")
         {
-            mc[2].isHit = true;
+            mc[2].IsHit = true;
             noteSpawn(2);
         }
-        else if (!mc[3].isHit && mc[3].GetInputNoteName == "Down Button")
+        else if (!mc[3].IsHit && mc[3].GetInputNoteName == "Down Button")
         {
-            mc[3].isHit = true;
+            mc[3].IsHit = true;
             noteSpawn(3);
         }
         
@@ -59,7 +60,7 @@ public class NoteSpawn : MonoBehaviour
         tempSpawnContainer[tempSpawnContainer.Count - 1].transform.position =
             new Vector3(tempSpawnContainer[tempSpawnContainer.Count - 1].transform.position.x + incrementPosition,
             tempSpawnContainer[tempSpawnContainer.Count - 1].transform.position.y);
-        if (!endIsReached)
+        if (!EndIsReached)
         {
             if (incrementPosition < transform.position.x + offset)
             {
@@ -81,9 +82,22 @@ public class NoteSpawn : MonoBehaviour
     }
 
     //Once a note reach the back end of the music sheet they disappear
-    public void despawn()
+    public void Despawn()
     {
         Destroy(tempSpawnContainer[0]);
         tempSpawnContainer.RemoveAt(0);        
+    }
+
+    public void NoteSpawnReset() 
+    {
+        for (int i = 0; i < tempSpawnContainer.Count; i++)
+        {
+            Destroy(tempSpawnContainer[i]);
+        }
+
+        tempSpawnContainer.Clear();
+
+        EndIsReached = false;
+        incrementPosition = 0;
     }
 }

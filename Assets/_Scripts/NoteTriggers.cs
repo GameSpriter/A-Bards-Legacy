@@ -13,12 +13,12 @@ public class NoteTriggers : MonoBehaviour
     {
         if (gameObject.CompareTag("Shifter") && collision.gameObject.CompareTag("Note"))
         {
-            ns.endIsReached = true;
+            ns.EndIsReached = true;
             ns.noteShift();
         }
         if (gameObject.CompareTag("Despawner") && collision.gameObject.CompareTag("Note"))
         {
-            ns.despawn();
+            ns.Despawn();
         }
     }
 }

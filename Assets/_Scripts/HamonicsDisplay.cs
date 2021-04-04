@@ -15,6 +15,8 @@ public class HamonicsDisplay : MonoBehaviour
     */
 
     public GameObject playerpos, musicSheetPos;
+    //Note spawn script attached to music sheet sprite
+    private NoteSpawn noteSpawnerScript;
 
     public int numberOfSides = 4;
     public float polygonRadius = 2;
@@ -46,6 +48,8 @@ public class HamonicsDisplay : MonoBehaviour
         }
 
         musicSheetPos.transform.position = new Vector3(musicSheetPos.transform.position.x, 7.0f);
+        //noteTrackScript = new NoteTracker();
+        noteSpawnerScript = musicSheetPos.GetComponent<NoteSpawn>();
 
         detectRadius = 1.25f;
     }
@@ -73,9 +77,10 @@ public class HamonicsDisplay : MonoBehaviour
         }
 
         if (harmonicsMode)
-        {            
-                musicSheetPos.transform.position = Vector3.MoveTowards(musicSheetPos.transform.position,
-                    new Vector3(musicSheetPos.transform.position.x, 3.0f), 0.025f);            
+        {
+            musicSheetPos.SetActive(true);
+            musicSheetPos.transform.position = Vector3.MoveTowards(musicSheetPos.transform.position,
+                    new Vector3(musicSheetPos.transform.position.x, 3.0f), 0.025f);
 
             for (int i = 0; i < gameObject.transform.childCount; i++)
             {
@@ -92,9 +97,14 @@ public class HamonicsDisplay : MonoBehaviour
         }
         else 
         {
+            noteSpawnerScript.NoteSpawnReset();
+
             musicSheetPos.transform.position = Vector3.MoveTowards(musicSheetPos.transform.position,
                    new Vector3(musicSheetPos.transform.position.x, 7.0f), 0.025f);
-
+            if (musicSheetPos.transform.position.y >= 7.0f) 
+            {
+                musicSheetPos.SetActive(false);
+            }
 
             for (int i = 0; i < gameObject.transform.childCount; i++)
             {
@@ -158,8 +168,6 @@ public class HamonicsDisplay : MonoBehaviour
                 <= Vector2.Distance(lr.GetPosition(0), lr.GetPosition(lr.positionCount - 1)) * detectRadius - width / 2.0f)
         {
             Debug.Log("We did Line: " + (lr.positionCount));
-        }
-        
-
+        }  
     }
 }

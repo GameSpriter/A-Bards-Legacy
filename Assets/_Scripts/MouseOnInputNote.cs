@@ -10,10 +10,8 @@ public class MouseOnInputNote : MonoBehaviour
     public Sprite selectSprite;
     private Sprite spriteOriginal;
 
-    private string getInputNoteName;
-    public bool isHit = false;
-
-    public string GetInputNoteName { get => getInputNoteName; set => getInputNoteName = value; }
+    public string GetInputNoteName { get; set; }
+    public bool IsHit { get; set; } = false;
 
     private void Start()
     {
@@ -45,7 +43,7 @@ public class MouseOnInputNote : MonoBehaviour
     private void OnMouseExit()
     {
         GetInputNoteName = "";
-        isHit = false;
+        IsHit = false;
         gameObject.GetComponent<SpriteRenderer>().sprite = spriteOriginal;
     }
 }
