@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-<<<<<<< Updated upstream
 using System.Text.RegularExpressions;
 using UnityEngine;
 
@@ -94,31 +93,4 @@ public class NoteTracker : MonoBehaviour
             songSubstring = "";
         }
     }
-<<<<<<< HEAD
 }
-
-
-=======
-using UnityEngine;
-
-/// <summary>
-/// Future implementation for note rules(see game-ideas)
-/// </summary>
-public class NoteTracker : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-}
->>>>>>> Stashed changes
-=======
-}
->>>>>>> 341c53f4a210cb951491a1ddf1419b387e48869f
