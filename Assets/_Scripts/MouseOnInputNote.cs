@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 public class MouseOnInputNote : MonoBehaviour
 {
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
     public Sprite selectSprite;
     private Sprite spriteOriginal;
 
@@ -18,17 +18,17 @@ public class MouseOnInputNote : MonoBehaviour
     {
         spriteOriginal = gameObject.GetComponent<SpriteRenderer>().sprite;
     }
-=======
+//=======
     private string getInputNoteName;
     public bool isHit = false;
 
     public string GetInputNoteName { get => getInputNoteName; set => getInputNoteName = value; }
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
 
     private void OnMouseOver()
     {
         GetInputNoteName = gameObject.name;
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
         switch (gameObject.name)
         {
             case "Down Button":
@@ -46,18 +46,18 @@ public class MouseOnInputNote : MonoBehaviour
             default:
                 break;
         }
-=======
->>>>>>> Stashed changes
+//=======
+//>>>>>>> Stashed changes
     }
 
     private void OnMouseExit()
     {
         GetInputNoteName = "";
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
         IsHit = false;
         gameObject.GetComponent<SpriteRenderer>().sprite = spriteOriginal;
-=======
+//=======
         isHit = false;
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
     }
 }

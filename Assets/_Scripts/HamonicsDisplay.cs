@@ -47,13 +47,13 @@ public class HamonicsDisplay : MonoBehaviour
             lr.loop = true;
         }
 
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
         musicSheetPos.transform.position = new Vector3(musicSheetPos.transform.position.x, 7.0f);
         //noteTrackScript = new NoteTracker();
         noteSpawnerScript = musicSheetPos.GetComponent<NoteSpawn>();
 
-=======
->>>>>>> Stashed changes
+//=======
+//>>>>>>> Stashed changes
         detectRadius = 1.25f;
     }
 
@@ -81,13 +81,13 @@ public class HamonicsDisplay : MonoBehaviour
 
         if (harmonicsMode)
         {
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
             musicSheetPos.SetActive(true);
             musicSheetPos.transform.position = Vector3.MoveTowards(musicSheetPos.transform.position,
                     new Vector3(musicSheetPos.transform.position.x, 3.0f), 0.025f);
 
-=======
->>>>>>> Stashed changes
+//=======
+//>>>>>>> Stashed changes
             for (int i = 0; i < gameObject.transform.childCount; i++)
             {
                 gameObject.transform.GetChild(i).gameObject.SetActive(true);
@@ -103,7 +103,7 @@ public class HamonicsDisplay : MonoBehaviour
         }
         else 
         {
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
             noteSpawnerScript.NoteSpawnReset();
 
             musicSheetPos.transform.position = Vector3.MoveTowards(musicSheetPos.transform.position,
@@ -113,8 +113,8 @@ public class HamonicsDisplay : MonoBehaviour
                 musicSheetPos.SetActive(false);
             }
 
-=======
->>>>>>> Stashed changes
+//=======
+//>>>>>>> Stashed changes
             for (int i = 0; i < gameObject.transform.childCount; i++)
             {
                 gameObject.transform.GetChild(i).gameObject.SetActive(false);
@@ -177,12 +177,11 @@ public class HamonicsDisplay : MonoBehaviour
                 <= Vector2.Distance(lr.GetPosition(0), lr.GetPosition(lr.positionCount - 1)) * detectRadius - width / 2.0f)
         {
             Debug.Log("We did Line: " + (lr.positionCount));
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
         }  
-=======
+//=======
         }
         
 
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
     }
-}
