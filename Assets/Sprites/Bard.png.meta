@@ -74,117 +74,6 @@ TextureImporter:
   - first:
       213: -3659941850767551215
     second: Bard 21
-  - first:
-      213: 1327165790113992385
-    second: Bard 22
-  - first:
-      213: -2510175952465414191
-    second: Bard 23
-  - first:
-      213: 637906585794462516
-    second: Bard 24
-  - first:
-      213: -9057405131331740945
-    second: Bard 25
-  - first:
-      213: -8725955330695258050
-    second: Bard 26
-  - first:
-      213: 2646707542802134372
-    second: Bard 27
-  - first:
-      213: -8670399152277670828
-    second: Bard 28
-  - first:
-      213: -8067975622622787995
-    second: Bard 29
-  - first:
-      213: 5693737884503046932
-    second: Bard 30
-  - first:
-      213: 4665690808882292996
-    second: Bard 31
-  - first:
-      213: 8480744200447196651
-    second: Bard 32
-  - first:
-      213: -5666068651380495699
-    second: Bard 33
-  - first:
-      213: 1863648924118957952
-    second: Bard 34
-  - first:
-      213: 7573796818578921047
-    second: Bard 35
-  - first:
-      213: 44434567311086930
-    second: Bard 36
-  - first:
-      213: 3684725736332469899
-    second: Bard 37
-  - first:
-      213: 8636410372024107680
-    second: Bard 38
-  - first:
-      213: 7379077674009283410
-    second: Bard 39
-  - first:
-      213: 1377562835480761408
-    second: Bard 40
-  - first:
-      213: 8605430547139377767
-    second: Bard 41
-  - first:
-      213: -1332395621486222729
-    second: Bard 42
-  - first:
-      213: 1992175773038043480
-    second: Bard 43
-  - first:
-      213: -3357100391449924047
-    second: Bard 44
-  - first:
-      213: 8692672924024383546
-    second: Bard 45
-  - first:
-      213: 5345689334573268914
-    second: Bard 46
-  - first:
-      213: -8479350058564255639
-    second: Bard 47
-  - first:
-      213: 7121719916932915708
-    second: Bard 48
-  - first:
-      213: 8714364845584585306
-    second: Bard 49
-  - first:
-      213: -6276173316093333090
-    second: Bard 50
-  - first:
-      213: -3926474922900152906
-    second: Bard 51
-  - first:
-      213: -6552260460928779727
-    second: Bard 52
-  - first:
-      213: -1639235812089442269
-    second: Bard 53
-  - first:
-      213: -2258999626593236829
-    second: Bard 54
-  - first:
-      213: 1501149214491691969
-    second: Bard 55
-  - first:
-      213: 6756492428884006927
-    second: Bard 56
-  - first:
-      213: 493440343791243058
-    second: Bard 57
-  - first:
-      213: 1457845111703859796
-    second: Bard 58
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -244,7 +133,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 448
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -286,11 +175,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 160
-        width: 64
+        y: 64
+        width: 32
         height: 32
       alignment: 7
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -307,11 +196,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 160
-        width: 64
+        y: 64
+        width: 32
         height: 32
       alignment: 7
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -327,12 +216,12 @@ TextureImporter:
       name: Bard 2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 160
-        width: 64
+        x: 32
+        y: 64
+        width: 32
         height: 32
       alignment: 7
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -348,12 +237,12 @@ TextureImporter:
       name: Bard 3
       rect:
         serializedVersion: 2
-        x: 128
-        y: 160
-        width: 64
+        x: 64
+        y: 64
+        width: 32
         height: 32
       alignment: 7
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -369,12 +258,12 @@ TextureImporter:
       name: Bard 4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 160
-        width: 64
+        x: 64
+        y: 64
+        width: 32
         height: 32
       alignment: 7
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -390,12 +279,12 @@ TextureImporter:
       name: Bard 5
       rect:
         serializedVersion: 2
-        x: 192
-        y: 160
-        width: 64
+        x: 96
+        y: 64
+        width: 32
         height: 32
       alignment: 7
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -412,11 +301,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 160
-        width: 64
+        y: 64
+        width: 32
         height: 32
       alignment: 7
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -432,12 +321,12 @@ TextureImporter:
       name: Bard 7
       rect:
         serializedVersion: 2
-        x: 256
-        y: 160
-        width: 64
+        x: 0
+        y: 32
+        width: 32
         height: 32
       alignment: 7
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -453,12 +342,12 @@ TextureImporter:
       name: Bard 8
       rect:
         serializedVersion: 2
-        x: 320
-        y: 160
-        width: 64
+        x: 32
+        y: 32
+        width: 32
         height: 32
       alignment: 7
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -474,12 +363,12 @@ TextureImporter:
       name: Bard 9
       rect:
         serializedVersion: 2
-        x: 256
-        y: 160
-        width: 64
+        x: 0
+        y: 32
+        width: 32
         height: 32
       alignment: 7
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -496,11 +385,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 160
-        width: 64
+        y: 64
+        width: 32
         height: 32
       alignment: 7
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -516,12 +405,12 @@ TextureImporter:
       name: Bard 11
       rect:
         serializedVersion: 2
-        x: 384
-        y: 160
-        width: 64
+        x: 64
+        y: 32
+        width: 32
         height: 32
       alignment: 7
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -537,12 +426,12 @@ TextureImporter:
       name: Bard 12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
-        width: 64
+        x: 96
+        y: 32
+        width: 32
         height: 32
       alignment: 7
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -558,12 +447,12 @@ TextureImporter:
       name: Bard 13
       rect:
         serializedVersion: 2
-        x: 384
-        y: 160
-        width: 64
+        x: 64
+        y: 32
+        width: 32
         height: 32
       alignment: 7
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -579,12 +468,12 @@ TextureImporter:
       name: Bard 14
       rect:
         serializedVersion: 2
-        x: 128
-        y: 160
-        width: 64
+        x: 64
+        y: 64
+        width: 32
         height: 32
       alignment: 7
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -600,12 +489,12 @@ TextureImporter:
       name: Bard 15
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
-        width: 64
+        x: 0
+        y: 0
+        width: 32
         height: 32
       alignment: 7
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -621,12 +510,12 @@ TextureImporter:
       name: Bard 16
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
-        width: 64
+        x: 32
+        y: 0
+        width: 32
         height: 32
       alignment: 7
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -642,12 +531,12 @@ TextureImporter:
       name: Bard 17
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
-        width: 64
+        x: 0
+        y: 0
+        width: 32
         height: 32
       alignment: 7
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -663,12 +552,12 @@ TextureImporter:
       name: Bard 18
       rect:
         serializedVersion: 2
-        x: 128
-        y: 160
-        width: 64
+        x: 64
+        y: 64
+        width: 32
         height: 32
       alignment: 7
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -684,12 +573,12 @@ TextureImporter:
       name: Bard 19
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
-        width: 64
+        x: 64
+        y: 0
+        width: 32
         height: 32
       alignment: 7
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -705,12 +594,12 @@ TextureImporter:
       name: Bard 20
       rect:
         serializedVersion: 2
-        x: 256
-        y: 128
-        width: 64
+        x: 96
+        y: 0
+        width: 32
         height: 32
       alignment: 7
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -726,12 +615,12 @@ TextureImporter:
       name: Bard 21
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
-        width: 64
+        x: 64
+        y: 0
+        width: 32
         height: 32
       alignment: 7
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -739,783 +628,6 @@ TextureImporter:
       bones: []
       spriteID: 1151a662746453dc0800000000000000
       internalID: -3659941850767551215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 22
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 128
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1ce8bc5214a0b6210800000000000000
-      internalID: 1327165790113992385
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 23
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 128
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1d7329d45401a2dd0800000000000000
-      internalID: -2510175952465414191
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 24
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 128
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4334926f8ac4ad800800000000000000
-      internalID: 637906585794462516
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 25
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: feadb207502ad4280800000000000000
-      internalID: -9057405131331740945
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 26
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e30abfbdbdd27e680800000000000000
-      internalID: -8725955330695258050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 27
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 96
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4657111cc7efab420800000000000000
-      internalID: 2646707542802134372
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 28
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 128
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 45434a3a8ed8ca780800000000000000
-      internalID: -8670399152277670828
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 29
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 96
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 566ce0dcaeac80090800000000000000
-      internalID: -8067975622622787995
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 30
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 96
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 41bfcf17078340f40800000000000000
-      internalID: 5693737884503046932
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 31
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 96
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 409eb3f121ddfb040800000000000000
-      internalID: 4665690808882292996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 32
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 128
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bedfb9adae7a1b570800000000000000
-      internalID: 8480744200447196651
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 33
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 96
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: daa2d79e4941e51b0800000000000000
-      internalID: -5666068651380495699
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 34
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 96
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 08f362c82d20dd910800000000000000
-      internalID: 1863648924118957952
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 35
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 96
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 756516c24188b1960800000000000000
-      internalID: 7573796818578921047
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 36
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2555358e00ddd9000800000000000000
-      internalID: 44434567311086930
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 37
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b8626d0e886c22330800000000000000
-      internalID: 3684725736332469899
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 38
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0a20ff6c971bad770800000000000000
-      internalID: 8636410372024107680
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 39
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 25bc6596c00c76660800000000000000
-      internalID: 7379077674009283410
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 40
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0445c98a9161e1310800000000000000
-      internalID: 1377562835480761408
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 41
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 64
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 76ab9853d71ac6770800000000000000
-      internalID: 8605430547139377767
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 42
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 64
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7722709dd31628de0800000000000000
-      internalID: -1332395621486222729
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 43
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 64
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 85162128f41a5ab10800000000000000
-      internalID: 1992175773038043480
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 44
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 64
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 13e6d4c0bfe2961d0800000000000000
-      internalID: -3357100391449924047
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 45
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 64
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a382129f7f392a870800000000000000
-      internalID: 8692672924024383546
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 46
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2bf75da8024bf2a40800000000000000
-      internalID: 5345689334573268914
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 47
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 96007191c0c435a80800000000000000
-      internalID: -8479350058564255639
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 48
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 32
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cf16c9e288e65d260800000000000000
-      internalID: 7121719916932915708
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 49
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a52983808a4afe870800000000000000
-      internalID: 8714364845584585306
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 50
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 32
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e91b8712f9d86e8a0800000000000000
-      internalID: -6276173316093333090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 51
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 32
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6bd9e096cdb5289c0800000000000000
-      internalID: -3926474922900152906
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 52
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 32
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 13ab08e73d1b115a0800000000000000
-      internalID: -6552260460928779727
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 53
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 32
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3205f45c6b34049e0800000000000000
-      internalID: -1639235812089442269
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 54
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 32
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3a88b2deecb66a0e0800000000000000
-      internalID: -2258999626593236829
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 55
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 32
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1cb42a4d14725d410800000000000000
-      internalID: 1501149214491691969
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 56
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f085f3f0112e3cd50800000000000000
-      internalID: 6756492428884006927
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 57
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 23f0689d06d09d600800000000000000
-      internalID: 493440343791243058
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bard 58
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 32
-        width: 64
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 452f5a4b76e4b3410800000000000000
-      internalID: 1457845111703859796
       vertices: []
       indices: 
       edges: []
