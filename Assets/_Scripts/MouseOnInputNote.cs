@@ -7,7 +7,14 @@ using UnityEngine;
 /// </summary>
 public class MouseOnInputNote : MonoBehaviour
 {
+<<<<<<< HEAD
+<<<<<<< HEAD
+//<<<<<<< Updated upstream
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
+=======
 <<<<<<< Updated upstream
+>>>>>>> parent of 73c82c1... Revert "Hakeem's push"
     public Sprite selectSprite;
     private Sprite spriteOriginal;
 
@@ -18,17 +25,35 @@ public class MouseOnInputNote : MonoBehaviour
     {
         spriteOriginal = gameObject.GetComponent<SpriteRenderer>().sprite;
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+//=======
 =======
+=======
+>>>>>>> parent of 73c82c1... Revert "Hakeem's push"
     private string getInputNoteName;
     public bool isHit = false;
 
     public string GetInputNoteName { get => getInputNoteName; set => getInputNoteName = value; }
+<<<<<<< HEAD
+//>>>>>>> Stashed changes
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
+=======
 >>>>>>> Stashed changes
+>>>>>>> parent of 73c82c1... Revert "Hakeem's push"
 
     private void OnMouseOver()
     {
         GetInputNoteName = gameObject.name;
+<<<<<<< HEAD
+<<<<<<< HEAD
+//<<<<<<< Updated upstream
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
+=======
 <<<<<<< Updated upstream
+>>>>>>> parent of 73c82c1... Revert "Hakeem's push"
         switch (gameObject.name)
         {
             case "Down Button":
@@ -46,18 +71,40 @@ public class MouseOnInputNote : MonoBehaviour
             default:
                 break;
         }
+<<<<<<< HEAD
+<<<<<<< HEAD
+//=======
+//>>>>>>> Stashed changes
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
+=======
 =======
 >>>>>>> Stashed changes
+>>>>>>> parent of 73c82c1... Revert "Hakeem's push"
     }
 
     private void OnMouseExit()
     {
         GetInputNoteName = "";
+<<<<<<< HEAD
+<<<<<<< HEAD
+//<<<<<<< Updated upstream
+        IsHit = false;
+        gameObject.GetComponent<SpriteRenderer>().sprite = spriteOriginal;
+//=======
+        isHit = false;
+//>>>>>>> Stashed changes
+=======
+        IsHit = false;
+        gameObject.GetComponent<SpriteRenderer>().sprite = spriteOriginal;
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
+=======
 <<<<<<< Updated upstream
         IsHit = false;
         gameObject.GetComponent<SpriteRenderer>().sprite = spriteOriginal;
 =======
         isHit = false;
 >>>>>>> Stashed changes
+>>>>>>> parent of 73c82c1... Revert "Hakeem's push"
     }
 }

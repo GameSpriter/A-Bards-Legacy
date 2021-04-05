@@ -47,13 +47,28 @@ public class HamonicsDisplay : MonoBehaviour
             lr.loop = true;
         }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+//<<<<<<< Updated upstream
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
+=======
 <<<<<<< Updated upstream
+>>>>>>> parent of 73c82c1... Revert "Hakeem's push"
         musicSheetPos.transform.position = new Vector3(musicSheetPos.transform.position.x, 7.0f);
         //noteTrackScript = new NoteTracker();
         noteSpawnerScript = musicSheetPos.GetComponent<NoteSpawn>();
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+//=======
+//>>>>>>> Stashed changes
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
+=======
 =======
 >>>>>>> Stashed changes
+>>>>>>> parent of 73c82c1... Revert "Hakeem's push"
         detectRadius = 1.25f;
     }
 
@@ -81,13 +96,28 @@ public class HamonicsDisplay : MonoBehaviour
 
         if (harmonicsMode)
         {
+<<<<<<< HEAD
+<<<<<<< HEAD
+//<<<<<<< Updated upstream
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
+=======
 <<<<<<< Updated upstream
+>>>>>>> parent of 73c82c1... Revert "Hakeem's push"
             musicSheetPos.SetActive(true);
             musicSheetPos.transform.position = Vector3.MoveTowards(musicSheetPos.transform.position,
                     new Vector3(musicSheetPos.transform.position.x, 3.0f), 0.025f);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+//=======
+//>>>>>>> Stashed changes
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
+=======
 =======
 >>>>>>> Stashed changes
+>>>>>>> parent of 73c82c1... Revert "Hakeem's push"
             for (int i = 0; i < gameObject.transform.childCount; i++)
             {
                 gameObject.transform.GetChild(i).gameObject.SetActive(true);
@@ -103,7 +133,14 @@ public class HamonicsDisplay : MonoBehaviour
         }
         else 
         {
+<<<<<<< HEAD
+<<<<<<< HEAD
+//<<<<<<< Updated upstream
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
+=======
 <<<<<<< Updated upstream
+>>>>>>> parent of 73c82c1... Revert "Hakeem's push"
             noteSpawnerScript.NoteSpawnReset();
 
             musicSheetPos.transform.position = Vector3.MoveTowards(musicSheetPos.transform.position,
@@ -113,8 +150,16 @@ public class HamonicsDisplay : MonoBehaviour
                 musicSheetPos.SetActive(false);
             }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+//=======
+//>>>>>>> Stashed changes
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
+=======
 =======
 >>>>>>> Stashed changes
+>>>>>>> parent of 73c82c1... Revert "Hakeem's push"
             for (int i = 0; i < gameObject.transform.childCount; i++)
             {
                 gameObject.transform.GetChild(i).gameObject.SetActive(false);
@@ -177,6 +222,19 @@ public class HamonicsDisplay : MonoBehaviour
                 <= Vector2.Distance(lr.GetPosition(0), lr.GetPosition(lr.positionCount - 1)) * detectRadius - width / 2.0f)
         {
             Debug.Log("We did Line: " + (lr.positionCount));
+<<<<<<< HEAD
+<<<<<<< HEAD
+//<<<<<<< Updated upstream
+        }  
+//=======
+        }
+        
+
+//>>>>>>> Stashed changes
+=======
+        }  
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
+=======
 <<<<<<< Updated upstream
         }  
 =======
@@ -184,5 +242,5 @@ public class HamonicsDisplay : MonoBehaviour
         
 
 >>>>>>> Stashed changes
+>>>>>>> parent of 73c82c1... Revert "Hakeem's push"
     }
-}
