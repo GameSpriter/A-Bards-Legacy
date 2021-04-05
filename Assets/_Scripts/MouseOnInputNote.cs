@@ -7,7 +7,10 @@ using UnityEngine;
 /// </summary>
 public class MouseOnInputNote : MonoBehaviour
 {
+<<<<<<< HEAD
 //<<<<<<< Updated upstream
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
     public Sprite selectSprite;
     private Sprite spriteOriginal;
 
@@ -18,17 +21,23 @@ public class MouseOnInputNote : MonoBehaviour
     {
         spriteOriginal = gameObject.GetComponent<SpriteRenderer>().sprite;
     }
+<<<<<<< HEAD
 //=======
     private string getInputNoteName;
     public bool isHit = false;
 
     public string GetInputNoteName { get => getInputNoteName; set => getInputNoteName = value; }
 //>>>>>>> Stashed changes
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
 
     private void OnMouseOver()
     {
         GetInputNoteName = gameObject.name;
+<<<<<<< HEAD
 //<<<<<<< Updated upstream
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
         switch (gameObject.name)
         {
             case "Down Button":
@@ -46,18 +55,26 @@ public class MouseOnInputNote : MonoBehaviour
             default:
                 break;
         }
+<<<<<<< HEAD
 //=======
 //>>>>>>> Stashed changes
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
     }
 
     private void OnMouseExit()
     {
         GetInputNoteName = "";
+<<<<<<< HEAD
 //<<<<<<< Updated upstream
         IsHit = false;
         gameObject.GetComponent<SpriteRenderer>().sprite = spriteOriginal;
 //=======
         isHit = false;
 //>>>>>>> Stashed changes
+=======
+        IsHit = false;
+        gameObject.GetComponent<SpriteRenderer>().sprite = spriteOriginal;
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
     }
 }

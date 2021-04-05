@@ -12,7 +12,10 @@ public class NoteSpawn : MonoBehaviour
     public List<GameObject> tempSpawnContainer = new List<GameObject>();
 
     public float incrementPosition = 0.0f;
+<<<<<<< HEAD
 //<<<<<<< Updated upstream
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
     private float offset = 9.0f;
 
     public bool EndIsReached { get; set; } = false;
@@ -20,6 +23,7 @@ public class NoteSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< HEAD
     }
 //=======
     public bool endIsReached = false;
@@ -28,6 +32,8 @@ public class NoteSpawn : MonoBehaviour
     void Start()
     {        
 //>>>>>>> Stashed changes
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
         //Set notes in designated positions on music sheet
         for (int i = 0; i < notes.Length; i++)
         {
@@ -37,7 +43,10 @@ public class NoteSpawn : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+<<<<<<< HEAD
 //<<<<<<< Updated upstream
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
     {
         //Playing a note will happen once when touched
         if (!mc[0].IsHit && mc[0].GetInputNoteName == "Up Button") 
@@ -58,6 +67,7 @@ public class NoteSpawn : MonoBehaviour
         else if (!mc[3].IsHit && mc[3].GetInputNoteName == "Down Button")
         {
             mc[3].IsHit = true;
+<<<<<<< HEAD
 //=======
     {        
         //Playing a note will happen once when touched
@@ -80,6 +90,8 @@ public class NoteSpawn : MonoBehaviour
         {
             mc[3].isHit = true;
 //>>>>>>> Stashed changes
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
             noteSpawn(3);
         }
         
@@ -92,6 +104,7 @@ public class NoteSpawn : MonoBehaviour
         tempSpawnContainer[tempSpawnContainer.Count - 1].transform.position =
             new Vector3(tempSpawnContainer[tempSpawnContainer.Count - 1].transform.position.x + incrementPosition,
             tempSpawnContainer[tempSpawnContainer.Count - 1].transform.position.y);
+<<<<<<< HEAD
 //<<<<<<< Updated upstream
         if (!EndIsReached)
         {
@@ -101,6 +114,11 @@ public class NoteSpawn : MonoBehaviour
         {
             if (incrementPosition < 8.0f)
 //>>>>>>> Stashed changes
+=======
+        if (!EndIsReached)
+        {
+            if (incrementPosition < transform.position.x + offset)
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
             {
                 incrementPosition += 1.0f;
             }
@@ -120,16 +138,23 @@ public class NoteSpawn : MonoBehaviour
     }
 
     //Once a note reach the back end of the music sheet they disappear
+<<<<<<< HEAD
 //<<<<<<< Updated upstream
     public void Despawn()
 //=======
     void despawn()
 //>>>>>>> Stashed changes
+=======
+    public void Despawn()
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
     {
         Destroy(tempSpawnContainer[0]);
         tempSpawnContainer.RemoveAt(0);        
     }
+<<<<<<< HEAD
 //<<<<<<< Updated upstream
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
 
     void NoteSpawnReset() 
     {
@@ -143,6 +168,9 @@ public class NoteSpawn : MonoBehaviour
         EndIsReached = false;
         incrementPosition = 0;
     }
+<<<<<<< HEAD
 //=======
 //>>>>>>> Stashed changes
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
 }

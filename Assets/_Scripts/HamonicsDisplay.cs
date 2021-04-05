@@ -47,13 +47,19 @@ public class HamonicsDisplay : MonoBehaviour
             lr.loop = true;
         }
 
+<<<<<<< HEAD
 //<<<<<<< Updated upstream
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
         musicSheetPos.transform.position = new Vector3(musicSheetPos.transform.position.x, 7.0f);
         //noteTrackScript = new NoteTracker();
         noteSpawnerScript = musicSheetPos.GetComponent<NoteSpawn>();
 
+<<<<<<< HEAD
 //=======
 //>>>>>>> Stashed changes
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
         detectRadius = 1.25f;
     }
 
@@ -81,13 +87,19 @@ public class HamonicsDisplay : MonoBehaviour
 
         if (harmonicsMode)
         {
+<<<<<<< HEAD
 //<<<<<<< Updated upstream
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
             musicSheetPos.SetActive(true);
             musicSheetPos.transform.position = Vector3.MoveTowards(musicSheetPos.transform.position,
                     new Vector3(musicSheetPos.transform.position.x, 3.0f), 0.025f);
 
+<<<<<<< HEAD
 //=======
 //>>>>>>> Stashed changes
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
             for (int i = 0; i < gameObject.transform.childCount; i++)
             {
                 gameObject.transform.GetChild(i).gameObject.SetActive(true);
@@ -97,13 +109,16 @@ public class HamonicsDisplay : MonoBehaviour
             /*
             if (Input.GetMouseButton(0) || Input.GetMouseButton(1))
             {
-                //DetectNoteInput();
+                DetectNoteInput();
             }
             */
         }
         else 
         {
+<<<<<<< HEAD
 //<<<<<<< Updated upstream
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
             noteSpawnerScript.NoteSpawnReset();
 
             musicSheetPos.transform.position = Vector3.MoveTowards(musicSheetPos.transform.position,
@@ -113,8 +128,11 @@ public class HamonicsDisplay : MonoBehaviour
                 musicSheetPos.SetActive(false);
             }
 
+<<<<<<< HEAD
 //=======
 //>>>>>>> Stashed changes
+=======
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
             for (int i = 0; i < gameObject.transform.childCount; i++)
             {
                 gameObject.transform.GetChild(i).gameObject.SetActive(false);
@@ -177,6 +195,7 @@ public class HamonicsDisplay : MonoBehaviour
                 <= Vector2.Distance(lr.GetPosition(0), lr.GetPosition(lr.positionCount - 1)) * detectRadius - width / 2.0f)
         {
             Debug.Log("We did Line: " + (lr.positionCount));
+<<<<<<< HEAD
 //<<<<<<< Updated upstream
         }  
 //=======
@@ -184,4 +203,7 @@ public class HamonicsDisplay : MonoBehaviour
         
 
 //>>>>>>> Stashed changes
+=======
+        }  
+>>>>>>> 73c82c150380afca1e09ea407fb0f5db9c0a92af
     }
