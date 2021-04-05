@@ -94,6 +94,7 @@ public class NoteTracker : MonoBehaviour
             songSubstring = "";
         }
     }
+<<<<<<< HEAD
 }
 
 
@@ -118,3 +119,6 @@ public class NoteTracker : MonoBehaviour
     }
 }
 >>>>>>> Stashed changes
+=======
+}
+>>>>>>> 341c53f4a210cb951491a1ddf1419b387e48869f
