@@ -18,22 +18,35 @@ public class EditorManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+
+        if(Input.GetMouseButton(0))
         {
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             worldPos.z = 0.0f;
 
             Destroy(room.GetValue(worldPos));
-            room.SetValue(worldPos, Instantiate(Resources.Load<GameObject>("TilePrefabs/TileWall")));
+            int x, y;
+            room.GetXY(worldPos, out x, out y);
+            if(x >= 0 && x < gridX && y >= 0 && y < gridY)
+            {
+                room.SetValue(worldPos, Instantiate(Resources.Load<GameObject>("TilePrefabs/TileWall"), new Vector2(x, y), Quaternion.identity));
+                room.GetValue(worldPos).transform.parent = gameObject.transform;
+            }
         }
 
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButton(1))
         {
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             worldPos.z = 0.0f;
 
             Destroy(room.GetValue(worldPos));
-            room.SetValue(worldPos, Instantiate(Resources.Load<GameObject>("TilePrefabs/TileFloor")));
+            int x, y;
+            room.GetXY(worldPos, out x, out y);
+            if(x >= 0 && x < gridX && y >= 0 && y < gridY)
+            {
+                room.SetValue(worldPos, Instantiate(Resources.Load<GameObject>("TilePrefabs/TileFloor"), new Vector2(x, y), Quaternion.identity));
+                room.GetValue(worldPos).transform.parent = gameObject.transform;
+            }
         }
     }
 
@@ -42,7 +55,8 @@ public class EditorManager : MonoBehaviour
         {
             for (int y = 0; y < gridY; y++)
             {
-                room.SetValue(x, y, Instantiate(Resources.Load<GameObject>("TilePrefabs/TileFloor")));
+                room.SetValue(x, y, Instantiate(Resources.Load<GameObject>("TilePrefabs/TileFloor"), new Vector2(x, y), Quaternion.identity));
+                room.GetValue(x, y).transform.parent = gameObject.transform;
             }
         }
     }

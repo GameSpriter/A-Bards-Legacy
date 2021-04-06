@@ -7,7 +7,7 @@ public class TileGrid<TGridObject>
     private int width;
     private int height;
     private TGridObject[,] gridArray;
-    private int scale;
+    public int scale;
 
     public TileGrid(int width, int height, int scale)
     {
@@ -60,7 +60,7 @@ public class TileGrid<TGridObject>
         return GetValue(x, y);
     }
 
-    private void GetXY(Vector3 worldPosition, out int x, out int y)
+    public void GetXY(Vector3 worldPosition, out int x, out int y)
     {
         x = Mathf.FloorToInt(worldPosition.x);
         y = Mathf.FloorToInt(worldPosition.y);
