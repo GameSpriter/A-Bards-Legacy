@@ -33,9 +33,14 @@ public class HamonicsDisplay : MonoBehaviour
     private Vector2 mosPos;
 
     private bool harmonicsMode = false;
+    bool animationinHarmonics = false;
+
+    
 
     void Start()
     {
+        
+
         if (!lr) 
         {
             if (gameObject.GetComponent<LineRenderer>() == null) 
@@ -68,7 +73,7 @@ public class HamonicsDisplay : MonoBehaviour
         {
             if (!harmonicsMode)
             {
-                harmonicsMode = true;
+                harmonicsMode = true;                
             }
             else
             {
