@@ -8380,8 +8380,8 @@ Transform:
   - {fileID: 1657209997}
   - {fileID: 904261513}
   - {fileID: 475459208}
-  - {fileID: 1794629448}
   - {fileID: 1937395534}
+  - {fileID: 1794629448}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17256,6 +17256,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8142308170845674240, guid: 1c48b1258d539544f9f9e920c8eb41da,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e065910a1a9e28b48b652c7332e614b9, type: 2}
     - target: {fileID: 8142308170845674242, guid: 1c48b1258d539544f9f9e920c8eb41da,
         type: 3}
       propertyPath: m_Material
