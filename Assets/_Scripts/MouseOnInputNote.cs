@@ -18,7 +18,8 @@ public class MouseOnInputNote : MonoBehaviour
         spriteOriginal = gameObject.GetComponent<SpriteRenderer>().sprite;
     }
 
-    private void OnMouseOver()
+    //private void OnMouseOver()
+    private void OnMouseEnter()
     {
         GetInputNoteName = gameObject.name;
         switch (gameObject.name)
@@ -38,6 +39,8 @@ public class MouseOnInputNote : MonoBehaviour
             default:
                 break;
         }
+        gameObject.GetComponent<AudioSource>().PlayOneShot(gameObject.GetComponent<AudioSource>().clip);
+        //gameObject.GetComponent<AudioSource>().Stop();
     }
 
     private void OnMouseExit()
