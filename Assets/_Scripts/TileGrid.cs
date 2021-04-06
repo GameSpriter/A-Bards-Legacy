@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TileGrid
+public class TileGrid<TGridObject>
 {
     private int width;
     private int height;
-    private int[,] gridArray;
-    private GameObject[,] gameObjectArray;
+    private TGridObject[,] gridArray;
     private int scale;
-
-    public enum TileType { Wall, Floor }
 
     public TileGrid(int width, int height, int scale)
     {
@@ -18,7 +15,7 @@ public class TileGrid
         this.height = height;
         this.scale = scale;
 
-        gridArray = new int[width, height];
+        gridArray = new TGridObject[width, height];
 
         for(int x = 0; x < gridArray.GetLength(0); x++)
         {
@@ -26,27 +23,41 @@ public class TileGrid
             {
                 Debug.DrawLine(new Vector2(x, y) * scale, new Vector2(x, y + 1) * scale, Color.white, 100.0f);
                 Debug.DrawLine(new Vector2(x, y) * scale, new Vector2(x + 1, y) * scale, Color.white, 100.0f);
-
-                
             }
         }
         Debug.DrawLine(new Vector2(0, height) * scale, new Vector2(width, height) * scale, Color.white, 100.0f);
         Debug.DrawLine(new Vector2(width, 0) * scale, new Vector2(width, height) * scale, Color.white, 100.0f);
     }
 
-    public void SetTile(int x, int y, TileType tileType)
+    public void SetValue(int x, int y, TGridObject value)
     {
         if(x >= 0 && x < width && y >= 0 && y < height) // If true then the coordinates are within the grid
         {
-            gridArray[x, y] = (int) tileType;
+            gridArray[x, y] = value;
         }
     }
 
-    public void SetTile(Vector3 worldPostion, TileType tileType)
+    public void SetValue(Vector3 worldPostion, TGridObject value)
     {
         int x, y;
         GetXY(worldPostion / scale, out x, out y);
-        SetTile(x, y, tileType);
+        SetValue(x, y, value);
+    }
+
+    public TGridObject GetValue(int x, int y)
+    {
+        if (x >= 0 && y >= 0 && x < width && y < height) {
+            return gridArray[x,y];
+        } else {
+            return default(TGridObject);
+        }
+    }
+
+    public TGridObject GetValue(Vector3 worldPostion) 
+    {
+        int x, y;
+        GetXY(worldPostion / scale, out x, out y);
+        return GetValue(x, y);
     }
 
     private void GetXY(Vector3 worldPosition, out int x, out int y)

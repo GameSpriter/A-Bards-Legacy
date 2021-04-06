@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class EditorManager : MonoBehaviour
 {
-    private TileGrid room;
-    private TileGrid dungeon;
+    public int gridX = 15;
+    public int gridY = 15;
+
+    private TileGrid<GameObject> room;
 
     private void Start()
     {
-        room = new TileGrid(15, 15, 1);
-        dungeon = new TileGrid(5, 5, 15);
+        room = new TileGrid<GameObject>(gridX, gridY, 1);
+
+        setupTileGrid();
     }
 
     private void Update()
@@ -20,8 +23,27 @@ public class EditorManager : MonoBehaviour
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             worldPos.z = 0.0f;
 
-            room.SetTile(worldPos, TileGrid.TileType.Wall);
-            dungeon.SetTile(worldPos, TileGrid.TileType.Floor);
+            Destroy(room.GetValue(worldPos));
+            room.SetValue(worldPos, Instantiate(Resources.Load<GameObject>("TilePrefabs/TileWall")));
+        }
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            worldPos.z = 0.0f;
+
+            Destroy(room.GetValue(worldPos));
+            room.SetValue(worldPos, Instantiate(Resources.Load<GameObject>("TilePrefabs/TileFloor")));
+        }
+    }
+
+    private void setupTileGrid() {
+        for (int x = 0; x < gridX; x++)
+        {
+            for (int y = 0; y < gridY; y++)
+            {
+                room.SetValue(x, y, Instantiate(Resources.Load<GameObject>("TilePrefabs/TileFloor")));
+            }
         }
     }
 }
