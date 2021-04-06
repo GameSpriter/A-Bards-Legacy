@@ -15,13 +15,32 @@ public class PlayerMovement : MonoBehaviour
 
     char lastKeyPressed;
 
+    bool mouseButtonDown = false;
+    bool leftClick = false;
+
     void Start()
     {
+        anim = gameObject.GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
+        if (Input.GetMouseButtonDown(2))
+        {
+            mouseButtonDown = !mouseButtonDown;
+        }
+
+        if (mouseButtonDown)
+        {
+            anim.SetBool("harmonicsAnim", true);
+            Debug.Log("Middle button pressed");
+        }
+        else
+        {
+            anim.SetBool("harmonicsAnim", false);
+            Debug.Log("Middle button unpressed");
+        }
 
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
@@ -38,6 +57,16 @@ public class PlayerMovement : MonoBehaviour
         else if(Input.GetKeyDown(KeyCode.D) && !Input.GetKeyDown(KeyCode.A))
         {
             spriteRenderer.flipX = false;
+        }
+
+        if (Input.GetMouseButton(0))
+        {
+            anim.SetBool("attackAnim", true);
+        }
+        else
+        {
+            anim.SetBool("attackAnim", false);
+            Debug.Log("Bye");
         }
     }
 
