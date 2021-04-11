@@ -89,6 +89,7 @@ public class NoteTracker : MonoBehaviour
         if (sequence == songSubstring)
         {
             //Add to multiplier
+
             //Reset tempSequence
             songSubstring = "";
         }
