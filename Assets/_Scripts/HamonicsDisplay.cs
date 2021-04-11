@@ -15,6 +15,7 @@ public class HamonicsDisplay : MonoBehaviour
     */
 
     public GameObject playerpos, musicSheetPos;
+
     //Note spawn script attached to music sheet sprite
     private NoteSpawn noteSpawnerScript;
 
@@ -33,14 +34,10 @@ public class HamonicsDisplay : MonoBehaviour
     private Vector2 mosPos;
 
     private bool harmonicsMode = false;
-    bool animationinHarmonics = false;
-
-    
+    bool animationinHarmonics = false;    
 
     void Start()
     {
-        
-
         if (!lr) 
         {
             if (gameObject.GetComponent<LineRenderer>() == null) 
@@ -120,8 +117,12 @@ public class HamonicsDisplay : MonoBehaviour
         }
     }
 
-    // Draw a polygon in the XY plane with a specfied position, number of sides
-    // and radius. Dynamic to allow more variety of notes to be played.
+    /// <summary>
+    /// Draw a polygon in the XY plane with a specfied position, number of sides
+    /// and radius. Dynamic to allow more variety of notes to be played.
+    /// </summary>
+    /// <param name="radius"></param>
+    /// <param name="numSides"></param>
     void DrawPolygon(float radius, int numSides)
     {
         // The corner that is used to start the polygon (parallel to the X axis).

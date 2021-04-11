@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Set's up how notes are controlled and displayed in scene
+/// </summary>
 public class NoteSpawn : MonoBehaviour
 {
-    public HamonicsDisplay hd;
     public MouseOnInputNote[] mc;
 
     public GameObject[] spawnPositions;
@@ -33,33 +35,37 @@ public class NoteSpawn : MonoBehaviour
         if (!mc[0].IsHit && mc[0].GetInputNoteName == "Up Button") 
         {
             mc[0].IsHit = true;
-            noteSpawn(0);
+            NoteSpawner(0);
         }
         else if (!mc[1].IsHit && mc[1].GetInputNoteName == "Right Button")
         {
             mc[1].IsHit = true;
-            noteSpawn(1);
+            NoteSpawner(1);
         }
         else if (!mc[2].IsHit && mc[2].GetInputNoteName == "Left Button")
         {
             mc[2].IsHit = true;
-            noteSpawn(2);
+            NoteSpawner(2);
         }
         else if (!mc[3].IsHit && mc[3].GetInputNoteName == "Down Button")
         {
             mc[3].IsHit = true;
-            noteSpawn(3);
+            NoteSpawner(3);
         }
         
     }
 
-    //How notes will be displayed in proper positions
-    void noteSpawn(int i) 
+    /// <summary>
+    /// How notes will be displayed in proper positions
+    /// </summary>
+    /// <param name="i"></param>
+    void NoteSpawner(int i) 
     {
         tempSpawnContainer.Add(Instantiate(notes[i]));
         tempSpawnContainer[tempSpawnContainer.Count - 1].transform.position =
             new Vector3(tempSpawnContainer[tempSpawnContainer.Count - 1].transform.position.x + incrementPosition,
             tempSpawnContainer[tempSpawnContainer.Count - 1].transform.position.y);
+        tempSpawnContainer[tempSpawnContainer.Count - 1].GetComponent<SpriteRenderer>().sortingOrder = 1;
         if (!EndIsReached)
         {
             if (incrementPosition < transform.position.x + offset)
@@ -69,8 +75,10 @@ public class NoteSpawn : MonoBehaviour
         }
     }
 
-    //Once notes reach past the front of music sheet, they all move back to make room for incoming notes
-    public void noteShift()
+    /// <summary>
+    /// Once notes reach past the front of music sheet, they all move back to make room for incoming notes
+    /// </summary>
+    public void NoteShift()
     {
         for (int i = 0; i < tempSpawnContainer.Count; i++) 
         {
@@ -81,7 +89,9 @@ public class NoteSpawn : MonoBehaviour
         }
     }
 
-    //Once a note reach the back end of the music sheet they disappear
+    /// <summary>
+    /// Once a note reach the back end of the music sheet they disappear
+    /// </summary>
     public void Despawn()
     {
         Destroy(tempSpawnContainer[0]);
