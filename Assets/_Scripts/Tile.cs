@@ -15,16 +15,18 @@ public class Tile
         private set;
     }
 
+    /*
     public TileGrid.TileType tileType
     {
         get;
         set;
     }
+    */
 
     public GameObject TileGameObject;
 
     public Tile()
     {
-        tileType = TileGrid.TileType.Wall;
+        //tileType = TileGrid.TileType.Wall;
     }
 }

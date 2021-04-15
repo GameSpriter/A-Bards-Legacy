@@ -2,78 +2,67 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TileGrid : MonoBehaviour
+public class TileGrid<TGridObject>
 {
-    public static TileGrid tileGrid
+    private int width;
+    private int height;
+    private TGridObject[,] gridArray;
+    public int scale;
+
+    public TileGrid(int width, int height, int scale)
     {
-        get;
-        private set;
-    }
+        this.width = width;
+        this.height = height;
+        this.scale = scale;
 
-    public enum TileType { Wall, Floor }
+        gridArray = new TGridObject[width, height];
 
-    public int gridWidth = 25;
-    public int gridHeight = 25;
-    public Tile[,] grid;
-
-    public float threshold = 0.2f;
-    public float scale = 15f;
-    public float seed = 0.0f;
-
-    public GameObject tilePrefab;
-    
-    void Start()
-    {
-        //Added reference to this script for ease of use
-        tileGrid = this;
-
-        //Setup the grid
-        grid = new Tile[gridWidth, gridHeight];
-
-        for (int x = 0; x < gridWidth; x++)
+        for(int x = 0; x < gridArray.GetLength(0); x++)
         {
-            for (int y = 0; y < gridWidth; y++)
+            for (int y = 0; y < gridArray.GetLength(1); y++)
             {
-                grid[x, y] = new Tile();
-
-                grid[x, y].TileGameObject = Instantiate(tilePrefab, new Vector2(x, y), Quaternion.identity);
+                Debug.DrawLine(new Vector2(x, y) * scale, new Vector2(x, y + 1) * scale, Color.white, 100.0f);
+                Debug.DrawLine(new Vector2(x, y) * scale, new Vector2(x + 1, y) * scale, Color.white, 100.0f);
             }
         }
-
-        setNoise();
+        Debug.DrawLine(new Vector2(0, height) * scale, new Vector2(width, height) * scale, Color.white, 100.0f);
+        Debug.DrawLine(new Vector2(width, 0) * scale, new Vector2(width, height) * scale, Color.white, 100.0f);
     }
 
-    void Update()
+    public void SetValue(int x, int y, TGridObject value)
     {
-        setNoise();
-    }
-
-    private void setNoise()
-    {
-        for (int x = 0; x < gridWidth; x++)
+        if(x >= 0 && x < width && y >= 0 && y < height) // If true then the coordinates are within the grid
         {
-            for (int y = 0; y < gridWidth; y++)
-            {
-                //seed = Time.time;
-
-                float noiseX = (x + seed) / scale;
-                float noiseY = (y + seed) / scale;
-
-                if (Mathf.PerlinNoise(noiseX, noiseY) > threshold)
-                {
-                    grid[x, y].tileType = TileType.Floor;
-                }
-                else
-                {
-                    grid[x, y].tileType = TileType.Wall;
-                }
-                grid[x, y].TileGameObject.GetComponentInChildren<SpriteRenderer>().sprite = GetSprite(grid[x, y].tileType);
-            }
+            gridArray[x, y] = value;
         }
     }
 
-    private Sprite GetSprite(TileType type)
+    public void SetValue(Vector3 worldPostion, TGridObject value)
     {
-        return Resources.LoadAll<Sprite>("Sprite-0001")[(int)type];
+        int x, y;
+        GetXY(worldPostion / scale, out x, out y);
+        SetValue(x, y, value);
+    }
+
+    public TGridObject GetValue(int x, int y)
+    {
+        if (x >= 0 && y >= 0 && x < width && y < height) {
+            return gridArray[x,y];
+        } else {
+            return default(TGridObject);
+        }
+    }
+
+    public TGridObject GetValue(Vector3 worldPostion) 
+    {
+        int x, y;
+        GetXY(worldPostion / scale, out x, out y);
+        return GetValue(x, y);
+    }
+
+    public void GetXY(Vector3 worldPosition, out int x, out int y)
+    {
+        x = Mathf.FloorToInt(worldPosition.x);
+        y = Mathf.FloorToInt(worldPosition.y);
     }
 }
