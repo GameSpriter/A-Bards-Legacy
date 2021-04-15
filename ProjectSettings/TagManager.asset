@@ -8,6 +8,8 @@ TagManager:
   - Shifter
   - Note
   - InputNote
+  - ShortSwordHitbox
+  - EighthNoteEnemy
   layers:
   - Default
   - TransparentFX

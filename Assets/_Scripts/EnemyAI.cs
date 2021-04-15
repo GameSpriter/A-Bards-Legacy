@@ -13,9 +13,15 @@ public class EnemyAI : MonoBehaviour
     float Distance;
     private float speed = 2f;
 
-    void Start()
+    IEnumerator TimeForEnemyToMoveBack(float seconds)
     {
-        
+        float counter = seconds;
+        while (counter > 0f)
+        {
+            yield return new WaitForSeconds(.25f);
+            counter--;
+        }
+        Debug.Log("Hi");
     }
 
     void Update()
@@ -43,15 +49,15 @@ public class EnemyAI : MonoBehaviour
 
     void combatWithPlayer()
     {
-        if (inRange == true && (Distance < 5 && Distance > 3))
+        if (inRange == true && (Distance > 4))
         {
             transform.position = enemyPosition;
         }
-        else if (inRange == true && (Distance < 3 && Distance > 1))
+        else if (inRange == true && (Distance < 4 && Distance > .85))
         {
             chasePlayer();
         }
-        else if (inRange == true && Distance < 1)
+        else if (inRange == true && (Distance < .65))
         {
             meleeAttackPlayer();
         }
@@ -65,10 +71,8 @@ public class EnemyAI : MonoBehaviour
 
     void meleeAttackPlayer()
     {
-        float enemySpeed = speed * Time.deltaTime;
         //Attack code here, along with damage and animation
-
-        //Move enemy back 
-        transform.position = Vector2.MoveTowards(transform.position, playerPosition, -1 * enemySpeed);
+        StartCoroutine(TimeForEnemyToMoveBack(.1f));
+        //Move enemy back
     }
 }

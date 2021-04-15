@@ -12,20 +12,35 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
 
     private SpriteRenderer spriteRenderer;
+    public GameObject shortSwordHitbox;
 
     char lastKeyPressed;
 
     bool mouseButtonDown = false;
     bool leftClick = false;
+    bool mouseClickForCoroutine = true;
 
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        shortSwordHitbox.SetActive(false);
+    }
+
+    IEnumerator DeactivateShortSwordHitbox(float seconds)
+    {
+        float counter = seconds;
+        while (counter > 0f)
+        {
+            yield return new WaitForSeconds(.50f);
+            counter--;
+        }
+        shortSwordHitbox.SetActive(false);
     }
 
     void Update()
     {
+        Vector3 playerScale = transform.localScale;
         if (Input.GetMouseButtonDown(2))
         {
             mouseButtonDown = !mouseButtonDown;
@@ -34,12 +49,26 @@ public class PlayerMovement : MonoBehaviour
         if (mouseButtonDown)
         {
             anim.SetBool("harmonicsAnim", true);
-            Debug.Log("Middle button pressed");
         }
         else
         {
             anim.SetBool("harmonicsAnim", false);
-            Debug.Log("Middle button unpressed");
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            mouseClickForCoroutine = true;
+        }
+
+        if (!Input.GetMouseButtonDown(0))
+        {
+            mouseClickForCoroutine = false;
+        }
+
+        if (mouseClickForCoroutine)
+        {
+            shortSwordHitbox.SetActive(true);
+            StartCoroutine(DeactivateShortSwordHitbox(.1f));
         }
 
         movement.x = Input.GetAxisRaw("Horizontal");
@@ -51,12 +80,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A) && !Input.GetKeyDown(KeyCode.D))
         {
-            spriteRenderer.flipX = true;
+            playerScale.x = -1;
         }
 
         else if(Input.GetKeyDown(KeyCode.D) && !Input.GetKeyDown(KeyCode.A))
         {
-            spriteRenderer.flipX = false;
+            playerScale.x = 1;
         }
 
         if (Input.GetMouseButton(0))
@@ -66,8 +95,8 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             anim.SetBool("attackAnim", false);
-            Debug.Log("Bye");
         }
+        transform.localScale = playerScale;
     }
 
     void FixedUpdate()
