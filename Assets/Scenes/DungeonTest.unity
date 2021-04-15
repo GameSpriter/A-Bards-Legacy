@@ -266,12 +266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridX: 3
   gridY: 1
-  prefabRooms:
-  - {fileID: 5561712208569146188, guid: b07dd99d544a6d54d94c0ae50ca96b94, type: 3}
-  - {fileID: 7682972728182622347, guid: dcaeb48ac11c42a449a06649e04d9472, type: 3}
-  - {fileID: 7440014431345430063, guid: 23cffc33f5cec9140a090866699a645e, type: 3}
-  - {fileID: 6348991505072050136, guid: 39046fd4ed7345d40b68df41e161f830, type: 3}
-  - {fileID: 7782825166615549336, guid: e168dde841e33be4caaff336ac31c190, type: 3}
+  prefabRooms: []
 --- !u!1 &1665571644
 GameObject:
   m_ObjectHideFlags: 0
