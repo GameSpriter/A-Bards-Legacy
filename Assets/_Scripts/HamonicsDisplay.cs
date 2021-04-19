@@ -18,6 +18,8 @@ public class HamonicsDisplay : MonoBehaviour
 
     //Note spawn script attached to music sheet sprite
     private NoteSpawn noteSpawnerScript;
+    
+    public NoteTracker noteTrackScript;
 
     public int numberOfSides = 4;
     public float polygonRadius = 2;
@@ -100,6 +102,8 @@ public class HamonicsDisplay : MonoBehaviour
         }
         else 
         {
+            noteTrackScript.SequenceEffectMatch();
+
             noteSpawnerScript.NoteSpawnReset();
 
             musicSheetPos.transform.position = Vector3.MoveTowards(musicSheetPos.transform.position,

@@ -24,6 +24,8 @@ public class NoteTracker : MonoBehaviour
 
     private string[] weaponSongs = { swordSequence_c, bowSequence_c };
 
+    public List<string> playedSequences = new List<string>();
+
     public MouseOnInputNote[] mc;
 
     // Update is called once per frame
@@ -81,7 +83,7 @@ public class NoteTracker : MonoBehaviour
     }
 
     /// <summary>
-    /// Checks for a valid sequence
+    /// Checks for a valid sequence that applies effects
     /// </summary>
     /// <param name="sequence"></param>
     public void isValidSequence(string sequence)
@@ -89,9 +91,48 @@ public class NoteTracker : MonoBehaviour
         if (sequence == songSubstring)
         {
             //Add to multiplier
+            playedSequences.Add(sequence);
+            //ApplyEffects(sequence) 
 
             //Reset tempSequence
             songSubstring = "";
+        }
+    }
+
+    /// <summary>
+    /// Iterates through sequences played and matches them with valid effect sequences
+    /// </summary>
+    public void SequenceEffectMatch() 
+    {
+        foreach (string sequence in playedSequences)
+        {
+            foreach (string song in weaponSongs) 
+            {
+                if(sequence == song) 
+                {
+                    ActivateEffect(sequence);
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// When harmonics mode exits, sequence effects are applied
+    /// </summary>
+    public void ActivateEffect(string effect) 
+    {
+        switch (effect) 
+        {
+            case swordSequence_c:
+                Debug.Log("Sword Animation");
+                //Place animation here
+                break;
+            case bowSequence_c:
+                Debug.Log("Bow Animation");
+                //Place animation here
+                break;
+            default:
+                break;
         }
     }
 }
