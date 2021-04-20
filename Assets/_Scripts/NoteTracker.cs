@@ -132,11 +132,13 @@ public class NoteTracker : MonoBehaviour
         {
             case swordSequence_c:
                 Debug.Log("Sword Animation");
-                //Place animation here
+                anim.SetBool("longSwordAnim", true);
+                anim.SetBool("shortSwordAnim", false);
+                anim.SetBool("harmonicsAnim", false);
                 break;
             case bowSequence_c:
                 Debug.Log("Bow Animation");
-                //Place animation here
+                anim.SetBool("bowAnim", true);
                 break;
             default:
                 break;
