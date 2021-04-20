@@ -21,7 +21,6 @@ public class EnemyAI : MonoBehaviour
             yield return new WaitForSeconds(.25f);
             counter--;
         }
-        Debug.Log("Hi");
     }
 
     void Update()

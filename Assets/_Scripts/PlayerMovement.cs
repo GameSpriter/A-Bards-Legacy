@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     bool mouseButtonDown = false;
     bool leftClick = false;
     bool mouseClickForCoroutine = true;
+    bool inHarmonicsMode = false;
 
     void Start()
     {
@@ -49,10 +50,16 @@ public class PlayerMovement : MonoBehaviour
         if (mouseButtonDown)
         {
             anim.SetBool("harmonicsAnim", true);
+            anim.SetBool("shortSwordAnim", false);
+            anim.SetBool("longSwordAnim", false);
+            inHarmonicsMode = true;
         }
         else
         {
             anim.SetBool("harmonicsAnim", false);
+            anim.SetBool("shortSwordAnim", true);
+            anim.SetBool("longSwordAnim", false);
+            inHarmonicsMode = false;
         }
 
         if (Input.GetMouseButtonDown(0))
@@ -90,11 +97,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            anim.SetBool("attackAnim", true);
+            anim.SetBool("shortSwordAnim", true);
         }
         else
         {
-            anim.SetBool("attackAnim", false);
+            anim.SetBool("shortSwordAnim", false);
         }
         transform.localScale = playerScale;
     }

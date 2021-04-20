@@ -29,6 +29,12 @@ public class NoteTracker : MonoBehaviour
     public MouseOnInputNote[] mc;
 
     public bool IsActivated { get; set; } = false;
+    public Animator anim;
+
+    void Start()
+    {
+        anim = gameObject.GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -128,11 +134,13 @@ public class NoteTracker : MonoBehaviour
         {
             case swordSequence_c:
                 Debug.Log("Sword Animation");
-                //Place animation here
+                anim.SetBool("longSwordAnim", true);
+                anim.SetBool("shortSwordAnim", false);
+                anim.SetBool("harmonicsAnim", false);
                 break;
             case bowSequence_c:
                 Debug.Log("Bow Animation");
-                //Place animation here
+                anim.SetBool("bowAnim", true);
                 break;
             default:
                 break;
