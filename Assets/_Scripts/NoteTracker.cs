@@ -28,6 +28,13 @@ public class NoteTracker : MonoBehaviour
 
     public MouseOnInputNote[] mc;
 
+    public Animator anim;
+
+    void Start()
+    {
+        anim = gameObject.GetComponent<Animator>();
+    }
+
     // Update is called once per frame
     void Update()
     {
