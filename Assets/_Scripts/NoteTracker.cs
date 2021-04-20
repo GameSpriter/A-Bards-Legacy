@@ -28,6 +28,8 @@ public class NoteTracker : MonoBehaviour
 
     public MouseOnInputNote[] mc;
 
+    public bool IsActivated { get; set; } = false;
+
     // Update is called once per frame
     void Update()
     {
@@ -114,6 +116,7 @@ public class NoteTracker : MonoBehaviour
                 }
             }
         }
+        IsActivated = false;
     }
 
     /// <summary>

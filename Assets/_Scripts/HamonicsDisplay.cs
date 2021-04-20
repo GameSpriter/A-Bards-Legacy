@@ -76,6 +76,7 @@ public class HamonicsDisplay : MonoBehaviour
             }
             else
             {
+                noteTrackScript.IsActivated = true;
                 harmonicsMode = false;
             }
         }
@@ -102,7 +103,10 @@ public class HamonicsDisplay : MonoBehaviour
         }
         else 
         {
-            noteTrackScript.SequenceEffectMatch();
+            if (noteTrackScript.IsActivated)
+            {
+                noteTrackScript.SequenceEffectMatch();
+            }
 
             noteSpawnerScript.NoteSpawnReset();
 

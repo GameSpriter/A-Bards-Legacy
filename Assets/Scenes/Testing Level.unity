@@ -824,6 +824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerpos: {fileID: 946246728}
   musicSheetPos: {fileID: 2080432669}
+  noteTrackScript: {fileID: 840326748}
   numberOfSides: 4
   polygonRadius: 2
   lr: {fileID: 0}
@@ -4773,6 +4774,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fe92ca9013c745429283cca560ed649, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gridX: 15
+  gridY: 15
 --- !u!4 &596829900
 Transform:
   m_ObjectHideFlags: 0
@@ -6980,6 +6983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   song: 
+  playedSequences: []
   mc:
   - {fileID: 730608154}
   - {fileID: 1083305271}
