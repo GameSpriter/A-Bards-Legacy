@@ -10,6 +10,7 @@ TagManager:
   - InputNote
   - ShortSwordHitbox
   - EighthNoteEnemy
+  - LongSwordHitbox
   layers:
   - Default
   - TransparentFX

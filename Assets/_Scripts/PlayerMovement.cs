@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     public GameObject shortSwordHitbox;
+    public GameObject longSwordHitbox;
 
     char lastKeyPressed;
 
@@ -32,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         shortSwordHitbox.SetActive(false);
+        longSwordHitbox.SetActive(false);
         longSwordActive = noteTracker.GetComponent<NoteTracker>().longSwordChange;
         shortSwordActive = noteTracker.GetComponent<NoteTracker>().shortSwordChange;
     }
@@ -46,9 +48,20 @@ public class PlayerMovement : MonoBehaviour
         }
         shortSwordHitbox.SetActive(false);
     }
+    IEnumerator DeactivateLongSwordHitbox(float seconds)
+    {
+        float counter = seconds;
+        while (counter > 0f)
+        {
+            yield return new WaitForSeconds(.50f);
+            counter--;
+        }
+        longSwordHitbox.SetActive(false);
+    }
 
     void Update()
     {
+        
         shortSwordActive = noteTracker.GetComponent<NoteTracker>().shortSwordChange;
         longSwordActive = noteTracker.GetComponent<NoteTracker>().longSwordChange;
 
@@ -94,8 +107,20 @@ public class PlayerMovement : MonoBehaviour
         
         if (mouseClickForCoroutine)
         {
-            shortSwordHitbox.SetActive(true);
-            StartCoroutine(DeactivateShortSwordHitbox(.1f));
+            if (longSwordActive == true)
+            {
+                longSwordHitbox.SetActive(true);
+                shortSwordActive = false;
+                StartCoroutine(DeactivateLongSwordHitbox(.1f));
+                Debug.Log("Long sword active is true");
+            }
+            if (shortSwordActive == true)
+            {
+                shortSwordHitbox.SetActive(true);
+                longSwordActive = false;
+                StartCoroutine(DeactivateShortSwordHitbox(.1f));
+                Debug.Log("short sword active is true");
+            }
         }
 
         movement.x = Input.GetAxisRaw("Horizontal");
