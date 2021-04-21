@@ -105,6 +105,9 @@ public class HamonicsDisplay : MonoBehaviour
         {
             if (noteTrackScript.IsActivated)
             {
+                noteTrackScript.SequenceSongSearch();
+                //noteTrackScript.songlength = noteTrackScript.song.Length;
+                noteTrackScript.song = "";
                 noteTrackScript.SequenceEffectMatch();
             }
 

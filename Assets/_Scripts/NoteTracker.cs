@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 using UnityEngine;
 
@@ -17,6 +18,7 @@ public class NoteTracker : MonoBehaviour
      */
 
     public string song = "";
+    public int songlength = 0;
     private string songSubstring = "";
 
     private const string swordSequence_c = "UUDUU";
@@ -46,28 +48,32 @@ public class NoteTracker : MonoBehaviour
             song += "U";
             songSubstring += "U";
             //Debug.Log(song);
-            Debug.Log(songSubstring + isValidSong());
+            Debug.Log(songSubstring);
+            //Debug.Log(songSubstring + isValidSong());
         }
         else if (!mc[1].IsHit && mc[1].GetInputNoteName == "Right Button")
         {
             song += "R";
             songSubstring += "R";
             //Debug.Log(song);
-            Debug.Log(songSubstring + isValidSong());
+            Debug.Log(songSubstring);
+            //Debug.Log(songSubstring + isValidSong());
         }
         else if (!mc[2].IsHit && mc[2].GetInputNoteName == "Left Button")
         {
             song += "L";
             songSubstring += "L";
             //Debug.Log(song);
-            Debug.Log(songSubstring + isValidSong());
+            Debug.Log(songSubstring);
+            //Debug.Log(songSubstring + isValidSong());
         }
         else if (!mc[3].IsHit && mc[3].GetInputNoteName == "Down Button")
         {
             song += "D";
             songSubstring += "D";
             //Debug.Log(song);
-            Debug.Log(songSubstring + isValidSong());
+            Debug.Log(songSubstring);
+            //Debug.Log(songSubstring + isValidSong());
         }
     }
 
@@ -110,15 +116,62 @@ public class NoteTracker : MonoBehaviour
     }
 
     /// <summary>
+    /// Searches through song for sequences after harmonics closes
+    /// </summary>
+    public void SequenceSongSearch()
+    {
+        string tempSong = song;
+        string sequenceSubstring = "";
+        bool isValidNote = false;
+
+        for (int i = 0; i < tempSong.Length; i++)
+        {
+            sequenceSubstring += tempSong[i];
+            foreach (string weaponSong in weaponSongs)
+            {
+                if (weaponSong.StartsWith(sequenceSubstring))
+                {
+                    isValidNote = true;
+                }
+                if (weaponSong.Equals(sequenceSubstring))
+                {
+                    playedSequences.Add(sequenceSubstring);
+                    sequenceSubstring = "";
+                    break;
+                }
+            }
+            if (!isValidNote)
+            {                
+                sequenceSubstring = sequenceSubstring.Remove(0,1);                                   
+            }
+            isValidNote = false;
+        }
+    }
+
+    /*
+    /// <summary>
+    /// Matches up valid sequence with song in songeffect list
+    /// </summary>
+    private void SequenceMatchUp(string validSequence, string sequenceSubstring) 
+    {
+        if (validSequence.Equals(sequenceSubstring))
+        {
+            playedSequences.Add(validSequence);
+            sequenceSubstring = "";
+        }
+    }
+    */
+
+    /// <summary>
     /// Iterates through sequences played and matches them with valid effect sequences
     /// </summary>
     public void SequenceEffectMatch() 
     {
         foreach (string sequence in playedSequences)
         {
-            foreach (string song in weaponSongs) 
+            foreach (string effectSong in weaponSongs) 
             {
-                if(sequence == song) 
+                if(sequence == effectSong) 
                 {
                     ActivateEffect(sequence);
                 }
