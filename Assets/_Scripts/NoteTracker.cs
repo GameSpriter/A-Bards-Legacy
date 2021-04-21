@@ -30,6 +30,8 @@ public class NoteTracker : MonoBehaviour
 
     public bool IsActivated { get; set; } = false;
     public Animator anim;
+    public bool longSwordChange = false;
+    public bool shortSwordChange = true;
 
     void Start()
     {
@@ -133,14 +135,12 @@ public class NoteTracker : MonoBehaviour
         switch (effect) 
         {
             case swordSequence_c:
-                Debug.Log("Sword Animation");
-                anim.SetBool("longSwordAnim", true);
-                anim.SetBool("shortSwordAnim", false);
-                anim.SetBool("harmonicsAnim", false);
+                Debug.Log("Long Sword Animation");
+                longSwordChange = true;
+                shortSwordChange = false;
                 break;
             case bowSequence_c:
                 Debug.Log("Bow Animation");
-                anim.SetBool("bowAnim", true);
                 break;
             default:
                 break;
