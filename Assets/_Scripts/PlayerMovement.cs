@@ -19,12 +19,21 @@ public class PlayerMovement : MonoBehaviour
     bool mouseButtonDown = false;
     bool leftClick = false;
     bool mouseClickForCoroutine = true;
+    bool inHarmonicsMode = false;
+    bool longSwordActive;
+    bool shortSwordActive;
+
+    //NoteTracker noteTracker;
+
+    public GameObject noteTracker;
 
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         shortSwordHitbox.SetActive(false);
+        longSwordActive = noteTracker.GetComponent<NoteTracker>().longSwordChange;
+        shortSwordActive = noteTracker.GetComponent<NoteTracker>().shortSwordChange;
     }
 
     IEnumerator DeactivateShortSwordHitbox(float seconds)
@@ -40,6 +49,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        shortSwordActive = noteTracker.GetComponent<NoteTracker>().shortSwordChange;
+        longSwordActive = noteTracker.GetComponent<NoteTracker>().longSwordChange;
+
         Vector3 playerScale = transform.localScale;
         if (Input.GetMouseButtonDown(2))
         {
@@ -49,22 +61,37 @@ public class PlayerMovement : MonoBehaviour
         if (mouseButtonDown)
         {
             anim.SetBool("harmonicsAnim", true);
+            anim.SetBool("shortSwordAnim", false);
+            anim.SetBool("longSwordAnim", false);
+            inHarmonicsMode = true;
         }
         else
         {
             anim.SetBool("harmonicsAnim", false);
+            if (longSwordActive == true)
+            {
+                anim.SetBool("shortSwordAnim", false);
+                anim.SetBool("longSwordAnim", true);
+            }
+            if (shortSwordActive == true)
+            {
+                anim.SetBool("shortSwordAnim", true);
+                anim.SetBool("longSwordAnim", false);
+            }
+            inHarmonicsMode = false;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && inHarmonicsMode == false)
         {
+            anim.SetBool("ifAttacking", true);
             mouseClickForCoroutine = true;
         }
-
-        if (!Input.GetMouseButtonDown(0))
+        else
         {
+            anim.SetBool("ifAttacking", false);
             mouseClickForCoroutine = false;
         }
-
+        
         if (mouseClickForCoroutine)
         {
             shortSwordHitbox.SetActive(true);
@@ -86,15 +113,6 @@ public class PlayerMovement : MonoBehaviour
         else if(Input.GetKeyDown(KeyCode.D) && !Input.GetKeyDown(KeyCode.A))
         {
             playerScale.x = 1;
-        }
-
-        if (Input.GetMouseButton(0))
-        {
-            anim.SetBool("attackAnim", true);
-        }
-        else
-        {
-            anim.SetBool("attackAnim", false);
         }
         transform.localScale = playerScale;
     }
