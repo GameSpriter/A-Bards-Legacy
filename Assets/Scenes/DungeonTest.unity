@@ -269,12 +269,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57c29170d0ce4a84ab499ba8d0b4fdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridX: 3
-  gridY: 3
+  roomsX: 3
+  roomsY: 3
+  prefabPlaceholder: {fileID: 992184377953002082, guid: 8c533a38faf97334da466d1cc3322498,
+    type: 3}
+  prefabWall: {fileID: 3051767622077802559, guid: f9270f5469693ee41a8a944e54a53480,
+    type: 3}
+  prefabDoor: {fileID: 2092515665979460798, guid: 9310469d0eed6764185f5da94a7e52be,
+    type: 3}
+  prefabFilledRoom: {fileID: 3787885664245407293, guid: bc3008174c514a643a4f4940f594ac9b,
+    type: 3}
   prefabRooms:
-  - {fileID: 905446791534548356, guid: 93b9524e113eaf34d87ea0da5f675894, type: 3}
-  - {fileID: 2550158561174348509, guid: d90c3e75cc425a141b84ae55f91b427a, type: 3}
-  - {fileID: 5708883902355107595, guid: d0322b3db0a9ed84dae3c79ac7851842, type: 3}
+  - {fileID: 9029877480968231591, guid: 6395cb470367bdf428ddc8a29dcfde5f, type: 3}
+  - {fileID: 2310242586670786184, guid: b5f70d3e117a44b419e943ca3ad3e505, type: 3}
+  - {fileID: 4789652022013385130, guid: ca8d2abe49e483b4690a4f4b82f8d680, type: 3}
+  - {fileID: 326083800895357520, guid: f7fd6a5ad4df9364ebd31bf3304fc7d5, type: 3}
+  - {fileID: 5875730425936224595, guid: 28e3b43c22da6c1418b3992f8a78aba8, type: 3}
+  - {fileID: 5006913286564864617, guid: 325ae734fb687ac44862d21cccc83f3b, type: 3}
+  - {fileID: 7885680244364997798, guid: a793bc81ec3c93f4ea2f00b08f28c751, type: 3}
+  - {fileID: 1493264796226321460, guid: 516d05f60ad11a14d91779454aebf40a, type: 3}
+  - {fileID: 7074000778581567811, guid: ca74fe78e5d434843bc241a2832cdce9, type: 3}
+  - {fileID: 5334305981575363946, guid: 659f00a14b058074fb767575b040ae70, type: 3}
 --- !u!1 &1665571644
 GameObject:
   m_ObjectHideFlags: 0
