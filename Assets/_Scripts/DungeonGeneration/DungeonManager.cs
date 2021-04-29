@@ -58,6 +58,9 @@ public class DungeonManager : MonoBehaviour
         Debug.Log("Start: 0, " + start);
         Debug.Log("End: " + roomsX + ", " + end);
 
+        //Move the player to the correct position in the dungeon
+        Camera.main.GetComponent<CameraRefs>().player.transform.SetPositionAndRotation(new Vector2(10.5f, (start * 18) + 10.5f), Quaternion.identity);
+
         TileGrid<char> path = setupPath(start, end);
 
         for (int gx = 0, px = 0; gx < gridX; gx++)
