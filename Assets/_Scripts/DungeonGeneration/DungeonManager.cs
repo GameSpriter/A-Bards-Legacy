@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +10,8 @@ public class DungeonManager : MonoBehaviour
     private int gridY;
     private int gridScale = 3;
 
+    public GameObject prefabStartRoom;
+    public GameObject prefabEndRoom;
     public GameObject prefabPlaceholder;
     public GameObject prefabWall;
     public GameObject prefabDoor;
@@ -20,6 +22,8 @@ public class DungeonManager : MonoBehaviour
 
     private void Start()
     {
+        roomsX += 2; //Added to allow room for the start and end room
+
         gridX = 1 + (roomsX * 6);
         gridY = 1 + (roomsY * 6);
 
@@ -28,6 +32,7 @@ public class DungeonManager : MonoBehaviour
         setupDungeon();
     }
 
+    //Un-comment for debugging purposes ONLY
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.R))
@@ -48,7 +53,7 @@ public class DungeonManager : MonoBehaviour
     private void setupDungeon() {
 
         //Position control setup
-        int start = Random.Range(0, roomsX);
+        int start = Random.Range(0, roomsY);
         int end = Random.Range(0, roomsY);
         Debug.Log("Start: 0, " + start);
         Debug.Log("End: " + roomsX + ", " + end);
@@ -62,16 +67,15 @@ public class DungeonManager : MonoBehaviour
             {
                 py = Mathf.FloorToInt(gy / 6.0f);
 
-                //[D]Placeholder
-                //[D]Room
-                //[D]Wall
-                //[D]Door
-
                 if(isPlaceholder(gx, gy)) {
                     placePlaceholder(gx, gy);
                 } else if(isRoom(gx, gy)) {
                     if(path.GetValue(px, py).Equals('Z')) {
                         placeFilledRoom(gx, gy);
+                    } else if(path.GetValue(px, py).Equals('B')) {
+                        placeStartRoom(gx, gy);
+                    } else if(path.GetValue(px, py).Equals('F')) {
+                        placeEndRoom(gx, gy);
                     } else {
                         placeRandomRoom(gx, gy);
                     }
@@ -97,7 +101,17 @@ public class DungeonManager : MonoBehaviour
         dungeon.SetValue(x, y, Instantiate(prefabRooms[index], new Vector2(x * dungeon.scale, y * dungeon.scale), Quaternion.identity));
         dungeon.GetValue(x, y).transform.parent = gameObject.transform;
         dungeon.GetValue(x, y).name = "Room: (" + x + ", " + y + ")";
-    }    
+    }
+    private void placeStartRoom(int x, int y) {
+        dungeon.SetValue(x, y, Instantiate(prefabStartRoom, new Vector2(x * dungeon.scale, y * dungeon.scale), Quaternion.identity));
+        dungeon.GetValue(x, y).transform.parent = gameObject.transform;
+        dungeon.GetValue(x, y).name = "Starting Room: (" + x + ", " + y + ")";
+    }
+    private void placeEndRoom(int x, int y) {
+        dungeon.SetValue(x, y, Instantiate(prefabEndRoom, new Vector2(x * dungeon.scale, y * dungeon.scale), Quaternion.identity));
+        dungeon.GetValue(x, y).transform.parent = gameObject.transform;
+        dungeon.GetValue(x, y).name = "Starting Room: (" + x + ", " + y + ")";
+    }
     private void placeFilledRoom(int x, int y) {
         int index = Random.Range(0, prefabRooms.Length);
         
@@ -167,7 +181,7 @@ public class DungeonManager : MonoBehaviour
         }
 
         if(y % 6 == 3) {
-            if(path.GetValue(px - 1, py).Equals('E')) { //If the path to the left of the doorway leads easy
+            if(path.GetValue(px - 1, py).Equals('E') || path.GetValue(px - 1, py).Equals('B')) { //If the path to the left of the doorway leads easy
                 return true;
             } else if (!path.GetValue(px - 1, py).Equals('Z') && !path.GetValue(px, py).Equals('Z')) {//If the path to the left and right are both valid rooms
                 int temp = Random.Range(0, 3);
@@ -213,6 +227,10 @@ public class DungeonManager : MonoBehaviour
             }
         }
 
+        //Start Room
+        path.SetValue(posX, posY, 'B');
+        posX++;
+
         //Path creation
         while(posX != roomsX - 1) {
             int nextDir = -1;
@@ -254,7 +272,7 @@ public class DungeonManager : MonoBehaviour
             }
         }
 
-        path.SetValue(posX, posY, 'E');
+        path.SetValue(posX, posY, 'F');
 
         return path;
     }
