@@ -232,7 +232,7 @@ public class DungeonManager : MonoBehaviour
         posX++;
 
         //Path creation
-        while(posX != roomsX - 1) {
+        while(posX != roomsX - 2) {
             int nextDir = -1;
 
             //0 = North; 1 = East; 2 = South;
@@ -272,6 +272,8 @@ public class DungeonManager : MonoBehaviour
             }
         }
 
+        path.SetValue(posX, posY, 'E');
+        posX++;
         path.SetValue(posX, posY, 'F');
 
         return path;
