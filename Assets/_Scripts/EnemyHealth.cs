@@ -5,11 +5,11 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public GameObject enemy;
-    int enemyHealth = 3;
+    int enemyHealth = 10;
 
     void Update()
     {
-        if (enemyHealth == 0)
+        if (enemyHealth <= 0)
         {
             Destroy(enemy);
         }
@@ -20,6 +20,11 @@ public class EnemyHealth : MonoBehaviour
         if (col.gameObject.tag == "ShortSwordHitbox")
         {
             enemyHealth -= 1;
+            Debug.Log("Current enemy health is: " + enemyHealth);
+        }
+        if (col.gameObject.tag == "LongSwordHitbox")
+        {
+            enemyHealth -= 3;
             Debug.Log("Current enemy health is: " + enemyHealth);
         }
     }
