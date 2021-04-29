@@ -8,7 +8,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Update()
     {
-        if (enemyHealth == 0)
+        if (enemyHealth <= 0)
         {
             Destroy(gameObject);
         }
@@ -19,6 +19,11 @@ public class EnemyHealth : MonoBehaviour
         if (col.gameObject.tag == "ShortSwordHitbox")
         {
             enemyHealth -= 1;
+            Debug.Log("Current enemy health is: " + enemyHealth);
+        }
+        if (col.gameObject.tag == "LongSwordHitbox")
+        {
+            enemyHealth -= 3;
             Debug.Log("Current enemy health is: " + enemyHealth);
         }
     }
