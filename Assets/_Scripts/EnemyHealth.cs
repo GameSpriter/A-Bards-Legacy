@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    int enemyHealth = 3;
+    int enemyHealth = 10;
 
     void Update()
     {
