@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public GameObject enemy;
     int enemyHealth = 10;
 
     void Update()
     {
         if (enemyHealth <= 0)
         {
-            Destroy(enemy);
+            Destroy(gameObject);
         }
     }
 

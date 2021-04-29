@@ -6,7 +6,6 @@ public class EnemyAI : MonoBehaviour
 {
     private bool inRange = false;
     public GameObject player;
-    public GameObject enemy;
     private Vector2 playerPosition;
     private Vector2 enemyPosition;
     Vector2 Destination;
@@ -27,7 +26,7 @@ public class EnemyAI : MonoBehaviour
     {
         checkForPlayer();
         playerPosition = player.transform.position;
-        enemyPosition = enemy.transform.position;
+        enemyPosition = gameObject.transform.position;
     }
 
     void checkForPlayer()
