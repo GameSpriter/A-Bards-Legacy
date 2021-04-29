@@ -5,12 +5,18 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     private bool inRange = false;
-    public GameObject player;
+    private GameObject player;
     private Vector2 playerPosition;
     private Vector2 enemyPosition;
     Vector2 Destination;
     float Distance;
     private float speed = 2f;
+
+    private void Awake() {
+        if(player == null) {
+            player = Camera.main.GetComponent<CameraRefs>().player;
+        }
+    }
 
     IEnumerator TimeForEnemyToMoveBack(float seconds)
     {
