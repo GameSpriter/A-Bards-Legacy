@@ -4811,7 +4811,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 596829900}
-  - component: {fileID: 596829899}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -4819,20 +4818,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &596829899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 596829898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fe92ca9013c745429283cca560ed649, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gridX: 15
-  gridY: 15
 --- !u!4 &596829900
 Transform:
   m_ObjectHideFlags: 0
@@ -7041,6 +7026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   song: 
+  songlength: 0
   playedSequences: []
   mc:
   - {fileID: 730608154}
@@ -8476,7 +8462,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &985546175
 Transform:
   m_ObjectHideFlags: 0
@@ -9259,7 +9245,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.045852005, y: 0.4803462}
+  m_Offset: {x: 0.03125286, y: 0.46818018}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -9270,7 +9256,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.73798835, y: 0.9606924}
+  m_Size: {x: 0.62606144, y: 0.93636036}
   m_EdgeRadius: 0
 --- !u!1001 &1103018557
 PrefabInstance:
