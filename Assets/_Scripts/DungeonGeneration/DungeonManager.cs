@@ -58,6 +58,9 @@ public class DungeonManager : MonoBehaviour
         Debug.Log("Start: 0, " + start);
         Debug.Log("End: " + roomsX + ", " + end);
 
+        //Move the player to the correct position in the dungeon
+        Camera.main.GetComponent<CameraRefs>().player.transform.SetPositionAndRotation(new Vector2(10.5f, (start * 18) + 10.5f), Quaternion.identity);
+
         TileGrid<char> path = setupPath(start, end);
 
         for (int gx = 0, px = 0; gx < gridX; gx++)
@@ -232,7 +235,7 @@ public class DungeonManager : MonoBehaviour
         posX++;
 
         //Path creation
-        while(posX != roomsX - 1) {
+        while(posX != roomsX - 2) {
             int nextDir = -1;
 
             //0 = North; 1 = East; 2 = South;
@@ -272,6 +275,8 @@ public class DungeonManager : MonoBehaviour
             }
         }
 
+        path.SetValue(posX, posY, 'E');
+        posX++;
         path.SetValue(posX, posY, 'F');
 
         return path;
