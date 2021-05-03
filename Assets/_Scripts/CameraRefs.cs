@@ -5,7 +5,8 @@ using UnityEngine;
 public class CameraRefs : MonoBehaviour
 {
     public GameObject player;
-    void Start()
+    
+    private void Awake()
     {
         if(player == null) {
             GameObject.FindGameObjectWithTag("Player");
