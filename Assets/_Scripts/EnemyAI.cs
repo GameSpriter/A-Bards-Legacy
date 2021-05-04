@@ -1,71 +1,154 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    private bool inRange = false;
-    private GameObject player;
-    private Vector2 playerPosition;
-    private Vector2 enemyPosition;
-    Vector2 Destination;
-    float Distance;
-    private float speed = 2f;
+    enum State
+    {
+        Idle,
+        Chasing,
+        Attacking,
+    }
+
+    [SerializeField] private bool inRange = false;
+    [SerializeField] private GameObject player;
+    [SerializeField] private Vector2 playerPosition;
+    [SerializeField] private Vector2 enemyPosition;
+    [SerializeField] Vector2 Destination;
+    [SerializeField] float Distance;
+    [SerializeField] float chaseRange = 4f;
+    [SerializeField] float attackRange = 0.5f;
+    [SerializeField] private float speed = 2f;
+    [SerializeField] private bool attackCooldown = false;
+    [SerializeField] private float cooldownTime = 3f;
+
+    private SpriteRenderer spriteRenderer;
+    private Animator animator;
+
+    State state;
 
     private void Awake() {
         if(player == null) {
             player = Camera.main.GetComponent<CameraRefs>().player;
         }
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+
+        state = State.Idle;
     }
 
-    IEnumerator TimeForEnemyToMoveBack(float seconds)
+    
+    IEnumerator unFreezePosition(float seconds)
     {
         float counter = seconds;
-        while (counter > 0f)
+        speed = 0f;
+        
+        if (counter > 0f)
         {
-            yield return new WaitForSeconds(.25f);
+
+            //GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+            Debug.Log("Frozen");
+            yield return new WaitForSeconds(5f);
             counter--;
         }
+        else
+        {
+            //GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+        }
     }
+    
 
     void Update()
     {
-        checkForPlayer();
+        if (!attackCooldown)
+            checkForPlayer();
+        else
+        {
+            if (cooldownTime > 0f)
+                cooldownTime -= Time.deltaTime;
+            else
+                attackCooldown = false;
+        }
+
         playerPosition = player.transform.position;
         enemyPosition = gameObject.transform.position;
+
+        Vector3 enemyScale = transform.localScale;
+
+        if (player.transform.position.x < this.transform.position.x)
+        {
+            enemyScale.x = 1;
+        }
+        else
+        {
+            enemyScale.x = -1;
+        }
+
+        transform.localScale = enemyScale;
+
+        switch(state)
+        {
+            default:
+            case State.Idle:
+                Debug.Log("Enemy Idle");
+                transform.position = enemyPosition;
+                break;
+            case State.Chasing:
+                Debug.Log("Enemy Chasing");
+                chasePlayer();
+                break;
+            case State.Attacking:
+                Debug.Log("Enemy Attacking");
+                meleeAttackPlayer();
+                break;
+        }
     }
 
     void checkForPlayer()
     {
-        Destination = GameObject.FindGameObjectWithTag("Player").transform.position;
+        Destination = player.transform.position;
         Distance = Vector2.Distance(gameObject.transform.position, Destination);
 
-        if (Distance < 5)
+        //if (Distance < 5)
+        //{
+        //    inRange = true;
+        //    combatWithPlayer();
+        //}
+        if (Distance > chaseRange)
         {
-            inRange = true;
-            combatWithPlayer();
+            state = State.Idle;
         }
-        else
+        else if (Distance < chaseRange && Distance > attackRange)
         {
-            inRange = false;
+            state = State.Chasing;
         }
+        else if (Distance < attackRange)
+        {
+            state = State.Attacking;
+        }
+        //else
+        //{
+        //    inRange = false;
+        //}
     }
 
-    void combatWithPlayer()
-    {
-        if (inRange == true && (Distance > 4))
-        {
-            transform.position = enemyPosition;
-        }
-        else if (inRange == true && (Distance < 4 && Distance > .85))
-        {
-            chasePlayer();
-        }
-        else if (inRange == true && (Distance < .65))
-        {
-            meleeAttackPlayer();
-        }
-    }
+    //void combatWithPlayer()
+    //{
+    //    if (inRange == true && (Distance > chaseRange))
+    //    {
+    //        transform.position = enemyPosition;
+    //    }
+    //    else if (inRange == true && (Distance < chaseRange && Distance > attackRange))
+    //    {
+    //        chasePlayer();
+    //    }
+    //    else if (inRange == true && (Distance < attackRange))
+    //    {
+    //        meleeAttackPlayer();
+    //    }
+    //}
 
     void chasePlayer()
     {
@@ -76,7 +159,12 @@ public class EnemyAI : MonoBehaviour
     void meleeAttackPlayer()
     {
         //Attack code here, along with damage and animation
-        StartCoroutine(TimeForEnemyToMoveBack(.1f));
+        animator.Play("Chompy Boy_Attack_D");
+        state = State.Idle;
+        attackCooldown = true;
+        cooldownTime = 3f;
+
+        //StartCoroutine(unFreezePosition(1f));
         //Move enemy back
     }
 }

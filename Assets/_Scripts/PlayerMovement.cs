@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     bool inHarmonicsMode = false;
     bool longSwordActive;
     bool shortSwordActive;
+    bool bowActive;
 
     //NoteTracker noteTracker;
 
@@ -76,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("harmonicsAnim", true);
             anim.SetBool("shortSwordAnim", false);
             anim.SetBool("longSwordAnim", false);
+            anim.SetBool("bowAnim", false);
             inHarmonicsMode = true;
         }
         else
@@ -85,11 +87,19 @@ public class PlayerMovement : MonoBehaviour
             {
                 anim.SetBool("shortSwordAnim", false);
                 anim.SetBool("longSwordAnim", true);
+                anim.SetBool("bowAnim", false);
             }
-            if (shortSwordActive == true)
+            else if (shortSwordActive == true)
             {
                 anim.SetBool("shortSwordAnim", true);
                 anim.SetBool("longSwordAnim", false);
+                anim.SetBool("bowAnim", false);
+            }
+            else if (bowActive == true)
+            {
+                anim.SetBool("shortSwordAnim", false);
+                anim.SetBool("longSwordAnim", false);
+                anim.SetBool("bowAnim", true);
             }
             inHarmonicsMode = false;
         }
@@ -112,14 +122,12 @@ public class PlayerMovement : MonoBehaviour
                 longSwordHitbox.SetActive(true);
                 shortSwordActive = false;
                 StartCoroutine(DeactivateLongSwordHitbox(.1f));
-                Debug.Log("Long sword active is true");
             }
             if (shortSwordActive == true)
             {
                 shortSwordHitbox.SetActive(true);
                 longSwordActive = false;
                 StartCoroutine(DeactivateShortSwordHitbox(.1f));
-                Debug.Log("short sword active is true");
             }
         }
 

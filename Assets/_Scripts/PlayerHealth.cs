@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
@@ -11,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (playerHealth == 0)
         {
-            player.SetActive(false);
+            SceneManager.LoadScene("DungeonTest", LoadSceneMode.Single);
         }
     }
 
