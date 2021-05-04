@@ -22,15 +22,23 @@ public class EnemyAI : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    IEnumerator TimeForEnemyToMoveBack(float seconds)
+    /*
+    IEnumerator unFreezePosition(float seconds)
     {
         float counter = seconds;
+        speed = 0f;
+        
         while (counter > 0f)
         {
-            yield return new WaitForSeconds(.25f);
+            float enemySpeed = speed * Time.deltaTime;
+            transform.position = Vector2.MoveTowards(transform.position, playerPosition, enemySpeed);
+            transform.position = enemyPosition;
+            Debug.Log("Frozen");
+            yield return new WaitForSeconds(5f);
             counter--;
         }
     }
+    */
 
     void Update()
     {
@@ -78,7 +86,7 @@ public class EnemyAI : MonoBehaviour
         {
             chasePlayer();
         }
-        else if (inRange == true && (Distance < .65))
+        else if (inRange == true && (Distance < .5))
         {
             meleeAttackPlayer();
         }
@@ -93,7 +101,8 @@ public class EnemyAI : MonoBehaviour
     void meleeAttackPlayer()
     {
         //Attack code here, along with damage and animation
-        StartCoroutine(TimeForEnemyToMoveBack(.1f));
+
+        //StartCoroutine(unFreezePosition(1f));
         //Move enemy back
     }
 }

@@ -122,14 +122,12 @@ public class PlayerMovement : MonoBehaviour
                 longSwordHitbox.SetActive(true);
                 shortSwordActive = false;
                 StartCoroutine(DeactivateLongSwordHitbox(.1f));
-                Debug.Log("Long sword active is true");
             }
             if (shortSwordActive == true)
             {
                 shortSwordHitbox.SetActive(true);
                 longSwordActive = false;
                 StartCoroutine(DeactivateShortSwordHitbox(.1f));
-                Debug.Log("short sword active is true");
             }
         }
 
