@@ -36,7 +36,13 @@ public class HamonicsDisplay : MonoBehaviour
     private Vector2 mosPos;
 
     private bool harmonicsMode = false;
-    bool animationinHarmonics = false;    
+    bool animationinHarmonics = false;
+
+    private void Awake() {
+        if(playerpos == null) {
+            playerpos = Camera.main.GetComponent<CameraRefs>().player;
+        }
+    }
 
     void Start()
     {
@@ -51,7 +57,7 @@ public class HamonicsDisplay : MonoBehaviour
             lr.loop = true;
         }
 
-        musicSheetPos.transform.position = new Vector3(musicSheetPos.transform.position.x, 7.0f);
+        musicSheetPos.transform.position = new Vector3(musicSheetPos.transform.position.x, Camera.main.transform.position.y + 7.0f);
         //noteTrackScript = new NoteTracker();
         noteSpawnerScript = musicSheetPos.GetComponent<NoteSpawn>();
 
@@ -85,7 +91,7 @@ public class HamonicsDisplay : MonoBehaviour
         {
             musicSheetPos.SetActive(true);
             musicSheetPos.transform.position = Vector3.MoveTowards(musicSheetPos.transform.position,
-                    new Vector3(musicSheetPos.transform.position.x, 3.0f), 0.025f);
+                    new Vector3(musicSheetPos.transform.position.x, Camera.main.transform.position.y + 3.0f), 0.025f);
 
 
             for (int i = 0; i < gameObject.transform.childCount; i++)
@@ -114,7 +120,7 @@ public class HamonicsDisplay : MonoBehaviour
             noteSpawnerScript.NoteSpawnReset();
 
             musicSheetPos.transform.position = Vector3.MoveTowards(musicSheetPos.transform.position,
-                   new Vector3(musicSheetPos.transform.position.x, 7.0f), 0.025f);
+                   new Vector3(musicSheetPos.transform.position.x, Camera.main.transform.position.y + 7.0f), 0.025f);
             if (musicSheetPos.transform.position.y >= 7.0f) 
             {
                 musicSheetPos.SetActive(false);
