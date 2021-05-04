@@ -36,7 +36,13 @@ public class HamonicsDisplay : MonoBehaviour
     private Vector2 mosPos;
 
     private bool harmonicsMode = false;
-    bool animationinHarmonics = false;    
+    bool animationinHarmonics = false;
+
+    private void Awake() {
+        if(playerpos == null) {
+            playerpos = Camera.main.GetComponent<CameraRefs>().player;
+        }
+    }
 
     void Start()
     {
