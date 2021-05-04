@@ -12,10 +12,14 @@ public class EnemyAI : MonoBehaviour
     float Distance;
     private float speed = 2f;
 
+    private SpriteRenderer spriteRenderer;
+    public GameObject playerCharacter;
+
     private void Awake() {
         if(player == null) {
             player = Camera.main.GetComponent<CameraRefs>().player;
         }
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     IEnumerator TimeForEnemyToMoveBack(float seconds)
@@ -33,6 +37,19 @@ public class EnemyAI : MonoBehaviour
         checkForPlayer();
         playerPosition = player.transform.position;
         enemyPosition = gameObject.transform.position;
+
+        Vector3 enemyScale = transform.localScale;
+
+        if (playerCharacter.transform.position.x < this.transform.position.x)
+        {
+            enemyScale.x = 1;
+        }
+        else
+        {
+            enemyScale.x = -1;
+        }
+
+        transform.localScale = enemyScale;
     }
 
     void checkForPlayer()
