@@ -10,27 +10,28 @@ public class NoteSpawn : MonoBehaviour
     public MouseOnInputNote[] mc;
 
     public GameObject[] spawnPositions;
+
+    //[SerializeField]
+    //private Transform[] spawnTransforms;
+    
     public GameObject[] notes;
     public List<GameObject> tempSpawnContainer = new List<GameObject>();
 
     public float incrementPosition = 0.0f;
-    private float offset = 9.0f;
+    private float offset = 9f;
+    private float shift = 0.25f;
 
     public bool EndIsReached { get; set; } = false;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        //Set notes in designated positions on music sheet
-        for (int i = 0; i < notes.Length; i++)
-        {
-            notes[i].transform.position = spawnPositions[i].transform.position;
-        }
+        
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {     
         //Playing a note will happen once when touched
         if (!mc[0].IsHit && mc[0].GetInputNoteName == "Up Button") 
         {
@@ -55,6 +56,15 @@ public class NoteSpawn : MonoBehaviour
         
     }
 
+    private void FixedUpdate()
+    {
+        //Set notes in designated positions on music sheet
+        for (int i = 0; i < notes.Length; i++)
+        {
+            notes[i].transform.position = spawnPositions[i].transform.position;
+        }
+    }
+
     /// <summary>
     /// How notes will be displayed in proper positions
     /// </summary>
@@ -62,6 +72,7 @@ public class NoteSpawn : MonoBehaviour
     void NoteSpawner(int i) 
     {
         tempSpawnContainer.Add(Instantiate(notes[i]));
+        tempSpawnContainer[tempSpawnContainer.Count - 1].transform.SetParent(gameObject.transform);
         tempSpawnContainer[tempSpawnContainer.Count - 1].transform.position =
             new Vector3(tempSpawnContainer[tempSpawnContainer.Count - 1].transform.position.x + incrementPosition,
             tempSpawnContainer[tempSpawnContainer.Count - 1].transform.position.y);
@@ -70,7 +81,7 @@ public class NoteSpawn : MonoBehaviour
         {
             if (incrementPosition < transform.position.x + offset)
             {
-                incrementPosition += 1.0f;
+                incrementPosition += (shift);
             }
         }
     }
@@ -84,7 +95,7 @@ public class NoteSpawn : MonoBehaviour
         {
             //tempSpawnContainer[i].transform.Translate(new Vector3(tempSpawnContainer[i].transform.position.x - 1.0f,
             //tempSpawnContainer[i].transform.position.y));
-            tempSpawnContainer[i].transform.position = new Vector3(tempSpawnContainer[i].transform.position.x - 1.0f,
+            tempSpawnContainer[i].transform.position = new Vector3(tempSpawnContainer[i].transform.position.x - shift,
                 tempSpawnContainer[i].transform.position.y);
         }
     }

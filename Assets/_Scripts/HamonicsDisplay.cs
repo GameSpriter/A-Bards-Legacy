@@ -34,9 +34,9 @@ public class HamonicsDisplay : MonoBehaviour
     public float width = 1f;
 
     private Vector2 mosPos;
-
-    private bool harmonicsMode = false;
     bool animationinHarmonics = false;
+
+    public bool HarmonicsMode { get; set; } = false;
 
     private void Awake() {
         if(playerpos == null) {
@@ -76,18 +76,22 @@ public class HamonicsDisplay : MonoBehaviour
 
         if (Input.GetMouseButtonDown(2))
         {
-            if (!harmonicsMode)
+            if (!HarmonicsMode)
             {
-                harmonicsMode = true;                
+                HarmonicsMode = true;                
             }
             else
             {
                 noteTrackScript.IsActivated = true;
-                harmonicsMode = false;
+                HarmonicsMode = false;
             }
         }
 
-        if (harmonicsMode)
+        if (noteTrackScript.song.Length > 400) {
+            HarmonicsMode = false;
+        }
+
+        if (HarmonicsMode)
         {
             musicSheetPos.SetActive(true);
             musicSheetPos.transform.position = Vector3.MoveTowards(musicSheetPos.transform.position,
