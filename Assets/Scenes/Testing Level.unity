@@ -19796,6 +19796,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8006421403183465952, guid: 857c7c1e44b7bc44a9eb272b6f3e3b89,
         type: 3}
+      propertyPath: attackRange
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006421403183465952, guid: 857c7c1e44b7bc44a9eb272b6f3e3b89,
+        type: 3}
       propertyPath: playerCharacter
       value: 
       objectReference: {fileID: 946246728}
@@ -19865,7 +19870,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 946246730, guid: 1c48b1258d539544f9f9e920c8eb41da, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8142308170845674242, guid: 1c48b1258d539544f9f9e920c8eb41da,
         type: 3}
