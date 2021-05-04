@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (playerHealth == 0)
         {
-            SceneManager.LoadScene("DungeonTest");
+            SceneManager.LoadScene("DungeonTest", LoadSceneMode.Single);
         }
     }
 
