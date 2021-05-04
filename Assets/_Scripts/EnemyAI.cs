@@ -21,6 +21,8 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] float chaseRange = 4f;
     [SerializeField] float attackRange = 0.5f;
     [SerializeField] private float speed = 2f;
+    [SerializeField] private bool attackCooldown = false;
+    [SerializeField] private float cooldownTime = 3f;
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -60,7 +62,16 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
-        checkForPlayer();
+        if (!attackCooldown)
+            checkForPlayer();
+        else
+        {
+            if (cooldownTime > 0f)
+                cooldownTime -= Time.deltaTime;
+            else
+                attackCooldown = false;
+        }
+
         playerPosition = player.transform.position;
         enemyPosition = gameObject.transform.position;
 
@@ -149,6 +160,10 @@ public class EnemyAI : MonoBehaviour
     {
         //Attack code here, along with damage and animation
         animator.Play("Chompy Boy_Attack_D");
+        state = State.Idle;
+        attackCooldown = true;
+        cooldownTime = 3f;
+
         //StartCoroutine(unFreezePosition(1f));
         //Move enemy back
     }

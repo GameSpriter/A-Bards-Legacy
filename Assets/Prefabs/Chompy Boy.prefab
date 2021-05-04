@@ -118,6 +118,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70feb9fc8148b554384522e65b4aae6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inRange: 0
+  player: {fileID: 0}
+  playerPosition: {x: 0, y: 0}
+  enemyPosition: {x: 0, y: 0}
+  Destination: {x: 0, y: 0}
+  Distance: 0
+  chaseRange: 4
+  attackRange: 0.8
+  speed: 2
+  attackCooldown: 0
+  cooldownTime: 3
 --- !u!61 &1093264302
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -176,4 +187,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
