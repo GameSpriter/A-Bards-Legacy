@@ -125,7 +125,7 @@ MonoBehaviour:
   Destination: {x: 0, y: 0}
   Distance: 0
   chaseRange: 4
-  attackRange: 0.8
+  attackRange: 0.6
   speed: 2
   attackCooldown: 0
   cooldownTime: 3
@@ -142,7 +142,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03125286, y: -0.03136021}
+  m_Offset: {x: -0.004387617, y: -0.22576326}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -153,7 +153,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.62606144, y: 0.9451939}
+  m_Size: {x: 0.5547805, y: 0.5563878}
   m_EdgeRadius: 0
 --- !u!114 &1093264297
 MonoBehaviour:
