@@ -13,7 +13,6 @@ public class EnemyAI : MonoBehaviour
     private float speed = 2f;
 
     private SpriteRenderer spriteRenderer;
-    public GameObject playerCharacter;
 
     private void Awake() {
         if(player == null) {
@@ -48,7 +47,7 @@ public class EnemyAI : MonoBehaviour
 
         Vector3 enemyScale = transform.localScale;
 
-        if (playerCharacter.transform.position.x < this.transform.position.x)
+        if (player.transform.position.x < this.transform.position.x)
         {
             enemyScale.x = 1;
         }
@@ -62,7 +61,7 @@ public class EnemyAI : MonoBehaviour
 
     void checkForPlayer()
     {
-        Destination = GameObject.FindGameObjectWithTag("Player").transform.position;
+        Destination = player.transform.position;
         Distance = Vector2.Distance(gameObject.transform.position, Destination);
 
         if (Distance < 5)
