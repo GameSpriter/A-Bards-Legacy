@@ -22,23 +22,18 @@ public class EnemyAI : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    /*
+   
     IEnumerator unFreezePosition(float seconds)
     {
         float counter = seconds;
-        speed = 0f;
         
         while (counter > 0f)
         {
-            float enemySpeed = speed * Time.deltaTime;
-            transform.position = Vector2.MoveTowards(transform.position, playerPosition, enemySpeed);
-            transform.position = enemyPosition;
             Debug.Log("Frozen");
             yield return new WaitForSeconds(5f);
             counter--;
         }
     }
-    */
 
     void Update()
     {
@@ -102,7 +97,7 @@ public class EnemyAI : MonoBehaviour
     {
         //Attack code here, along with damage and animation
 
-        //StartCoroutine(unFreezePosition(1f));
+        StartCoroutine(unFreezePosition(1f));
         //Move enemy back
     }
 }
