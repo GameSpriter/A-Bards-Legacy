@@ -28,6 +28,11 @@ public class PlayerMovement : MonoBehaviour
     //NoteTracker noteTracker;
 
     public GameObject noteTracker;
+    public Transform shotSpawn;
+    public GameObject arrowPrefab;
+    float speed = 8f;
+
+    Vector3 playerScale;
 
     void Start()
     {
@@ -38,6 +43,8 @@ public class PlayerMovement : MonoBehaviour
         longSwordActive = noteTracker.GetComponent<NoteTracker>().longSwordChange;
         shortSwordActive = noteTracker.GetComponent<NoteTracker>().shortSwordChange;
         bowActive = noteTracker.GetComponent<NoteTracker>().bowChange;
+
+        playerScale = transform.localScale;
     }
 
     IEnumerator DeactivateShortSwordHitbox(float seconds)
@@ -88,7 +95,6 @@ public class PlayerMovement : MonoBehaviour
 
         anim.SetBool("backToShortSword", false);
 
-        Vector3 playerScale = transform.localScale;
         if (Input.GetMouseButtonDown(2))
         {
             mouseButtonDown = !mouseButtonDown;
@@ -113,7 +119,7 @@ public class PlayerMovement : MonoBehaviour
                 noteTracker.GetComponent<NoteTracker>().shortSwordChange = false;
                 noteTracker.GetComponent<NoteTracker>().longSwordChange = true;
                 noteTracker.GetComponent<NoteTracker>().bowChange = false;
-                StartCoroutine(BackToSword(6f));
+                StartCoroutine(BackToSword(60f));
                 
             }
             else if (shortSwordActive == true)
@@ -133,7 +139,7 @@ public class PlayerMovement : MonoBehaviour
                 noteTracker.GetComponent<NoteTracker>().shortSwordChange = false;
                 noteTracker.GetComponent<NoteTracker>().longSwordChange = false;
                 noteTracker.GetComponent<NoteTracker>().bowChange = true;
-                StartCoroutine(BackToSword(10f));
+                StartCoroutine(BackToSword(30f));
                 
             }
             inHarmonicsMode = false;
@@ -145,7 +151,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && inHarmonicsMode == false)
         {
-            Debug.Log("Mouse button down");
             anim.SetBool("ifAttacking", true);
             mouseClickForCoroutine = true;
         }
@@ -157,23 +162,22 @@ public class PlayerMovement : MonoBehaviour
         
         if (mouseClickForCoroutine)
         {
-            Debug.Log("Start mouse click coroutine");
             //shortSwordActive = true;
             if (longSwordActive == true)
             {
-                Debug.Log("long sword down");
-
                 longSwordHitbox.SetActive(true);
                 shortSwordActive = false;
                 StartCoroutine(DeactivateLongSwordHitbox(.1f));
             }
             if (shortSwordActive == true)
             {
-                Debug.Log("short sword down");
-
                 shortSwordHitbox.SetActive(true);
                 longSwordActive = false;
                 StartCoroutine(DeactivateShortSwordHitbox(.1f));
+            }
+            if (bowActive == true)
+            {
+                FireBow();
             }
         }
 
@@ -194,6 +198,21 @@ public class PlayerMovement : MonoBehaviour
             playerScale.x = 1;
         }
         transform.localScale = playerScale;
+    }
+
+    void FireBow()
+    {
+        GameObject arrowRBGameObject = Instantiate(arrowPrefab, shotSpawn.position, shotSpawn.rotation);
+        if (playerScale.x == -1)
+        {
+            arrowRBGameObject.GetComponent<Rigidbody2D>().velocity = -transform.right * speed;
+        }
+        else
+        {
+            arrowRBGameObject.GetComponent<Rigidbody2D>().velocity = transform.right * speed;
+        }
+       
+        Destroy(arrowRBGameObject, 2f);
     }
 
     void FixedUpdate()

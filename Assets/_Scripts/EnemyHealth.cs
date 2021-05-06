@@ -6,6 +6,8 @@ public class EnemyHealth : MonoBehaviour
 {
     int enemyHealth = 10;
 
+    public GameObject arrow;
+
     void Update()
     {
         if (enemyHealth <= 0)
@@ -25,6 +27,12 @@ public class EnemyHealth : MonoBehaviour
         {
             enemyHealth -= 3;
             Debug.Log("Current enemy health is: " + enemyHealth);
+        }
+        if (col.gameObject.tag == "Arrow")
+        {
+            enemyHealth -= 1;
+            Debug.Log("Current enemy health is: " + enemyHealth);
+            Destroy(col.gameObject, 0f);
         }
     }
 }

@@ -13,6 +13,8 @@ TagManager:
   - TileWall
   - LongSwordHitbox
   - 8thNoteAttackHitbox
+  - EighthNoteAttackHitbox
+  - Arrow
   layers:
   - Default
   - TransparentFX
