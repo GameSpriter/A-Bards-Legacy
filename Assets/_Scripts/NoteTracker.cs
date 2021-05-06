@@ -35,6 +35,7 @@ public class NoteTracker : MonoBehaviour
     public bool longSwordChange = false;
     public bool shortSwordChange = true;
     public bool bowChange = false;
+    public PlayerMovement playerMovement;
 
     void Start()
     {
@@ -174,6 +175,7 @@ public class NoteTracker : MonoBehaviour
             {
                 if(sequence == effectSong) 
                 {
+                    //playerMovement.StopAllCoroutines();
                     ActivateEffect(sequence);
                 }
             }
@@ -192,11 +194,13 @@ public class NoteTracker : MonoBehaviour
                 longSwordChange = true;
                 shortSwordChange = false;
                 bowChange = false;
+                Camera.main.GetComponent<CameraRefs>().player.GetComponent<PlayerMovement>().StopAllCoroutines();
                 break;
             case bowSequence_c:
                 longSwordChange = false;
                 shortSwordChange = false;
                 bowChange = true;
+                Camera.main.GetComponent<CameraRefs>().player.GetComponent<PlayerMovement>().StopAllCoroutines();
                 break;
             default:
                 break;
