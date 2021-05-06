@@ -3263,6 +3263,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 26167636277275997, guid: 2b891379d1cafe7428753a780a4e1f36,
+        type: 3}
+      propertyPath: m_ForceIntoRT
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 26167636277275997, guid: 2b891379d1cafe7428753a780a4e1f36,
+        type: 3}
+      propertyPath: orthographic size
+      value: 3.90625
+      objectReference: {fileID: 0}
+    - target: {fileID: 26167636277275997, guid: 2b891379d1cafe7428753a780a4e1f36,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0.001992032
+      objectReference: {fileID: 0}
+    - target: {fileID: 26167636277275997, guid: 2b891379d1cafe7428753a780a4e1f36,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: 0.99601597
+      objectReference: {fileID: 0}
+    - target: {fileID: 26167636277275999, guid: 2b891379d1cafe7428753a780a4e1f36,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 26167636277275999, guid: 2b891379d1cafe7428753a780a4e1f36,
+        type: 3}
+      propertyPath: m_CropFrameX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 26167636277275999, guid: 2b891379d1cafe7428753a780a4e1f36,
+        type: 3}
+      propertyPath: m_CropFrameY
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 26167637753454805, guid: 2b891379d1cafe7428753a780a4e1f36,
         type: 3}
       propertyPath: playerpos
