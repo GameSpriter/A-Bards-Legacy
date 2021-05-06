@@ -18,14 +18,11 @@ public class PlayerMovement : MonoBehaviour
     char lastKeyPressed;
 
     bool mouseButtonDown = false;
-    bool leftClick = false;
     bool mouseClickForCoroutine = true;
     bool inHarmonicsMode = false;
     bool longSwordActive;
     bool shortSwordActive;
     bool bowActive;
-
-    //NoteTracker noteTracker;
 
     public GameObject noteTracker;
 
@@ -35,9 +32,8 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         shortSwordHitbox.SetActive(false);
         longSwordHitbox.SetActive(false);
-        longSwordActive = noteTracker.GetComponent<NoteTracker>().longSwordChange;
-        shortSwordActive = noteTracker.GetComponent<NoteTracker>().shortSwordChange;
-        bowActive = noteTracker.GetComponent<NoteTracker>().bowChange;
+
+        UpdateActiveWeapon();
     }
 
     IEnumerator DeactivateShortSwordHitbox(float seconds)
@@ -73,17 +69,18 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("shortSwordAnim", true);
         anim.SetBool("longSwordAnim", false);
         anim.SetBool("bowAnim", false);
+        UpdateActiveWeapon();
         shortSwordActive = true;
+    }
+
+    public void UpdateActiveWeapon() {
+        shortSwordActive = noteTracker.GetComponent<NoteTracker>().shortSwordChange;
+        longSwordActive = noteTracker.GetComponent<NoteTracker>().longSwordChange;
+        bowActive = noteTracker.GetComponent<NoteTracker>().bowChange;
     }
 
     void Update()
     {
-        
-        shortSwordActive = noteTracker.GetComponent<NoteTracker>().shortSwordChange;
-        longSwordActive = noteTracker.GetComponent<NoteTracker>().longSwordChange;
-        bowActive = noteTracker.GetComponent<NoteTracker>().bowChange;
-
-
         Vector3 playerScale = transform.localScale;
         if (Input.GetMouseButtonDown(2))
         {
@@ -122,10 +119,6 @@ public class PlayerMovement : MonoBehaviour
                 StartCoroutine(BackToSword(10f));
             }
             inHarmonicsMode = false;
-
-            noteTracker.GetComponent<NoteTracker>().shortSwordChange = false;
-            noteTracker.GetComponent<NoteTracker>().longSwordChange = false;
-            noteTracker.GetComponent<NoteTracker>().bowChange = false;
         }
 
         if (Input.GetMouseButtonDown(0) && inHarmonicsMode == false)
@@ -172,6 +165,10 @@ public class PlayerMovement : MonoBehaviour
             playerScale.x = 1;
         }
         transform.localScale = playerScale;
+        
+        noteTracker.GetComponent<NoteTracker>().shortSwordChange = false;
+        noteTracker.GetComponent<NoteTracker>().longSwordChange = false;
+        noteTracker.GetComponent<NoteTracker>().bowChange = false;
     }
 
     void FixedUpdate()

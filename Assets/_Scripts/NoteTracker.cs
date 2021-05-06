@@ -41,7 +41,6 @@ public class NoteTracker : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!mc[0].IsHit && mc[0].GetInputNoteName == "Up Button")
@@ -109,7 +108,6 @@ public class NoteTracker : MonoBehaviour
         {
             //Add to multiplier
             playedSequences.Add(sequence);
-            //ApplyEffects(sequence) 
 
             //Reset tempSequence
             songSubstring = "";
@@ -192,11 +190,13 @@ public class NoteTracker : MonoBehaviour
                 longSwordChange = true;
                 shortSwordChange = false;
                 bowChange = false;
+                Camera.main.GetComponent<CameraRefs>().player.GetComponent<PlayerMovement>().UpdateActiveWeapon();
                 break;
             case bowSequence_c:
                 longSwordChange = false;
                 shortSwordChange = false;
                 bowChange = true;
+                Camera.main.GetComponent<CameraRefs>().player.GetComponent<PlayerMovement>().UpdateActiveWeapon();
                 break;
             default:
                 break;

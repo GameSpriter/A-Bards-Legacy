@@ -23,9 +23,6 @@ public class HamonicsDisplay : MonoBehaviour
 
     public int numberOfSides = 4;
     public float polygonRadius = 2;
-    //public Vector3 polygonCenter;
-
-    //private int angle = (2 * Mathf.PI) / 180.0f;
 
     public LineRenderer lr;
     public Material lrMat;
@@ -34,7 +31,6 @@ public class HamonicsDisplay : MonoBehaviour
     public float width = 1f;
 
     private Vector2 mosPos;
-    bool animationinHarmonics = false;
 
     public bool HarmonicsMode { get; set; } = false;
 
@@ -58,7 +54,6 @@ public class HamonicsDisplay : MonoBehaviour
         }
 
         musicSheetPos.transform.position = new Vector3(musicSheetPos.transform.position.x, Camera.main.transform.position.y + 5.0f);
-        //noteTrackScript = new NoteTracker();
         noteSpawnerScript = musicSheetPos.GetComponent<NoteSpawn>();
 
         detectRadius = 1.25f;
@@ -66,8 +61,6 @@ public class HamonicsDisplay : MonoBehaviour
 
     void Update()
     {
-        //gameObject.transform.position = playerpos.transform.position;
-
         mosPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         lr.positionCount = numberOfSides;
@@ -104,19 +97,12 @@ public class HamonicsDisplay : MonoBehaviour
             }
 
             gameObject.GetComponent<LineRenderer>().enabled = true;
-            /*
-            if (Input.GetMouseButton(0) || Input.GetMouseButton(1))
-            {
-                //DetectNoteInput();
-            }
-            */
         }
         else 
         {
             if (noteTrackScript.IsActivated)
             {
                 noteTrackScript.SequenceSongSearch();
-                //noteTrackScript.songlength = noteTrackScript.song.Length;
                 noteTrackScript.song = "";
                 noteTrackScript.SequenceEffectMatch();
             }
