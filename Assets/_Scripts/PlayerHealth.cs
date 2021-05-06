@@ -18,7 +18,7 @@ public class PlayerHealth : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "EighthNoteEnemy")
+        if (col.gameObject.tag == "8thNoteAttackHitbox")
         {
             playerHealth -= 1;
             Debug.Log("Current player health is: " + playerHealth);

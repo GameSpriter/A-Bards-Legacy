@@ -12,6 +12,7 @@ TagManager:
   - EighthNoteEnemy
   - TileWall
   - LongSwordHitbox
+  - 8thNoteAttackHitbox
   layers:
   - Default
   - TransparentFX

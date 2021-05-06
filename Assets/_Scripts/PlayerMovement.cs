@@ -73,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("shortSwordAnim", true);
         anim.SetBool("longSwordAnim", false);
         anim.SetBool("bowAnim", false);
+        shortSwordActive = true;
     }
 
     void Update()

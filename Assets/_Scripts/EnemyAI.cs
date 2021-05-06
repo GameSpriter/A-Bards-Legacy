@@ -143,12 +143,12 @@ public class EnemyAI : MonoBehaviour
 
     void meleeAttackPlayer()
     {
-        StartCoroutine(DeactivateEighthNoteHitbox(.1f));
         animator.Play("Chompy Boy_Attack_D");
         state = State.Idle;
         eighthNoteAttackHitbox.SetActive(true);
         attackCooldown = true;
         cooldownTime = 3f;
+        StartCoroutine(DeactivateEighthNoteHitbox(.1f));
 
         //Move enemy back
     }
