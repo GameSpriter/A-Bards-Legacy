@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Quarter Chompy Boy
+  m_Controller: {fileID: 9100000, guid: f4c347a20fb997442b3f10b73547f229, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: ab61be73b0c5301489cc023b7224cb67, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 45481aeadea38ec409effc0b3c3b6c74, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 419f5cc6f2adfdf4a973831a63d1a7f2, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a1a777b9926103b46b0edda553cd1642, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 981a38e11e22f134eb52b9e48bf4652f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 88259eba65dab6248b1cc82815f22d68, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 93e36f6b8fbc0e446a32261be7541d6f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: dcad9e499bd32b748ac6b6dffadb5fa0, type: 2}
