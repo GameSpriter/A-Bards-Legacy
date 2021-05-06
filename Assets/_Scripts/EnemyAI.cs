@@ -39,36 +39,6 @@ public class EnemyAI : MonoBehaviour
         state = State.Idle;
     }
 
-<<<<<<< HEAD
-   
-=======
-    
->>>>>>> 7d9affca91a4357e9d851e4f525e1ce81923e8f0
-    IEnumerator unFreezePosition(float seconds)
-    {
-        float counter = seconds;
-        
-        if (counter > 0f)
-        {
-<<<<<<< HEAD
-=======
-
-            //GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
->>>>>>> 7d9affca91a4357e9d851e4f525e1ce81923e8f0
-            Debug.Log("Frozen");
-            yield return new WaitForSeconds(5f);
-            counter--;
-        }
-        else
-        {
-            //GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
-        }
-    }
-<<<<<<< HEAD
-=======
-    
->>>>>>> 7d9affca91a4357e9d851e4f525e1ce81923e8f0
-
     void Update()
     {
         if (!attackCooldown)
@@ -120,11 +90,6 @@ public class EnemyAI : MonoBehaviour
         Destination = player.transform.position;
         Distance = Vector2.Distance(gameObject.transform.position, Destination);
 
-        //if (Distance < 5)
-        //{
-        //    inRange = true;
-        //    combatWithPlayer();
-        //}
         if (Distance > chaseRange)
         {
             state = State.Idle;
@@ -137,10 +102,7 @@ public class EnemyAI : MonoBehaviour
         {
             state = State.Attacking;
         }
-        //else
-        //{
-        //    inRange = false;
-        //}
+
     }
 
     //void combatWithPlayer()
@@ -173,7 +135,6 @@ public class EnemyAI : MonoBehaviour
         attackCooldown = true;
         cooldownTime = 3f;
 
-        StartCoroutine(unFreezePosition(1f));
         //Move enemy back
     }
 }
