@@ -61,7 +61,7 @@ public class NoteSpawn : MonoBehaviour
         //Set notes in designated positions on music sheet
         for (int i = 0; i < notes.Length; i++)
         {
-            notes[i].transform.position = spawnPositions[i].transform.position;
+            //notes[i].transform.position = spawnPositions[i].transform.position;
         }
     }
 
@@ -71,7 +71,7 @@ public class NoteSpawn : MonoBehaviour
     /// <param name="i"></param>
     void NoteSpawner(int i) 
     {
-        tempSpawnContainer.Add(Instantiate(notes[i]));
+        tempSpawnContainer.Add(Instantiate(notes[i], spawnPositions[i].transform.position, Quaternion.identity));
         tempSpawnContainer[tempSpawnContainer.Count - 1].transform.SetParent(gameObject.transform);
         tempSpawnContainer[tempSpawnContainer.Count - 1].transform.position =
             new Vector3(tempSpawnContainer[tempSpawnContainer.Count - 1].transform.position.x + incrementPosition,

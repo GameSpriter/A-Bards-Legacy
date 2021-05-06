@@ -66,8 +66,8 @@ public class PlayerMovement : MonoBehaviour
         float counter = seconds;
         while (counter > 0f)
         {
-            yield return new WaitForSeconds(.50f);
             counter--;
+            yield return new WaitForSeconds(.50f);
         }
         anim.SetBool("backToShortSword", true);
         anim.SetBool("shortSwordAnim", true);
@@ -122,6 +122,10 @@ public class PlayerMovement : MonoBehaviour
                 StartCoroutine(BackToSword(10f));
             }
             inHarmonicsMode = false;
+
+            noteTracker.GetComponent<NoteTracker>().shortSwordChange = false;
+            noteTracker.GetComponent<NoteTracker>().longSwordChange = false;
+            noteTracker.GetComponent<NoteTracker>().bowChange = false;
         }
 
         if (Input.GetMouseButtonDown(0) && inHarmonicsMode == false)
