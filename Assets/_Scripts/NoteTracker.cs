@@ -9,9 +9,9 @@ using UnityEngine;
 /// </summary>
 public class NoteTracker : MonoBehaviour
 {
-    /* 
+    /*
      * iterate through string song
-     * foreach char note in song add them to a temporary string tempSequence 
+     * foreach char note in song add them to a temporary string tempSequence
      * check if tempSequence is the starting sub string of valid sequences in the List
      * check if tempSequence matches song in list(if it does Do something then reset temp)
      * if there is an invalid character in temporary string (Do something)
@@ -35,6 +35,7 @@ public class NoteTracker : MonoBehaviour
     public bool longSwordChange = false;
     public bool shortSwordChange = true;
     public bool bowChange = false;
+    public PlayerMovement playerMovement;
 
     void Start()
     {
@@ -78,7 +79,7 @@ public class NoteTracker : MonoBehaviour
     }
 
     /// <summary>
-    /// Tracks the whether an invalid note has been played or not. 
+    /// Tracks the whether an invalid note has been played or not.
     /// Also checks if a valid sequence has been played that adds to a certian effects multiplier.
     /// </summary>
     /// <returns>Returns true for no invalid notes played, else false</returns>
@@ -140,8 +141,8 @@ public class NoteTracker : MonoBehaviour
                 }
             }
             if (!isValidNote)
-            {                
-                sequenceSubstring = sequenceSubstring.Remove(0,1);                                   
+            {
+                sequenceSubstring = sequenceSubstring.Remove(0,1);
             }
             isValidNote = false;
         }
@@ -151,7 +152,7 @@ public class NoteTracker : MonoBehaviour
     /// <summary>
     /// Matches up valid sequence with song in songeffect list
     /// </summary>
-    private void SequenceMatchUp(string validSequence, string sequenceSubstring) 
+    private void SequenceMatchUp(string validSequence, string sequenceSubstring)
     {
         if (validSequence.Equals(sequenceSubstring))
         {
@@ -164,14 +165,15 @@ public class NoteTracker : MonoBehaviour
     /// <summary>
     /// Iterates through sequences played and matches them with valid effect sequences
     /// </summary>
-    public void SequenceEffectMatch() 
+    public void SequenceEffectMatch()
     {
         foreach (string sequence in playedSequences)
         {
-            foreach (string effectSong in weaponSongs) 
+            foreach (string effectSong in weaponSongs)
             {
-                if(sequence == effectSong) 
+                if(sequence == effectSong)
                 {
+                    //playerMovement.StopAllCoroutines();
                     ActivateEffect(sequence);
                 }
             }
@@ -182,21 +184,23 @@ public class NoteTracker : MonoBehaviour
     /// <summary>
     /// When harmonics mode exits, sequence effects are applied
     /// </summary>
-    public void ActivateEffect(string effect) 
+    public void ActivateEffect(string effect)
     {
-        switch (effect) 
+        switch (effect)
         {
             case swordSequence_c:
                 longSwordChange = true;
                 shortSwordChange = false;
                 bowChange = false;
                 Camera.main.GetComponent<CameraRefs>().player.GetComponent<PlayerMovement>().UpdateActiveWeapon();
+                Camera.main.GetComponent<CameraRefs>().player.GetComponent<PlayerMovement>().StopAllCoroutines();
                 break;
             case bowSequence_c:
                 longSwordChange = false;
                 shortSwordChange = false;
                 bowChange = true;
                 Camera.main.GetComponent<CameraRefs>().player.GetComponent<PlayerMovement>().UpdateActiveWeapon();
+                Camera.main.GetComponent<CameraRefs>().player.GetComponent<PlayerMovement>().StopAllCoroutines();
                 break;
             default:
                 break;

@@ -81,6 +81,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        anim.SetBool("backToShortSword", false);
+
         Vector3 playerScale = transform.localScale;
         if (Input.GetMouseButtonDown(2))
         {
@@ -103,26 +105,38 @@ public class PlayerMovement : MonoBehaviour
                 anim.SetBool("shortSwordAnim", false);
                 anim.SetBool("longSwordAnim", true);
                 anim.SetBool("bowAnim", false);
+                noteTracker.GetComponent<NoteTracker>().shortSwordChange = false;
+                noteTracker.GetComponent<NoteTracker>().longSwordChange = true;
+                noteTracker.GetComponent<NoteTracker>().bowChange = false;
                 StartCoroutine(BackToSword(6f));
+
             }
             else if (shortSwordActive == true)
             {
                 anim.SetBool("shortSwordAnim", true);
                 anim.SetBool("longSwordAnim", false);
                 anim.SetBool("bowAnim", false);
+                noteTracker.GetComponent<NoteTracker>().shortSwordChange = true;
+                noteTracker.GetComponent<NoteTracker>().longSwordChange = false;
+                noteTracker.GetComponent<NoteTracker>().bowChange = false;
             }
             else if (bowActive == true)
             {
                 anim.SetBool("shortSwordAnim", false);
                 anim.SetBool("longSwordAnim", false);
                 anim.SetBool("bowAnim", true);
+                noteTracker.GetComponent<NoteTracker>().shortSwordChange = false;
+                noteTracker.GetComponent<NoteTracker>().longSwordChange = false;
+                noteTracker.GetComponent<NoteTracker>().bowChange = true;
                 StartCoroutine(BackToSword(10f));
+
             }
             inHarmonicsMode = false;
         }
 
         if (Input.GetMouseButtonDown(0) && inHarmonicsMode == false)
         {
+            Debug.Log("Mouse button down");
             anim.SetBool("ifAttacking", true);
             mouseClickForCoroutine = true;
         }
@@ -131,17 +145,23 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("ifAttacking", false);
             mouseClickForCoroutine = false;
         }
-        
+
         if (mouseClickForCoroutine)
         {
+            Debug.Log("Start mouse click coroutine");
+            //shortSwordActive = true;
             if (longSwordActive == true)
             {
+                Debug.Log("long sword down");
+
                 longSwordHitbox.SetActive(true);
                 shortSwordActive = false;
                 StartCoroutine(DeactivateLongSwordHitbox(.1f));
             }
             if (shortSwordActive == true)
             {
+                Debug.Log("short sword down");
+
                 shortSwordHitbox.SetActive(true);
                 longSwordActive = false;
                 StartCoroutine(DeactivateShortSwordHitbox(.1f));
@@ -165,7 +185,7 @@ public class PlayerMovement : MonoBehaviour
             playerScale.x = 1;
         }
         transform.localScale = playerScale;
-        
+
         noteTracker.GetComponent<NoteTracker>().shortSwordChange = false;
         noteTracker.GetComponent<NoteTracker>().longSwordChange = false;
         noteTracker.GetComponent<NoteTracker>().bowChange = false;
@@ -177,7 +197,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     //Original movement code, keeping just in case something goes wrong with the note script
-    
+
     /*
     [SerializeField]
     private float speed = 10.0f;
@@ -185,7 +205,7 @@ public class PlayerMovement : MonoBehaviour
     private float smoothTime = 0.5f;
 
     public Animator anim;
-    
+
     char lastKeyPressed;
 
     // Start is called before the first frame update
@@ -202,11 +222,11 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.W))
             {
                 transform.Translate(0, speed * Time.deltaTime * smoothTime, 0);
-                
+
                 anim.SetBool("walkUp", true);
                 anim.SetBool("walkDown", false);
                 lastKeyPressed = 'W';
-                
+
             }
             if (Input.GetKey(KeyCode.S))
             {
@@ -215,7 +235,7 @@ public class PlayerMovement : MonoBehaviour
                 anim.SetBool("walkUp", false);
                 anim.SetBool("walkDown", true);
                 lastKeyPressed = 'S';
-               
+
             }
             if (Input.GetKey(KeyCode.A))
             {
@@ -242,7 +262,7 @@ public class PlayerMovement : MonoBehaviour
                 anim.SetBool("idleDown", true);
                 Debug.Log("Down");
             }
-        }   
+        }
     }
     */
 }
