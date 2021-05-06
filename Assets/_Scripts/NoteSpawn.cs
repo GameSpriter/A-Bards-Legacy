@@ -56,15 +56,6 @@ public class NoteSpawn : MonoBehaviour
         
     }
 
-    private void FixedUpdate()
-    {
-        //Set notes in designated positions on music sheet
-        for (int i = 0; i < notes.Length; i++)
-        {
-            //notes[i].transform.position = spawnPositions[i].transform.position;
-        }
-    }
-
     /// <summary>
     /// How notes will be displayed in proper positions
     /// </summary>

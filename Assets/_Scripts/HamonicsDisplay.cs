@@ -66,7 +66,7 @@ public class HamonicsDisplay : MonoBehaviour
 
     void Update()
     {
-        gameObject.transform.position = playerpos.transform.position;
+        //gameObject.transform.position = playerpos.transform.position;
 
         mosPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
@@ -95,7 +95,7 @@ public class HamonicsDisplay : MonoBehaviour
         {
             musicSheetPos.SetActive(true);
             musicSheetPos.transform.position = Vector3.MoveTowards(musicSheetPos.transform.position,
-                    new Vector3(musicSheetPos.transform.position.x, Camera.main.transform.position.y + 3.2f), 0.025f);
+                    new Vector3(musicSheetPos.transform.position.x, Camera.main.transform.position.y + 3.21875f), 0.025f);
 
 
             for (int i = 0; i < gameObject.transform.childCount; i++)
