@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         longSwordHitbox.SetActive(false);
         longSwordActive = noteTracker.GetComponent<NoteTracker>().longSwordChange;
         shortSwordActive = noteTracker.GetComponent<NoteTracker>().shortSwordChange;
+        bowActive = noteTracker.GetComponent<NoteTracker>().bowChange;
     }
 
     IEnumerator DeactivateShortSwordHitbox(float seconds)
@@ -60,11 +61,27 @@ public class PlayerMovement : MonoBehaviour
         longSwordHitbox.SetActive(false);
     }
 
+    IEnumerator BackToSword(float seconds)
+    {
+        float counter = seconds;
+        while (counter > 0f)
+        {
+            yield return new WaitForSeconds(.50f);
+            counter--;
+        }
+        anim.SetBool("backToShortSword", true);
+        anim.SetBool("shortSwordAnim", true);
+        anim.SetBool("longSwordAnim", false);
+        anim.SetBool("bowAnim", false);
+    }
+
     void Update()
     {
         
         shortSwordActive = noteTracker.GetComponent<NoteTracker>().shortSwordChange;
         longSwordActive = noteTracker.GetComponent<NoteTracker>().longSwordChange;
+        bowActive = noteTracker.GetComponent<NoteTracker>().bowChange;
+
 
         Vector3 playerScale = transform.localScale;
         if (Input.GetMouseButtonDown(2))
@@ -88,6 +105,7 @@ public class PlayerMovement : MonoBehaviour
                 anim.SetBool("shortSwordAnim", false);
                 anim.SetBool("longSwordAnim", true);
                 anim.SetBool("bowAnim", false);
+                StartCoroutine(BackToSword(6f));
             }
             else if (shortSwordActive == true)
             {
@@ -100,6 +118,7 @@ public class PlayerMovement : MonoBehaviour
                 anim.SetBool("shortSwordAnim", false);
                 anim.SetBool("longSwordAnim", false);
                 anim.SetBool("bowAnim", true);
+                StartCoroutine(BackToSword(10f));
             }
             inHarmonicsMode = false;
         }

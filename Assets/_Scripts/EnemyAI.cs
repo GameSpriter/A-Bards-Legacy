@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -27,7 +26,21 @@ public class EnemyAI : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
+    public GameObject eighthNoteAttackHitbox;
+
     State state;
+
+    IEnumerator DeactivateEighthNoteHitbox(float seconds)
+    {
+        float counter = seconds;
+        while (counter > 0f)
+        {
+            yield return new WaitForSeconds(.50f);
+            counter--;
+        }
+        //Debug.Log("Attacked!");
+        eighthNoteAttackHitbox.SetActive(false);
+    }
 
     private void Awake() {
         if(player == null) {
@@ -35,12 +48,16 @@ public class EnemyAI : MonoBehaviour
         }
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        eighthNoteAttackHitbox = transform.GetChild(0).gameObject;
+        eighthNoteAttackHitbox.SetActive(false);
 
         state = State.Idle;
     }
 
     void Update()
     {
+        //Debug.Log("Attack Cooldown: " + attackCooldown);
+
         if (!attackCooldown)
             checkForPlayer();
         else
@@ -126,9 +143,10 @@ public class EnemyAI : MonoBehaviour
 
     void meleeAttackPlayer()
     {
-        //Attack code here, along with damage and animation
+        StartCoroutine(DeactivateEighthNoteHitbox(.1f));
         animator.Play("Chompy Boy_Attack_D");
         state = State.Idle;
+        eighthNoteAttackHitbox.SetActive(true);
         attackCooldown = true;
         cooldownTime = 3f;
 
