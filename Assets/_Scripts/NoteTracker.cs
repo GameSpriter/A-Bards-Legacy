@@ -192,14 +192,14 @@ public class NoteTracker : MonoBehaviour
                 longSwordChange = true;
                 shortSwordChange = false;
                 bowChange = false;
-                Camera.main.GetComponent<CameraRefs>().player.GetComponent<PlayerMovement>().UpdateActiveWeapon();
+                //Camera.main.GetComponent<CameraRefs>().player.GetComponent<PlayerMovement>().UpdateActiveWeapon();
                 Camera.main.GetComponent<CameraRefs>().player.GetComponent<PlayerMovement>().StopAllCoroutines();
                 break;
             case bowSequence_c:
                 longSwordChange = false;
                 shortSwordChange = false;
                 bowChange = true;
-                Camera.main.GetComponent<CameraRefs>().player.GetComponent<PlayerMovement>().UpdateActiveWeapon();
+                //Camera.main.GetComponent<CameraRefs>().player.GetComponent<PlayerMovement>().UpdateActiveWeapon();
                 Camera.main.GetComponent<CameraRefs>().player.GetComponent<PlayerMovement>().StopAllCoroutines();
                 break;
             default:

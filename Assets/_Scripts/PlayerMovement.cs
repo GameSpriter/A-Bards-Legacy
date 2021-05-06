@@ -18,11 +18,14 @@ public class PlayerMovement : MonoBehaviour
     char lastKeyPressed;
 
     bool mouseButtonDown = false;
+    bool leftClick = false;
     bool mouseClickForCoroutine = true;
     bool inHarmonicsMode = false;
     bool longSwordActive;
     bool shortSwordActive;
     bool bowActive;
+
+    //NoteTracker noteTracker;
 
     public GameObject noteTracker;
 
@@ -32,8 +35,9 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         shortSwordHitbox.SetActive(false);
         longSwordHitbox.SetActive(false);
-
-        UpdateActiveWeapon();
+        longSwordActive = noteTracker.GetComponent<NoteTracker>().longSwordChange;
+        shortSwordActive = noteTracker.GetComponent<NoteTracker>().shortSwordChange;
+        bowActive = noteTracker.GetComponent<NoteTracker>().bowChange;
     }
 
     IEnumerator DeactivateShortSwordHitbox(float seconds)
@@ -69,18 +73,19 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("shortSwordAnim", true);
         anim.SetBool("longSwordAnim", false);
         anim.SetBool("bowAnim", false);
-        UpdateActiveWeapon();
+        noteTracker.GetComponent<NoteTracker>().shortSwordChange = true;
+        noteTracker.GetComponent<NoteTracker>().longSwordChange = false;
+        noteTracker.GetComponent<NoteTracker>().bowChange = false;
         shortSwordActive = true;
-    }
-
-    public void UpdateActiveWeapon() {
-        shortSwordActive = noteTracker.GetComponent<NoteTracker>().shortSwordChange;
-        longSwordActive = noteTracker.GetComponent<NoteTracker>().longSwordChange;
-        bowActive = noteTracker.GetComponent<NoteTracker>().bowChange;
     }
 
     void Update()
     {
+        
+        shortSwordActive = noteTracker.GetComponent<NoteTracker>().shortSwordChange;
+        longSwordActive = noteTracker.GetComponent<NoteTracker>().longSwordChange;
+        bowActive = noteTracker.GetComponent<NoteTracker>().bowChange;
+
         anim.SetBool("backToShortSword", false);
 
         Vector3 playerScale = transform.localScale;
@@ -109,7 +114,7 @@ public class PlayerMovement : MonoBehaviour
                 noteTracker.GetComponent<NoteTracker>().longSwordChange = true;
                 noteTracker.GetComponent<NoteTracker>().bowChange = false;
                 StartCoroutine(BackToSword(6f));
-
+                
             }
             else if (shortSwordActive == true)
             {
@@ -129,9 +134,13 @@ public class PlayerMovement : MonoBehaviour
                 noteTracker.GetComponent<NoteTracker>().longSwordChange = false;
                 noteTracker.GetComponent<NoteTracker>().bowChange = true;
                 StartCoroutine(BackToSword(10f));
-
+                
             }
             inHarmonicsMode = false;
+
+            //noteTracker.GetComponent<NoteTracker>().shortSwordChange = false;
+            //noteTracker.GetComponent<NoteTracker>().longSwordChange = false;
+            //noteTracker.GetComponent<NoteTracker>().bowChange = false;
         }
 
         if (Input.GetMouseButtonDown(0) && inHarmonicsMode == false)
@@ -145,7 +154,7 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("ifAttacking", false);
             mouseClickForCoroutine = false;
         }
-
+        
         if (mouseClickForCoroutine)
         {
             Debug.Log("Start mouse click coroutine");
@@ -185,10 +194,6 @@ public class PlayerMovement : MonoBehaviour
             playerScale.x = 1;
         }
         transform.localScale = playerScale;
-
-        noteTracker.GetComponent<NoteTracker>().shortSwordChange = false;
-        noteTracker.GetComponent<NoteTracker>().longSwordChange = false;
-        noteTracker.GetComponent<NoteTracker>().bowChange = false;
     }
 
     void FixedUpdate()
@@ -197,7 +202,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     //Original movement code, keeping just in case something goes wrong with the note script
-
+    
     /*
     [SerializeField]
     private float speed = 10.0f;
@@ -205,7 +210,7 @@ public class PlayerMovement : MonoBehaviour
     private float smoothTime = 0.5f;
 
     public Animator anim;
-
+    
     char lastKeyPressed;
 
     // Start is called before the first frame update
@@ -222,11 +227,11 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.W))
             {
                 transform.Translate(0, speed * Time.deltaTime * smoothTime, 0);
-
+                
                 anim.SetBool("walkUp", true);
                 anim.SetBool("walkDown", false);
                 lastKeyPressed = 'W';
-
+                
             }
             if (Input.GetKey(KeyCode.S))
             {
@@ -235,7 +240,7 @@ public class PlayerMovement : MonoBehaviour
                 anim.SetBool("walkUp", false);
                 anim.SetBool("walkDown", true);
                 lastKeyPressed = 'S';
-
+               
             }
             if (Input.GetKey(KeyCode.A))
             {
@@ -262,7 +267,7 @@ public class PlayerMovement : MonoBehaviour
                 anim.SetBool("idleDown", true);
                 Debug.Log("Down");
             }
-        }
+        }   
     }
     */
 }
