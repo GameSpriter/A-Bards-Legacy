@@ -71,15 +71,12 @@ public class EnemyAI : MonoBehaviour
         {
             default:
             case State.Idle:
-                Debug.Log("Enemy Idle");
                 transform.position = enemyPosition;
                 break;
             case State.Chasing:
-                Debug.Log("Enemy Chasing");
                 chasePlayer();
                 break;
             case State.Attacking:
-                Debug.Log("Enemy Attacking");
                 meleeAttackPlayer();
                 break;
         }
