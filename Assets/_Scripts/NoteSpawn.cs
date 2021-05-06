@@ -76,7 +76,6 @@ public class NoteSpawn : MonoBehaviour
         tempSpawnContainer[tempSpawnContainer.Count - 1].transform.position =
             new Vector3(tempSpawnContainer[tempSpawnContainer.Count - 1].transform.position.x + incrementPosition,
             tempSpawnContainer[tempSpawnContainer.Count - 1].transform.position.y);
-        tempSpawnContainer[tempSpawnContainer.Count - 1].GetComponent<SpriteRenderer>().sortingOrder = 1;
         if (!EndIsReached)
         {
             if (incrementPosition < transform.position.x + offset)
