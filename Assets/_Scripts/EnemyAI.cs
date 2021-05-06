@@ -11,7 +11,6 @@ public class EnemyAI : MonoBehaviour
         Attacking,
     }
 
-    [SerializeField] private bool inRange = false;
     [SerializeField] private GameObject player;
     [SerializeField] private Vector2 playerPosition;
     [SerializeField] private Vector2 enemyPosition;
