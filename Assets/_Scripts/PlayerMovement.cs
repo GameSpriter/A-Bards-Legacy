@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
         shortSwordActive = noteTracker.GetComponent<NoteTracker>().shortSwordChange;
         bowActive = noteTracker.GetComponent<NoteTracker>().bowChange;
 
+
         playerScale = transform.localScale;
     }
 
@@ -196,6 +197,7 @@ public class PlayerMovement : MonoBehaviour
         else if(Input.GetKeyDown(KeyCode.D) && !Input.GetKeyDown(KeyCode.A))
         {
             playerScale.x = 1;
+
         }
         transform.localScale = playerScale;
     }
@@ -203,15 +205,18 @@ public class PlayerMovement : MonoBehaviour
     void FireBow()
     {
         GameObject arrowRBGameObject = Instantiate(arrowPrefab, shotSpawn.position, shotSpawn.rotation);
+        
         if (playerScale.x == -1)
         {
             arrowRBGameObject.GetComponent<Rigidbody2D>().velocity = -transform.right * speed;
+            arrowRBGameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
         else
         {
             arrowRBGameObject.GetComponent<Rigidbody2D>().velocity = transform.right * speed;
+            arrowRBGameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
-       
+        
         Destroy(arrowRBGameObject, 2f);
     }
 
