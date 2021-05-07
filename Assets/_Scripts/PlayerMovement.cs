@@ -18,7 +18,6 @@ public class PlayerMovement : MonoBehaviour
     char lastKeyPressed;
 
     bool mouseButtonDown = false;
-    bool leftClick = false;
     bool mouseClickForCoroutine = true;
     bool inHarmonicsMode = false;
     bool longSwordActive;
