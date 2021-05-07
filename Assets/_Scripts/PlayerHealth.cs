@@ -2,11 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     public GameObject player;
+    public Slider healthSlider;
     int playerHealth = 5;
+
+    private void Awake()
+    {
+        healthSlider.maxValue = playerHealth;
+        healthSlider.value = healthSlider.maxValue;
+    }
 
     void Update()
     {
@@ -21,6 +29,7 @@ public class PlayerHealth : MonoBehaviour
         if (col.gameObject.tag == "8thNoteAttackHitbox")
         {
             playerHealth -= 1;
+            healthSlider.value = playerHealth;
             Debug.Log("Current player health is: " + playerHealth);
         }
     }
