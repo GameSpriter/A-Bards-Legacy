@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    int enemyHealth = 10;
+    [SerializeField] int enemyHealth = 10;
 
     public GameObject arrow;
 

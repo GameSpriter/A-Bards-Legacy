@@ -8081,6 +8081,7 @@ MonoBehaviour:
   longSwordChange: 0
   shortSwordChange: 1
   bowChange: 0
+  playerMovement: {fileID: 0}
 --- !u!4 &840326749
 Transform:
   m_ObjectHideFlags: 0
@@ -14968,110 +14969,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1531529616}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1539796347
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 384132362, guid: 857c7c1e44b7bc44a9eb272b6f3e3b89, type: 3}
-      propertyPath: m_Mass
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 384132362, guid: 857c7c1e44b7bc44a9eb272b6f3e3b89, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8006421403183465884, guid: 857c7c1e44b7bc44a9eb272b6f3e3b89,
-        type: 3}
-      propertyPath: m_Name
-      value: Quarter Chompy Boy
-      objectReference: {fileID: 0}
-    - target: {fileID: 8006421403183465952, guid: 857c7c1e44b7bc44a9eb272b6f3e3b89,
-        type: 3}
-      propertyPath: speed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8006421403183465952, guid: 857c7c1e44b7bc44a9eb272b6f3e3b89,
-        type: 3}
-      propertyPath: chaseRange
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8006421403183465952, guid: 857c7c1e44b7bc44a9eb272b6f3e3b89,
-        type: 3}
-      propertyPath: cooldownTime
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8006421403183465953, guid: 857c7c1e44b7bc44a9eb272b6f3e3b89,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 22100000, guid: 5bcf6cbeb7a29b1478ff9b65592ea2a8,
-        type: 2}
-    - target: {fileID: 8006421403183465954, guid: 857c7c1e44b7bc44a9eb272b6f3e3b89,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8006421403183465954, guid: 857c7c1e44b7bc44a9eb272b6f3e3b89,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 8006421403183465954, guid: 857c7c1e44b7bc44a9eb272b6f3e3b89,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.88
-      objectReference: {fileID: 0}
-    - target: {fileID: 8006421403183465954, guid: 857c7c1e44b7bc44a9eb272b6f3e3b89,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8006421403183465954, guid: 857c7c1e44b7bc44a9eb272b6f3e3b89,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8006421403183465954, guid: 857c7c1e44b7bc44a9eb272b6f3e3b89,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8006421403183465954, guid: 857c7c1e44b7bc44a9eb272b6f3e3b89,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8006421403183465954, guid: 857c7c1e44b7bc44a9eb272b6f3e3b89,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8006421403183465954, guid: 857c7c1e44b7bc44a9eb272b6f3e3b89,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8006421403183465954, guid: 857c7c1e44b7bc44a9eb272b6f3e3b89,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8006421403183465954, guid: 857c7c1e44b7bc44a9eb272b6f3e3b89,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8006421403183465955, guid: 857c7c1e44b7bc44a9eb272b6f3e3b89,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 3922418736982651924, guid: 9a40c1eb3dbdf0e4daa461d18bd53c59,
-        type: 3}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 857c7c1e44b7bc44a9eb272b6f3e3b89, type: 3}
 --- !u!1 &1552791985 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5924250203862994531, guid: 6dac598d6fac71949b9eff12b4b124fa,
@@ -19922,6 +19819,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dac598d6fac71949b9eff12b4b124fa, type: 3}
+--- !u!1001 &6322938630129663153
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4081126543561823272, guid: fabaeab221ecaa2499ae8d65d969aadf,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081126543561823272, guid: fabaeab221ecaa2499ae8d65d969aadf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081126543561823272, guid: fabaeab221ecaa2499ae8d65d969aadf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081126543561823272, guid: fabaeab221ecaa2499ae8d65d969aadf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081126543561823272, guid: fabaeab221ecaa2499ae8d65d969aadf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081126543561823272, guid: fabaeab221ecaa2499ae8d65d969aadf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081126543561823272, guid: fabaeab221ecaa2499ae8d65d969aadf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081126543561823272, guid: fabaeab221ecaa2499ae8d65d969aadf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081126543561823272, guid: fabaeab221ecaa2499ae8d65d969aadf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081126543561823272, guid: fabaeab221ecaa2499ae8d65d969aadf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081126543561823272, guid: fabaeab221ecaa2499ae8d65d969aadf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081126543561823318, guid: fabaeab221ecaa2499ae8d65d969aadf,
+        type: 3}
+      propertyPath: m_Name
+      value: Quarter Chompy Boy
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fabaeab221ecaa2499ae8d65d969aadf, type: 3}
 --- !u!1001 &8006421404460738083
 PrefabInstance:
   m_ObjectHideFlags: 0
