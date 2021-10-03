@@ -3266,7 +3266,7 @@ PrefabInstance:
     - target: {fileID: 26167636277275997, guid: 2b891379d1cafe7428753a780a4e1f36,
         type: 3}
       propertyPath: m_ForceIntoRT
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 26167636277275997, guid: 2b891379d1cafe7428753a780a4e1f36,
         type: 3}
@@ -3275,13 +3275,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 26167636277275997, guid: 2b891379d1cafe7428753a780a4e1f36,
         type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 26167636277275997, guid: 2b891379d1cafe7428753a780a4e1f36,
+        type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.001992032
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 26167636277275997, guid: 2b891379d1cafe7428753a780a4e1f36,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 26167636277275997, guid: 2b891379d1cafe7428753a780a4e1f36,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.99601597
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 26167636277275999, guid: 2b891379d1cafe7428753a780a4e1f36,
         type: 3}
