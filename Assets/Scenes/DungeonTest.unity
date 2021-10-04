@@ -486,6 +486,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 309635064}
   m_CullTransparentMesh: 0
+--- !u!1 &380984187 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 168085154, guid: 1c48b1258d539544f9f9e920c8eb41da,
+    type: 3}
+  m_PrefabInstance: {fileID: 1396957134}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &489371032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1669,6 +1675,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 168085154, guid: 1c48b1258d539544f9f9e920c8eb41da, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 168085154, guid: 1c48b1258d539544f9f9e920c8eb41da, type: 3}
+      propertyPath: m_TagString
+      value: PlayerHitbox
+      objectReference: {fileID: 0}
     - target: {fileID: 168085155, guid: 1c48b1258d539544f9f9e920c8eb41da, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.07
@@ -1682,12 +1696,20 @@ PrefabInstance:
       value: 0.7780031
       objectReference: {fileID: 0}
     - target: {fileID: 168085156, guid: 1c48b1258d539544f9f9e920c8eb41da, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 168085156, guid: 1c48b1258d539544f9f9e920c8eb41da, type: 3}
       propertyPath: m_Offset.x
       value: 0.009288073
       objectReference: {fileID: 0}
     - target: {fileID: 168085156, guid: 1c48b1258d539544f9f9e920c8eb41da, type: 3}
       propertyPath: m_Offset.y
       value: -0.044012368
+      objectReference: {fileID: 0}
+    - target: {fileID: 168085156, guid: 1c48b1258d539544f9f9e920c8eb41da, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 168085157, guid: 1c48b1258d539544f9f9e920c8eb41da, type: 3}
       propertyPath: healthSlider
@@ -1718,6 +1740,10 @@ PrefabInstance:
       value: 0.6626899
       objectReference: {fileID: 0}
     - target: {fileID: 946246730, guid: 1c48b1258d539544f9f9e920c8eb41da, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 946246730, guid: 1c48b1258d539544f9f9e920c8eb41da, type: 3}
       propertyPath: m_Offset.x
       value: 0.013193846
       objectReference: {fileID: 0}
@@ -1737,6 +1763,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8142308170845674240, guid: 1c48b1258d539544f9f9e920c8eb41da,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8142308170845674242, guid: 1c48b1258d539544f9f9e920c8eb41da,
         type: 3}
       propertyPath: m_BodyType
@@ -1745,6 +1776,11 @@ PrefabInstance:
     - target: {fileID: 8142308170845674242, guid: 1c48b1258d539544f9f9e920c8eb41da,
         type: 3}
       propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8142308170845674242, guid: 1c48b1258d539544f9f9e920c8eb41da,
+        type: 3}
+      propertyPath: m_CollisionDetection
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8142308170845674244, guid: 1c48b1258d539544f9f9e920c8eb41da,
@@ -1833,6 +1869,16 @@ PrefabInstance:
       propertyPath: noteTracker
       value: 
       objectReference: {fileID: 1348175258}
+    - target: {fileID: 8142308170845674247, guid: 1c48b1258d539544f9f9e920c8eb41da,
+        type: 3}
+      propertyPath: playerHitbox
+      value: 
+      objectReference: {fileID: 380984187}
+    - target: {fileID: 8142308170845674247, guid: 1c48b1258d539544f9f9e920c8eb41da,
+        type: 3}
+      propertyPath: playerStartDashTime
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c48b1258d539544f9f9e920c8eb41da, type: 3}
 --- !u!1 &1549411415

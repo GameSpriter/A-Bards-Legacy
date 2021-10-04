@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    float playerSpeed = 4f;
-
     public Rigidbody2D rb;
+
     public Animator anim;
 
     Vector2 movement;
 
     private SpriteRenderer spriteRenderer;
+
     public GameObject shortSwordHitbox;
     public GameObject longSwordHitbox;
+    public GameObject noteTracker;
+    public GameObject playerHitbox;
 
     char lastKeyPressed;
 
@@ -24,14 +26,23 @@ public class PlayerMovement : MonoBehaviour
     bool shortSwordActive;
     bool bowActive;
 
-    //NoteTracker noteTracker;
+    private string lastWeaponUsed;
 
-    public GameObject noteTracker;
+    //NoteTracker noteTracker;
     public Transform shotSpawn;
     public GameObject arrowPrefab;
-    float speed = 8f;
+
+    float speed = 8f; 
+    public float playerSpeed = 4f;
+    public float playerDashSpeed = 50f;
+
+    int dashTimer;
 
     Vector3 playerScale;
+    private Vector2 positionAfterLeftDash;
+    private Vector2 positionAfterRightDash;
+    private Vector2 positionAfterDownDash;
+    private Vector2 positionAfterUpDash;
 
     void Start()
     {
@@ -42,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         longSwordActive = noteTracker.GetComponent<NoteTracker>().longSwordChange;
         shortSwordActive = noteTracker.GetComponent<NoteTracker>().shortSwordChange;
         bowActive = noteTracker.GetComponent<NoteTracker>().bowChange;
-
+        rb = GetComponent<Rigidbody2D>();
 
         playerScale = transform.localScale;
     }
@@ -86,9 +97,44 @@ public class PlayerMovement : MonoBehaviour
         shortSwordActive = true;
     }
 
+    IEnumerator stopDashAnimation(float seconds)
+    {
+        float counter = seconds;
+        while (counter > 0f)
+        {
+            counter--;
+            yield return new WaitForSeconds(.0001f);
+        }
+
+        
+        if (lastWeaponUsed == "Short sword")
+        {
+            anim.SetBool("shortSwordAnim", true);
+            anim.SetBool("longSwordAnim", false);
+            anim.SetBool("bowAnim", false);
+            
+            Debug.Log("Short sword last");
+        }
+        if (lastWeaponUsed == "Long sword")
+        {
+            anim.SetBool("shortSwordAnim", false);
+            anim.SetBool("longSwordAnim", true);
+            anim.SetBool("bowAnim", false);
+            
+            Debug.Log("Long sword last");
+        }
+        if (lastWeaponUsed == "Bow")
+        {
+            anim.SetBool("shortSwordAnim", false);
+            anim.SetBool("longSwordAnim", false);
+            anim.SetBool("bowAnim", true);        
+        }
+        playerHitbox.SetActive(true);
+        anim.SetBool("dashing", false);
+    }
+
     void Update()
     {
-        
         shortSwordActive = noteTracker.GetComponent<NoteTracker>().shortSwordChange;
         longSwordActive = noteTracker.GetComponent<NoteTracker>().longSwordChange;
         bowActive = noteTracker.GetComponent<NoteTracker>().bowChange;
@@ -120,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
                 noteTracker.GetComponent<NoteTracker>().longSwordChange = true;
                 noteTracker.GetComponent<NoteTracker>().bowChange = false;
                 StartCoroutine(BackToSword(60f));
-                
+                lastWeaponUsed = "Long sword";
             }
             else if (shortSwordActive == true)
             {
@@ -130,6 +176,7 @@ public class PlayerMovement : MonoBehaviour
                 noteTracker.GetComponent<NoteTracker>().shortSwordChange = true;
                 noteTracker.GetComponent<NoteTracker>().longSwordChange = false;
                 noteTracker.GetComponent<NoteTracker>().bowChange = false;
+                lastWeaponUsed = "Short sword";
             }
             else if (bowActive == true)
             {
@@ -140,7 +187,7 @@ public class PlayerMovement : MonoBehaviour
                 noteTracker.GetComponent<NoteTracker>().longSwordChange = false;
                 noteTracker.GetComponent<NoteTracker>().bowChange = true;
                 StartCoroutine(BackToSword(30f));
-                
+                lastWeaponUsed = "Bow";
             }
             inHarmonicsMode = false;
 
@@ -199,7 +246,53 @@ public class PlayerMovement : MonoBehaviour
 
         }
         transform.localScale = playerScale;
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                playerHitbox.SetActive(false);
+                anim.SetBool("dashing", true);
+                StartCoroutine(stopDashAnimation(.001f));
+                dashTimer = 5;
+                positionAfterLeftDash = Vector2.left * 1000;
+            }
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                playerHitbox.SetActive(false);
+                anim.SetBool("dashing", true);
+                StartCoroutine(stopDashAnimation(.001f));
+                dashTimer = 5;
+                positionAfterRightDash = Vector2.right * 1000;
+            }
+        }
+        else if (Input.GetKey(KeyCode.W))
+        {
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                playerHitbox.SetActive(false);
+                anim.SetBool("dashing", true);
+                StartCoroutine(stopDashAnimation(.001f));
+                dashTimer = 5;
+                positionAfterUpDash = Vector2.up * 1000;
+            }
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                playerHitbox.SetActive(false);
+                anim.SetBool("dashing", true);
+                StartCoroutine(stopDashAnimation(.001f));
+                dashTimer = 5;
+                positionAfterDownDash = Vector2.down * 1000;
+            }
+        }
     }
+
 
     void FireBow()
     {
@@ -222,10 +315,29 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * playerSpeed * Time.fixedDeltaTime);
+
+        if (dashTimer > 0)
+        {
+            rb.AddForce(positionAfterLeftDash, ForceMode2D.Force);
+            rb.AddForce(positionAfterRightDash, ForceMode2D.Force);
+            rb.AddForce(positionAfterUpDash, ForceMode2D.Force);
+            rb.AddForce(positionAfterDownDash, ForceMode2D.Force);
+
+            dashTimer--;
+        }
+        else if (dashTimer == 0)
+        {
+            positionAfterLeftDash = Vector2.zero;
+            positionAfterRightDash = Vector2.zero;
+            positionAfterUpDash = Vector2.zero;
+            positionAfterDownDash = Vector2.zero;
+
+            dashTimer--;
+        }
     }
 
     //Original movement code, keeping just in case something goes wrong with the note script
-    
+
     /*
     [SerializeField]
     private float speed = 10.0f;
