@@ -17,8 +17,6 @@ public class PlayerMovement : MonoBehaviour
     public GameObject noteTracker;
     public GameObject playerHitbox;
 
-    char lastKeyPressed;
-
     bool mouseButtonDown = false;
     bool mouseClickForCoroutine = true;
     bool inHarmonicsMode = false;
@@ -46,18 +44,22 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        //Getting components and setting active hitboxes to false 
         anim = gameObject.GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
         shortSwordHitbox.SetActive(false);
         longSwordHitbox.SetActive(false);
+
+        //Getting components from the NoteTracker script 
         longSwordActive = noteTracker.GetComponent<NoteTracker>().longSwordChange;
         shortSwordActive = noteTracker.GetComponent<NoteTracker>().shortSwordChange;
         bowActive = noteTracker.GetComponent<NoteTracker>().bowChange;
-        rb = GetComponent<Rigidbody2D>();
 
         playerScale = transform.localScale;
     }
 
+    //Creates a timer that deactivates the hitbox of the short sword
     IEnumerator DeactivateShortSwordHitbox(float seconds)
     {
         float counter = seconds;
@@ -68,6 +70,8 @@ public class PlayerMovement : MonoBehaviour
         }
         shortSwordHitbox.SetActive(false);
     }
+
+    //Creates a timer that deactives the hitbox of the long sword
     IEnumerator DeactivateLongSwordHitbox(float seconds)
     {
         float counter = seconds;
@@ -78,14 +82,15 @@ public class PlayerMovement : MonoBehaviour
         }
         longSwordHitbox.SetActive(false);
     }
-
+    
+    //Creates a timer that disables all of the weapons except for the short sword
     IEnumerator BackToSword(float seconds)
     {
         float counter = seconds;
         while (counter > 0f)
         {
             counter--;
-            yield return new WaitForSeconds(.50f);
+            yield return new WaitForSeconds(1f);
         }
         anim.SetBool("backToShortSword", true);
         anim.SetBool("shortSwordAnim", true);
@@ -97,6 +102,7 @@ public class PlayerMovement : MonoBehaviour
         shortSwordActive = true;
     }
 
+    //Stops the dash animation and then based on the last weapon the player had the proper weapon will be brought back out 
     IEnumerator stopDashAnimation(float seconds)
     {
         float counter = seconds;
@@ -105,23 +111,18 @@ public class PlayerMovement : MonoBehaviour
             counter--;
             yield return new WaitForSeconds(.0001f);
         }
-
-        
+    
         if (lastWeaponUsed == "Short sword")
         {
             anim.SetBool("shortSwordAnim", true);
             anim.SetBool("longSwordAnim", false);
             anim.SetBool("bowAnim", false);
-            
-            Debug.Log("Short sword last");
         }
         if (lastWeaponUsed == "Long sword")
         {
             anim.SetBool("shortSwordAnim", false);
             anim.SetBool("longSwordAnim", true);
             anim.SetBool("bowAnim", false);
-            
-            Debug.Log("Long sword last");
         }
         if (lastWeaponUsed == "Bow")
         {
@@ -130,11 +131,11 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("bowAnim", true);        
         }
         playerHitbox.SetActive(true);
-        anim.SetBool("dashing", false);
     }
 
     void Update()
     {
+        //Gets components
         shortSwordActive = noteTracker.GetComponent<NoteTracker>().shortSwordChange;
         longSwordActive = noteTracker.GetComponent<NoteTracker>().longSwordChange;
         bowActive = noteTracker.GetComponent<NoteTracker>().bowChange;
@@ -146,6 +147,7 @@ public class PlayerMovement : MonoBehaviour
             mouseButtonDown = !mouseButtonDown;
         }
 
+        //Sets harmonics system to true if the middle mouse button is clicked, otherwise runs weapon specific code 
         if (mouseButtonDown)
         {
             anim.SetBool("harmonicsAnim", true);
@@ -165,7 +167,7 @@ public class PlayerMovement : MonoBehaviour
                 noteTracker.GetComponent<NoteTracker>().shortSwordChange = false;
                 noteTracker.GetComponent<NoteTracker>().longSwordChange = true;
                 noteTracker.GetComponent<NoteTracker>().bowChange = false;
-                StartCoroutine(BackToSword(60f));
+                StartCoroutine(BackToSword(10f));
                 lastWeaponUsed = "Long sword";
             }
             else if (shortSwordActive == true)
@@ -196,6 +198,7 @@ public class PlayerMovement : MonoBehaviour
             //noteTracker.GetComponent<NoteTracker>().bowChange = false;
         }
 
+        //Checking to see if the attack button is pressed and the player is not in harmonics 
         if (Input.GetMouseButtonDown(0) && inHarmonicsMode == false)
         {
             anim.SetBool("ifAttacking", true);
@@ -207,6 +210,8 @@ public class PlayerMovement : MonoBehaviour
             mouseClickForCoroutine = false;
         }
         
+        //If the mouse has been clicked to attack, depending on the weapon selected a different timer will be run to return the weapon back to the short sword
+        //This part is most likely the buggiest area and probably needs the most refinement
         if (mouseClickForCoroutine)
         {
             //shortSwordActive = true;
@@ -235,6 +240,7 @@ public class PlayerMovement : MonoBehaviour
         anim.SetFloat("Vertical", movement.y);
         anim.SetFloat("Speed", movement.sqrMagnitude);
 
+        //Changing the direction of the player to turn sprites around 
         if (Input.GetKeyDown(KeyCode.A) && !Input.GetKeyDown(KeyCode.D))
         {
             playerScale.x = -1;
@@ -247,6 +253,7 @@ public class PlayerMovement : MonoBehaviour
         }
         transform.localScale = playerScale;
 
+        //Dash code, we need a way to lock the player out of spamming the dash through locking the use of the shift key out for a certain amount of time.
         if (Input.GetKey(KeyCode.A))
         {
             if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -312,6 +319,7 @@ public class PlayerMovement : MonoBehaviour
         Destroy(arrowRBGameObject, 2f);
     }
 
+    //Code that helps smooth out dash
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * playerSpeed * Time.fixedDeltaTime);
