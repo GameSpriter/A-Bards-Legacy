@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     public float playerDashSpeed = 50f;
 
     int dashTimer;
+    private int dashLimitCounter = 3; 
 
     Vector3 playerScale;
     private Vector2 positionAfterLeftDash;
@@ -111,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
             counter--;
             yield return new WaitForSeconds(.0001f);
         }
-    
+
         if (lastWeaponUsed == "Short sword")
         {
             anim.SetBool("shortSwordAnim", true);
@@ -131,6 +132,19 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("bowAnim", true);        
         }
         playerHitbox.SetActive(true);
+        anim.SetBool("dashing", false);
+    }
+
+    IEnumerator resetDashLimitCounter(float seconds)
+    {
+        float counter = seconds;
+        while (counter > 0f)
+        {
+            counter--;
+            yield return new WaitForSeconds(1f);
+        }
+        dashLimitCounter = 3;
+        Debug.Log("Dash limit reset");
     }
 
     void Update()
@@ -167,7 +181,7 @@ public class PlayerMovement : MonoBehaviour
                 noteTracker.GetComponent<NoteTracker>().shortSwordChange = false;
                 noteTracker.GetComponent<NoteTracker>().longSwordChange = true;
                 noteTracker.GetComponent<NoteTracker>().bowChange = false;
-                StartCoroutine(BackToSword(10f));
+                StartCoroutine(BackToSword(5f));
                 lastWeaponUsed = "Long sword";
             }
             else if (shortSwordActive == true)
@@ -188,14 +202,10 @@ public class PlayerMovement : MonoBehaviour
                 noteTracker.GetComponent<NoteTracker>().shortSwordChange = false;
                 noteTracker.GetComponent<NoteTracker>().longSwordChange = false;
                 noteTracker.GetComponent<NoteTracker>().bowChange = true;
-                StartCoroutine(BackToSword(30f));
+                StartCoroutine(BackToSword(10f));
                 lastWeaponUsed = "Bow";
             }
             inHarmonicsMode = false;
-
-            //noteTracker.GetComponent<NoteTracker>().shortSwordChange = false;
-            //noteTracker.GetComponent<NoteTracker>().longSwordChange = false;
-            //noteTracker.GetComponent<NoteTracker>().bowChange = false;
         }
 
         //Checking to see if the attack button is pressed and the player is not in harmonics 
@@ -256,47 +266,55 @@ public class PlayerMovement : MonoBehaviour
         //Dash code, we need a way to lock the player out of spamming the dash through locking the use of the shift key out for a certain amount of time.
         if (Input.GetKey(KeyCode.A))
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (Input.GetKeyDown(KeyCode.LeftShift) && dashLimitCounter != 0)
             {
                 playerHitbox.SetActive(false);
                 anim.SetBool("dashing", true);
                 StartCoroutine(stopDashAnimation(.001f));
                 dashTimer = 5;
                 positionAfterLeftDash = Vector2.left * 1000;
+                dashLimitCounter -= 1;
             }
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (Input.GetKeyDown(KeyCode.LeftShift) && dashLimitCounter != 0)
             {
                 playerHitbox.SetActive(false);
                 anim.SetBool("dashing", true);
                 StartCoroutine(stopDashAnimation(.001f));
                 dashTimer = 5;
                 positionAfterRightDash = Vector2.right * 1000;
+                dashLimitCounter -= 1;
             }
         }
         else if (Input.GetKey(KeyCode.W))
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (Input.GetKeyDown(KeyCode.LeftShift) && dashLimitCounter != 0)
             {
                 playerHitbox.SetActive(false);
                 anim.SetBool("dashing", true);
                 StartCoroutine(stopDashAnimation(.001f));
                 dashTimer = 5;
                 positionAfterUpDash = Vector2.up * 1000;
+                dashLimitCounter -= 1;
             }
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (Input.GetKeyDown(KeyCode.LeftShift) && dashLimitCounter != 0)
             {
                 playerHitbox.SetActive(false);
                 anim.SetBool("dashing", true);
                 StartCoroutine(stopDashAnimation(.001f));
                 dashTimer = 5;
                 positionAfterDownDash = Vector2.down * 1000;
+                dashLimitCounter -= 1;
             }
+        }
+        if (dashLimitCounter == 0)
+        {
+            StartCoroutine(resetDashLimitCounter(3f));
         }
     }
 
