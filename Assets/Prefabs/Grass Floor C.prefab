@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5924250203862994529}
   - component: {fileID: 5924250203862994528}
-  - component: {fileID: 5924250203862994558}
   m_Layer: 0
   m_Name: Grass Floor C
   m_TagString: Untagged
@@ -71,7 +70,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8767896694097406626, guid: 48108ff2e9079b146bbd6f33ef715e8b,
+  m_Sprite: {fileID: -6810708052994140232, guid: 48108ff2e9079b146bbd6f33ef715e8b,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -83,22 +82,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &5924250203862994558
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5924250203862994531}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b71f2865e9b4a56479562ee0da9b9aac, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
