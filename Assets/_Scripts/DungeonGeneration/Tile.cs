@@ -1,32 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DUtils;
 
 public class Tile
 {
-    public int x
+    public DungeonUtils.TileType tileType;
+
+    public override string ToString()
     {
-        get;
-        private set;
-    }
-    public int y
-    {
-        get;
-        private set;
+        return "" + (int) tileType;
     }
 
-    /*
-    public TileGrid.TileType tileType
-    {
-        get;
-        set;
+    public Tile() {
+        tileType = (DungeonUtils.TileType) 0;
     }
-    */
 
-    public GameObject TileGameObject;
-
-    public Tile()
-    {
-        //tileType = TileGrid.TileType.Wall;
+    public Tile(int tt) {
+        tileType = (DungeonUtils.TileType) tt;
     }
+
 }

@@ -20,8 +20,7 @@ public class DungeonManager : MonoBehaviour
 
     private TileGrid<GameObject> dungeon;
 
-    private void Start()
-    {
+    private void Start() {
         roomsX += 2; //Added to allow room for the start and end room
 
         gridX = 1 + (roomsX * 6);
@@ -32,9 +31,9 @@ public class DungeonManager : MonoBehaviour
         setupDungeon();
     }
 
-    //Un-comment for debugging purposes ONLY
-    private void Update()
-    {
+    private void Update() {
+        //Un-comment for debugging purposes ONLY
+        /*
         if(Input.GetKeyDown(KeyCode.R))
         {
             Debug.Log("Generating New Dungeon");
@@ -48,6 +47,7 @@ public class DungeonManager : MonoBehaviour
 
             setupDungeon();
         }
+        */
     }
 
     private void setupDungeon() {
@@ -94,41 +94,41 @@ public class DungeonManager : MonoBehaviour
     }
 
     private void placePlaceholder(int x, int y) {
-        dungeon.SetValue(x, y, Instantiate(prefabPlaceholder, new Vector2(x * dungeon.scale, y * dungeon.scale), Quaternion.identity));
+        dungeon.SetValue(x, y, Instantiate(prefabPlaceholder, new Vector2(x * dungeon.Scale, y * dungeon.Scale), Quaternion.identity));
         dungeon.GetValue(x, y).transform.parent = gameObject.transform;
         dungeon.GetValue(x, y).name = "Placeholder: (" + x + ", " + y + ")";
     }
     private void placeRandomRoom(int x, int y) {
         int index = Random.Range(0, prefabRooms.Length);
         
-        dungeon.SetValue(x, y, Instantiate(prefabRooms[index], new Vector2(x * dungeon.scale, y * dungeon.scale), Quaternion.identity));
+        dungeon.SetValue(x, y, Instantiate(prefabRooms[index], new Vector2(x * dungeon.Scale, y * dungeon.Scale), Quaternion.identity));
         dungeon.GetValue(x, y).transform.parent = gameObject.transform;
         dungeon.GetValue(x, y).name = "Room: (" + x + ", " + y + ")";
     }
     private void placeStartRoom(int x, int y) {
-        dungeon.SetValue(x, y, Instantiate(prefabStartRoom, new Vector2(x * dungeon.scale, y * dungeon.scale), Quaternion.identity));
+        dungeon.SetValue(x, y, Instantiate(prefabStartRoom, new Vector2(x * dungeon.Scale, y * dungeon.Scale), Quaternion.identity));
         dungeon.GetValue(x, y).transform.parent = gameObject.transform;
         dungeon.GetValue(x, y).name = "Starting Room: (" + x + ", " + y + ")";
     }
     private void placeEndRoom(int x, int y) {
-        dungeon.SetValue(x, y, Instantiate(prefabEndRoom, new Vector2(x * dungeon.scale, y * dungeon.scale), Quaternion.identity));
+        dungeon.SetValue(x, y, Instantiate(prefabEndRoom, new Vector2(x * dungeon.Scale, y * dungeon.Scale), Quaternion.identity));
         dungeon.GetValue(x, y).transform.parent = gameObject.transform;
         dungeon.GetValue(x, y).name = "Starting Room: (" + x + ", " + y + ")";
     }
     private void placeFilledRoom(int x, int y) {
         int index = Random.Range(0, prefabRooms.Length);
         
-        dungeon.SetValue(x, y, Instantiate(prefabFilledRoom, new Vector2(x * dungeon.scale, y * dungeon.scale), Quaternion.identity));
+        dungeon.SetValue(x, y, Instantiate(prefabFilledRoom, new Vector2(x * dungeon.Scale, y * dungeon.Scale), Quaternion.identity));
         dungeon.GetValue(x, y).transform.parent = gameObject.transform;
         dungeon.GetValue(x, y).name = "Filled Room: (" + x + ", " + y + ")";
     }
     private void placeSolidWall(int x, int y) {
-        dungeon.SetValue(x, y, Instantiate(prefabWall, new Vector2(x * dungeon.scale, y * dungeon.scale), Quaternion.identity));
+        dungeon.SetValue(x, y, Instantiate(prefabWall, new Vector2(x * dungeon.Scale, y * dungeon.Scale), Quaternion.identity));
         dungeon.GetValue(x, y).transform.parent = gameObject.transform;
         dungeon.GetValue(x, y).name = "Wall: (" + x + ", " + y + ")";
     }
     private void placeOpenDoorway(int x, int y) {
-        dungeon.SetValue(x, y, Instantiate(prefabDoor, new Vector2(x * dungeon.scale, y * dungeon.scale), Quaternion.identity));
+        dungeon.SetValue(x, y, Instantiate(prefabDoor, new Vector2(x * dungeon.Scale, y * dungeon.Scale), Quaternion.identity));
         dungeon.GetValue(x, y).transform.parent = gameObject.transform;
         dungeon.GetValue(x, y).name = "Doorway: (" + x + ", " + y + ")";
     }
