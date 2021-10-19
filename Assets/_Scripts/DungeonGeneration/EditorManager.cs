@@ -18,14 +18,19 @@ public class EditorManager : MonoBehaviour
     private TileGrid<Tile> tiles;
     #endregion
 
-    private KeyCode activeKey = KeyCode.Alpha1;
+    private KeyCode activeKey;
     private DungeonUtils.TileType activeTileType;
+    private DungeonUtils.TileType eraserTileType;
     public string roomKey = "";
 
     private void Start()
     {
         gameObjects = new TileGrid<GameObject>(gridX, gridY, 1);
         tiles = new TileGrid<Tile>(gridX, gridY, -1);
+
+        activeKey = KeyCode.Alpha1;
+        updateActiveTileType();
+        updateEraserTileType();
 
         setupTileGrid();
     }
@@ -63,13 +68,13 @@ public class EditorManager : MonoBehaviour
             gameObjects.GetXY(worldPos, out x, out y);
             if(x >= 0 && x < gridX && y >= 0 && y < gridY)
             {
-                if(tiles.GetValue(x,y).tileType != activeTileType) {
+                if(tiles.GetValue(x,y).tileType != eraserTileType) {
                     Destroy(gameObjects.GetValue(worldPos));
 
                     gameObjects.SetValue(worldPos, Instantiate(Resources.Load<GameObject>(prefabFolderPath + "/" + prefabTiles[0]), new Vector2(x, y), Quaternion.identity));
                     gameObjects.GetValue(worldPos).transform.parent = gameObject.transform;
 
-                    tiles.GetValue(worldPos).tileType = activeTileType;
+                    tiles.GetValue(worldPos).tileType = eraserTileType;
                 }
             }
         }
@@ -110,8 +115,6 @@ public class EditorManager : MonoBehaviour
                 //GameObjects
                 gameObjects.SetValue(x, y, Instantiate(Resources.Load<GameObject>(prefabFolderPath + "/" + prefabTiles[0]), new Vector2(x, y), Quaternion.identity));
                 gameObjects.GetValue(x, y).transform.parent = gameObject.transform;
-
-                
             }
         }
     }
@@ -131,8 +134,6 @@ public class EditorManager : MonoBehaviour
                                 
                                 gameObjects.SetValue(x, y, Instantiate(Resources.Load<GameObject>(prefabFolderPath + "/" + prefabTiles[i]), new Vector2(x, y), Quaternion.identity));
                                 gameObjects.GetValue(x, y).transform.parent = gameObject.transform;
-
-                                Debug.Log("Here");
 
                                 Destroy(go);
                                 break;
@@ -178,6 +179,11 @@ public class EditorManager : MonoBehaviour
         GameObject go = Instantiate(getActivePrefab());
         activeTileType = go.GetComponent<TileGameObject>().tileType;
         Destroy(go);
+    }
+
+    private void updateEraserTileType() {
+        GameObject go = Resources.Load<GameObject>(prefabFolderPath + "/" + prefabTiles[0]);
+        eraserTileType = go.GetComponent<TileGameObject>().tileType;
     }
 
     public void updateRoomKey() {
