@@ -219,12 +219,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 longSwordHitbox.SetActive(true);
                 shortSwordActive = false;
+                bowActive = false;
                 StartCoroutine(DeactivateLongSwordHitbox(.1f));
             }
             if (shortSwordActive == true)
             {
                 shortSwordHitbox.SetActive(true);
                 longSwordActive = false;
+                bowActive = false;
                 StartCoroutine(DeactivateShortSwordHitbox(.1f));
             }
             if (bowActive == true)
