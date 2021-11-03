@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     bool longSwordActive;
     bool shortSwordActive;
     bool bowActive;
+    bool shiftForDashAttack = false;
+    bool attackForDashAttack = false;
 
     private string lastWeaponUsed;
 
@@ -96,10 +98,11 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("shortSwordAnim", true);
         anim.SetBool("longSwordAnim", false);
         anim.SetBool("bowAnim", false);
-        noteTracker.GetComponent<NoteTracker>().shortSwordChange = true;
-        noteTracker.GetComponent<NoteTracker>().longSwordChange = false;
-        noteTracker.GetComponent<NoteTracker>().bowChange = false;
         shortSwordActive = true;
+        longSwordActive = false;
+        bowActive = false;
+        shortSwordActive = true;
+        Debug.Log("Long sword is: " + longSwordActive);
     }
 
     //Stops the dash animation and then based on the last weapon the player had the proper weapon will be brought back out 
@@ -111,26 +114,39 @@ public class PlayerMovement : MonoBehaviour
             counter--;
             yield return new WaitForSeconds(.0001f);
         }
-    
         if (lastWeaponUsed == "Short sword")
         {
             anim.SetBool("shortSwordAnim", true);
             anim.SetBool("longSwordAnim", false);
             anim.SetBool("bowAnim", false);
+            anim.SetBool("dashing", false);
         }
         if (lastWeaponUsed == "Long sword")
         {
             anim.SetBool("shortSwordAnim", false);
             anim.SetBool("longSwordAnim", true);
             anim.SetBool("bowAnim", false);
+            anim.SetBool("dashing", false);
         }
         if (lastWeaponUsed == "Bow")
         {
             anim.SetBool("shortSwordAnim", false);
             anim.SetBool("longSwordAnim", false);
-            anim.SetBool("bowAnim", true);        
+            anim.SetBool("bowAnim", true);
+            anim.SetBool("dashing", false);
         }
         playerHitbox.SetActive(true);
+    }
+
+    IEnumerator timer (float seconds)
+    {
+        float counter = seconds; 
+        while (counter > 0f)
+        {
+            counter--;
+            yield return new WaitForSeconds(.001f);
+        }
+        anim.SetBool("dashAttack", false);
     }
 
     void Update()
@@ -139,8 +155,6 @@ public class PlayerMovement : MonoBehaviour
         shortSwordActive = noteTracker.GetComponent<NoteTracker>().shortSwordChange;
         longSwordActive = noteTracker.GetComponent<NoteTracker>().longSwordChange;
         bowActive = noteTracker.GetComponent<NoteTracker>().bowChange;
-
-        anim.SetBool("backToShortSword", false);
 
         if (Input.GetMouseButtonDown(2))
         {
@@ -151,23 +165,21 @@ public class PlayerMovement : MonoBehaviour
         if (mouseButtonDown)
         {
             anim.SetBool("harmonicsAnim", true);
-            anim.SetBool("shortSwordAnim", false);
-            anim.SetBool("longSwordAnim", false);
-            anim.SetBool("bowAnim", false);
             inHarmonicsMode = true;
         }
         else
         {
+            inHarmonicsMode = false;
             anim.SetBool("harmonicsAnim", false);
             if (longSwordActive == true)
             {
                 anim.SetBool("shortSwordAnim", false);
                 anim.SetBool("longSwordAnim", true);
                 anim.SetBool("bowAnim", false);
-                noteTracker.GetComponent<NoteTracker>().shortSwordChange = false;
-                noteTracker.GetComponent<NoteTracker>().longSwordChange = true;
-                noteTracker.GetComponent<NoteTracker>().bowChange = false;
-                StartCoroutine(BackToSword(10f));
+                shortSwordActive = false;
+                longSwordActive = true;
+                bowActive = false;
+                StartCoroutine(BackToSword(5f));
                 lastWeaponUsed = "Long sword";
             }
             else if (shortSwordActive == true)
@@ -188,15 +200,12 @@ public class PlayerMovement : MonoBehaviour
                 noteTracker.GetComponent<NoteTracker>().shortSwordChange = false;
                 noteTracker.GetComponent<NoteTracker>().longSwordChange = false;
                 noteTracker.GetComponent<NoteTracker>().bowChange = true;
-                StartCoroutine(BackToSword(30f));
+                StartCoroutine(BackToSword(10f));
                 lastWeaponUsed = "Bow";
             }
-            inHarmonicsMode = false;
-
-            //noteTracker.GetComponent<NoteTracker>().shortSwordChange = false;
-            //noteTracker.GetComponent<NoteTracker>().longSwordChange = false;
-            //noteTracker.GetComponent<NoteTracker>().bowChange = false;
+            Debug.Log("After the loop the long sword is: " + longSwordActive);
         }
+        
 
         //Checking to see if the attack button is pressed and the player is not in harmonics 
         if (Input.GetMouseButtonDown(0) && inHarmonicsMode == false)
@@ -271,9 +280,19 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
+                shiftForDashAttack = true;
                 playerHitbox.SetActive(false);
                 anim.SetBool("dashing", true);
-                StartCoroutine(stopDashAnimation(.001f));
+                
+                if (shiftForDashAttack == true && shortSwordActive == true)
+                {
+                    anim.SetBool("dashAttack", true);
+                    StartCoroutine(timer(.01f));
+                }
+                shiftForDashAttack = false;
+                StartCoroutine(stopDashAnimation(.0001f));
+                Debug.Log(shiftForDashAttack);
+                Debug.Log(shortSwordActive);
                 dashTimer = 5;
                 positionAfterRightDash = Vector2.right * 1000;
             }
