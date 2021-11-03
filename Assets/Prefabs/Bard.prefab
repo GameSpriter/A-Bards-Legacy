@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 8142308170845674244}
+  healthSlider: {fileID: 0}
 --- !u!61 &168085156
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -261,7 +262,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1131293588989074975, guid: 46fe8420cc98c5546833311caa626625,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -291,6 +292,12 @@ MonoBehaviour:
   shortSwordHitbox: {fileID: 1623328824}
   longSwordHitbox: {fileID: 283570717}
   noteTracker: {fileID: 0}
+  playerHitbox: {fileID: 168085154}
+  shotSpawn: {fileID: 0}
+  arrowPrefab: {fileID: 8268833200275349898, guid: 92a0e15b62c20c64fa4da9578208fc15,
+    type: 3}
+  playerSpeed: 4
+  playerDashSpeed: 50
 --- !u!95 &8142308170845674240
 Animator:
   serializedVersion: 3

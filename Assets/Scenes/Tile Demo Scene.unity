@@ -5333,11 +5333,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bard
       objectReference: {fileID: 0}
-    - target: {fileID: 8142308170845674245, guid: 1c48b1258d539544f9f9e920c8eb41da,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8142308170845674246, guid: 1c48b1258d539544f9f9e920c8eb41da,
         type: 3}
       propertyPath: m_RootOrder
@@ -5395,20 +5390,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8142308170845674247, guid: 1c48b1258d539544f9f9e920c8eb41da,
         type: 3}
-      propertyPath: arrowPrefab
-      value: 
-      objectReference: {fileID: 8268833200275349898, guid: 92a0e15b62c20c64fa4da9578208fc15,
-        type: 3}
-    - target: {fileID: 8142308170845674247, guid: 1c48b1258d539544f9f9e920c8eb41da,
-        type: 3}
       propertyPath: noteTracker
       value: 
       objectReference: {fileID: 940469194}
-    - target: {fileID: 8142308170845674247, guid: 1c48b1258d539544f9f9e920c8eb41da,
-        type: 3}
-      propertyPath: playerHitbox
-      value: 
-      objectReference: {fileID: 675598794}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c48b1258d539544f9f9e920c8eb41da, type: 3}
 --- !u!1 &649304755
@@ -5655,12 +5639,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &675598794 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 168085154, guid: 1c48b1258d539544f9f9e920c8eb41da,
-    type: 3}
-  m_PrefabInstance: {fileID: 642559484}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &687652547
 GameObject:
   m_ObjectHideFlags: 0
@@ -5830,11 +5808,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 26167636001812142, guid: 2b891379d1cafe7428753a780a4e1f36,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 26167636277275995, guid: 2b891379d1cafe7428753a780a4e1f36,
         type: 3}
       propertyPath: m_Name
@@ -5895,49 +5868,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 26167636277275997, guid: 2b891379d1cafe7428753a780a4e1f36,
-        type: 3}
-      propertyPath: m_ForceIntoRT
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 26167636277275997, guid: 2b891379d1cafe7428753a780a4e1f36,
-        type: 3}
-      propertyPath: orthographic size
-      value: 5.15625
-      objectReference: {fileID: 0}
-    - target: {fileID: 26167636277275997, guid: 2b891379d1cafe7428753a780a4e1f36,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 26167636277275997, guid: 2b891379d1cafe7428753a780a4e1f36,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 26167636277275997, guid: 2b891379d1cafe7428753a780a4e1f36,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 26167636277275997, guid: 2b891379d1cafe7428753a780a4e1f36,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.height
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 26167636277275999, guid: 2b891379d1cafe7428753a780a4e1f36,
-        type: 3}
-      propertyPath: m_CropFrameX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 26167636277275999, guid: 2b891379d1cafe7428753a780a4e1f36,
-        type: 3}
-      propertyPath: m_CropFrameY
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 26167637753454805, guid: 2b891379d1cafe7428753a780a4e1f36,
         type: 3}
       propertyPath: playerpos
+      value: 
+      objectReference: {fileID: 1745836657}
+    - target: {fileID: 7703904955364401344, guid: 2b891379d1cafe7428753a780a4e1f36,
+        type: 3}
+      propertyPath: player
       value: 
       objectReference: {fileID: 1745836657}
     m_RemovedComponents: []
