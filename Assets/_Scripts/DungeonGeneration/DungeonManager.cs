@@ -1,53 +1,57 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DUtils;
 
 public class DungeonManager : MonoBehaviour
 {
+    #region Room/Grid Vars
     public int roomsX = 3;
     public int roomsY = 1;
     private int gridX;
     private int gridY;
-    private int gridScale = 3;
+    private int wallThickness = 3;
+    private int roomWidth;
+    #endregion
 
-    public GameObject prefabStartRoom;
-    public GameObject prefabEndRoom;
-    public GameObject prefabPlaceholder;
+    #region Prefabs
     public GameObject prefabWall;
-    public GameObject prefabDoor;
-    public GameObject prefabFilledRoom; 
-    public GameObject[] prefabRooms;
+    public GameObject prefabFloor;
+    #endregion
+
+    #region Scriptable Objects
+    public ScriptableRoom scriptableStartRoom;
+    public ScriptableRoom scriptableEndRoom;
+    public ScriptableRoom[] scriptableRooms;
+    #endregion
+
+    #region TileGrid Tiles
+    private TileGrid<Tile> tileGridStartRoom;
+    private TileGrid<Tile> tileGridEndRoom;
+    private TileGrid<Tile>[] tileGridRooms;
+    #endregion
 
     private TileGrid<GameObject> dungeon;
 
     private void Start() {
         roomsX += 2; //Added to allow room for the start and end room
 
-        gridX = 1 + (roomsX * 6);
-        gridY = 1 + (roomsY * 6);
+        //Convert from Scriptable Objects to TileGrids
+        tileGridStartRoom = DungeonUtils.getRoomGrid(scriptableStartRoom.Key);
+        tileGridEndRoom = DungeonUtils.getRoomGrid(scriptableEndRoom.Key);
+        tileGridRooms = new TileGrid<Tile>[scriptableRooms.Length];
+        for(int i = 0; i < scriptableRooms.Length; i++) {
+            tileGridRooms[i] = DungeonUtils.getRoomGrid(scriptableRooms[i].Key);
+        }
 
-        dungeon = new TileGrid<GameObject>(gridX, gridY, gridScale);
+        roomWidth = tileGridRooms[0].Width;
+
+        gridX = ((roomsX + 1) * roomWidth) + wallThickness;
+        gridY = (roomsY + 1) * roomWidth + wallThickness;
+
+        dungeon = new TileGrid<GameObject>(gridX, gridY, 1);
 
         setupDungeon();
-    }
-
-    private void Update() {
-        //Un-comment for debugging purposes ONLY
-        /*
-        if(Input.GetKeyDown(KeyCode.R))
-        {
-            Debug.Log("Generating New Dungeon");
-            for (int x = 0; x < gridX; x++)
-            {
-                for (int y = 0; y < gridY; y++)
-                {
-                    Destroy(dungeon.GetValue(x,y));
-                }
-            }
-
-            setupDungeon();
-        }
-        */
     }
 
     private void setupDungeon() {
@@ -56,164 +60,172 @@ public class DungeonManager : MonoBehaviour
         int start = Random.Range(0, roomsY);
         int end = Random.Range(0, roomsY);
         Debug.Log("Start: 0, " + start);
-        Debug.Log("End: " + roomsX + ", " + end);
+        Debug.Log("End: " + (roomsX - 1) + ", " + end);
 
         //Move the player to the correct position in the dungeon
-        Camera.main.GetComponent<CameraRefs>().player.transform.SetPositionAndRotation(new Vector2(10.5f, (start * 18) + 10.5f), Quaternion.identity);
+        Camera.main.GetComponent<CameraRefs>().player.transform.SetPositionAndRotation(new Vector2((0.5f * roomWidth) + wallThickness, (start * (roomWidth + wallThickness)) + (0.5f * roomWidth) + wallThickness), Quaternion.identity);
 
         TileGrid<char> path = setupPath(start, end);
+        bool generating = true;
+        int pathX = 0;
+        int pathY = start;
 
-        for (int gx = 0, px = 0; gx < gridX; gx++)
-        {
-            px = Mathf.FloorToInt(gx / 6.0f);
-            for (int gy = 0, py = 0; gy < gridY; gy++)
-            {
-                py = Mathf.FloorToInt(gy / 6.0f);
+        while(generating) {
+            if(path.GetValue(pathX, pathY) == 'B') {
+                placeSouthWall(pathX, pathY);           //South Wall
+                placeWestWall(pathX, pathY);            //West Wall
+                placeSouthWall(pathX, pathY + 1);       //North Wall
+                placeWestWall(pathX + 1, pathY, true);  //East Wall
 
-                if(isPlaceholder(gx, gy)) {
-                    placePlaceholder(gx, gy);
-                } else if(isRoom(gx, gy)) {
-                    if(path.GetValue(px, py).Equals('Z')) {
-                        placeFilledRoom(gx, gy);
-                    } else if(path.GetValue(px, py).Equals('B')) {
-                        placeStartRoom(gx, gy);
-                    } else if(path.GetValue(px, py).Equals('F')) {
-                        placeEndRoom(gx, gy);
+                placeRoom(pathX, pathY, tileGridStartRoom);
+
+                //TODO: Move Player here
+
+                pathX++;
+            } else if(path.GetValue(pathX, pathY) == 'N') {
+                if(path.GetValue(pathX, pathY - 1) != 'N') {//South Wall
+                    placeSouthWall(pathX, pathY);
+                }
+                if(path.GetValue(pathX - 1, pathY) == 'Z') {//West Wall
+                    placeWestWall(pathX, pathY);
+                }
+                placeSouthWall(pathX, pathY + 1, true);     //North Wall
+                if(path.GetValue(pathX + 1, pathY) != 'Z') {//East Wall; 1 in 3 chance to place a wall with a door between two rooms
+                    if(Random.Range(0, 3) == 0) {
+                        placeWestWall(pathX + 1, pathY, true);
                     } else {
-                        placeRandomRoom(gx, gy);
+                        placeWestWall(pathX + 1, pathY);
                     }
-                } else if(isSolidWall(gx, gy)) {
-                    placeSolidWall(gx, gy);
-                } else if(isDoorway(gx, gy, path, px, py)) {
-                    placeOpenDoorway(gx, gy);
                 } else {
-                    placeSolidWall(gx, gy);
+                    placeWestWall(pathX + 1, pathY);
+                }
+                placeNorthEastCorner(pathX, pathY - 1);
+                
+                placeRoom(pathX, pathY, tileGridRooms[Random.Range(0, tileGridRooms.Length)]);
+
+                pathY++;
+            } else if(path.GetValue(pathX, pathY) == 'E') {
+                Debug.Log(string.Format("Room: ({0},{1}); Path: E", pathX, pathY));
+                if(path.GetValue(pathX, pathY - 1) != 'N') {//South Wall
+                    placeSouthWall(pathX, pathY);
+                }
+                if(path.GetValue(pathX - 1, pathY) == 'Z') {//West Wall
+                    placeWestWall(pathX, pathY);
+                }
+                if(path.GetValue(pathX, pathY + 1) == 'Z' || path.GetValue(pathX, pathY + 1) == '\0') {//North Wall
+                    placeSouthWall(pathX, pathY + 1);
+                }
+                placeWestWall(pathX + 1, pathY, true);      //East Wall
+
+                placeRoom(pathX, pathY, tileGridRooms[Random.Range(0, tileGridRooms.Length)]);
+
+                pathX++;
+            } else if(path.GetValue(pathX, pathY) == 'S') {
+                placeSouthWall(pathX, pathY, true);         //South Wall
+                if(path.GetValue(pathX - 1, pathY) == 'Z') {//West Wall
+                    placeWestWall(pathX, pathY);
+                }
+                if(path.GetValue(pathX, pathY + 1) != 'S') {//North Wall
+                    placeSouthWall(pathX, pathY + 1);
+                }
+                if(path.GetValue(pathX + 1, pathY) != 'Z') {//East Wall; 1 in 3 chance to place a wall with a door between two rooms
+                    if(Random.Range(0, 3) == 0) {
+                        placeWestWall(pathX + 1, pathY, true);
+                    } else {
+                        placeWestWall(pathX + 1, pathY);
+                    }
+                } else {
+                    placeWestWall(pathX + 1, pathY);
+                }
+                placeNorthEastCorner(pathX, pathY);
+                
+                placeRoom(pathX, pathY, tileGridRooms[Random.Range(0, tileGridRooms.Length)]);
+
+                pathY--;
+            } else if(path.GetValue(pathX, pathY) == 'F') {
+                placeSouthWall(pathX, pathY);           //South Wall
+                //placeWestWall(pathX, pathY);          //West Wall
+                placeSouthWall(pathX, pathY + 1);       //North Wall
+                placeWestWall(pathX + 1, pathY);        //East Wall
+                
+                placeNorthEastCorner(pathX, pathY);
+                placeNorthEastCorner(pathX, pathY - 1);
+
+                placeRoom(pathX, pathY, tileGridEndRoom);
+                
+                break;
+            }
+        }
+    }
+    private void placeRoom(int pathX, int pathY, TileGrid<Tile> tileGridRoom) {
+        //For each tile int the room, place a floor or wall tile
+        for (int roomX = 0; roomX < roomWidth; roomX++) {
+            for (int roomY = 0; roomY < roomWidth; roomY++) {
+                int worldX = roomX + getWorldPosFromPath(pathX) + wallThickness;
+                int worldY = roomY + getWorldPosFromPath(pathY) + wallThickness;
+                
+                if(tileGridRoom.GetValue(roomX, roomY).tileType == DungeonUtils.TileType.Wall) {
+                    placePrefab(worldX, worldY, prefabWall);
+                } else if(tileGridRoom.GetValue(roomX, roomY).tileType == DungeonUtils.TileType.Floor) {
+                    placePrefab(worldX, worldY, prefabFloor);
                 }
             }
         }
     }
 
-    private void placePlaceholder(int x, int y) {
-        dungeon.SetValue(x, y, Instantiate(prefabPlaceholder, new Vector2(x * dungeon.Scale, y * dungeon.Scale), Quaternion.identity));
-        dungeon.GetValue(x, y).transform.parent = gameObject.transform;
-        dungeon.GetValue(x, y).name = "Placeholder: (" + x + ", " + y + ")";
-    }
-    private void placeRandomRoom(int x, int y) {
-        int index = Random.Range(0, prefabRooms.Length);
-        
-        dungeon.SetValue(x, y, Instantiate(prefabRooms[index], new Vector2(x * dungeon.Scale, y * dungeon.Scale), Quaternion.identity));
-        dungeon.GetValue(x, y).transform.parent = gameObject.transform;
-        dungeon.GetValue(x, y).name = "Room: (" + x + ", " + y + ")";
-    }
-    private void placeStartRoom(int x, int y) {
-        dungeon.SetValue(x, y, Instantiate(prefabStartRoom, new Vector2(x * dungeon.Scale, y * dungeon.Scale), Quaternion.identity));
-        dungeon.GetValue(x, y).transform.parent = gameObject.transform;
-        dungeon.GetValue(x, y).name = "Starting Room: (" + x + ", " + y + ")";
-    }
-    private void placeEndRoom(int x, int y) {
-        dungeon.SetValue(x, y, Instantiate(prefabEndRoom, new Vector2(x * dungeon.Scale, y * dungeon.Scale), Quaternion.identity));
-        dungeon.GetValue(x, y).transform.parent = gameObject.transform;
-        dungeon.GetValue(x, y).name = "Starting Room: (" + x + ", " + y + ")";
-    }
-    private void placeFilledRoom(int x, int y) {
-        int index = Random.Range(0, prefabRooms.Length);
-        
-        dungeon.SetValue(x, y, Instantiate(prefabFilledRoom, new Vector2(x * dungeon.Scale, y * dungeon.Scale), Quaternion.identity));
-        dungeon.GetValue(x, y).transform.parent = gameObject.transform;
-        dungeon.GetValue(x, y).name = "Filled Room: (" + x + ", " + y + ")";
-    }
-    private void placeSolidWall(int x, int y) {
-        dungeon.SetValue(x, y, Instantiate(prefabWall, new Vector2(x * dungeon.Scale, y * dungeon.Scale), Quaternion.identity));
-        dungeon.GetValue(x, y).transform.parent = gameObject.transform;
-        dungeon.GetValue(x, y).name = "Wall: (" + x + ", " + y + ")";
-    }
-    private void placeOpenDoorway(int x, int y) {
-        dungeon.SetValue(x, y, Instantiate(prefabDoor, new Vector2(x * dungeon.Scale, y * dungeon.Scale), Quaternion.identity));
-        dungeon.GetValue(x, y).transform.parent = gameObject.transform;
-        dungeon.GetValue(x, y).name = "Doorway: (" + x + ", " + y + ")";
-    }
-
-    private bool isPlaceholder(int x, int y) {
-        if(x % 6 != 0 && y % 6 != 0) {//is placeholder if it's not a room
-            if (x % 6 == 1 && y % 6 == 1) {//Is room
-                return false;
-            } else {
-                return true;
-            }
-        }
-
-        return false;
-    }
-    private bool isRoom(int x, int y) {
-        if(x % 6  == 1 && y % 6 == 1) {
-            return true;
-        }
-
-        return false;
-    }
-    private bool isSolidWall(int x, int y) {
-        if(x == 0 || y == 0 || x == gridX - 1 || y == gridY - 1) {//Litterally edge cases; They're on the edge of the map
-            return true;
-        }
-        
-        if(x % 6 == 0 && y % 6 == 0) { //Corner
-            return true;
-        }
-
-        if(x % 6 == 1 || x % 6 == 5) {
-            if(y % 6 == 1) { //One off of the corner horizontally
-                return true;
-            }
-        }
-
-        if(y % 6 == 1 || y % 6 == 5) {
-            if(x % 6 == 1) { //One off of the corner vertically
-                return true;
-            }
-        }
-
-        return false;
-    }
-    private bool isDoorway(int x, int y, TileGrid<char> path, int px, int py) {
-        if(x == 0 || x == gridX) {
-            return false;
-        }
-
-        if(y == 0 || y == gridY) {
-            return false;
-        }
-
-        if(y % 6 == 3) {
-            if(path.GetValue(px - 1, py).Equals('E') || path.GetValue(px - 1, py).Equals('B')) { //If the path to the left of the doorway leads easy
-                return true;
-            } else if (!path.GetValue(px - 1, py).Equals('Z') && !path.GetValue(px, py).Equals('Z')) {//If the path to the left and right are both valid rooms
-                int temp = Random.Range(0, 3);
-                if(temp == 1) { //1 in 3 chances it will be an open doorway
-                    return true;
+    private void placeSouthWall(int pathX, int pathY, bool hasDoor = false) {
+        for(int worldX = getWorldPosFromPath(pathX); worldX < getWorldPosFromPath(pathX + 1); worldX++) {
+            for(int worldY = getWorldPosFromPath(pathY); worldY < getWorldPosFromPath(pathY) + wallThickness; worldY++) {
+                if(hasDoor) {
+                    int halfWayPoint = (getWorldPosFromPath(pathX) + getWorldPosFromPath(pathX + 1)) / 2;
+                    halfWayPoint++;
+                    if(worldX >= halfWayPoint - 1 && worldX <= halfWayPoint + 1) {
+                        placePrefab(worldX, worldY, prefabFloor);
+                        Debug.Log("X: " + worldX + "; Y: " + worldY);
+                    } else {
+                        placePrefab(worldX, worldY, prefabWall);
+                    }
                 } else {
-                    return false;
+                    placePrefab(worldX, worldY, prefabWall);
                 }
-            } else {
-                return false;
             }
         }
+    }
 
-        if(x % 6 == 3) {
-            if(path.GetValue(px, py - 1).Equals('N') || path.GetValue(px, py).Equals('S')) { //If the path to the left of the doorway leads easy
-                return true;
-            } else if (!path.GetValue(px, py - 1).Equals('Z') && !path.GetValue(px, py).Equals('Z')) {//If the path to the left and right are both valid rooms
-                int temp = Random.Range(0, 3);
-                if(temp == 0) { //1 in 3 chances it will be an open doorway
-                    return true;
+    private void placeWestWall(int pathX, int pathY, bool hasDoor = false) {
+        for(int worldX = getWorldPosFromPath(pathX); worldX < getWorldPosFromPath(pathX) + wallThickness; worldX++) {
+            for(int worldY = getWorldPosFromPath(pathY) + wallThickness; worldY < getWorldPosFromPath(pathY + 1); worldY++) {
+                if(hasDoor) {
+                    int halfWayPoint = (getWorldPosFromPath(pathY) + getWorldPosFromPath(pathY + 1)) / 2;
+                    halfWayPoint++;
+                    if(worldY >= halfWayPoint - 1 && worldY <= halfWayPoint + 1) {
+                        placePrefab(worldX, worldY, prefabFloor);
+                    } else {
+                        placePrefab(worldX, worldY, prefabWall);
+                    }
                 } else {
-                    return false;
+                    placePrefab(worldX, worldY, prefabWall);
                 }
-            } else {
-                return false;
             }
         }
+    }
 
-        return false;
+    private void placeNorthEastCorner(int pathX, int pathY) {
+        for(int worldX = getWorldPosFromPath(pathX + 1); worldX < getWorldPosFromPath(pathX + 1) + wallThickness; worldX++) {
+            for(int worldY = getWorldPosFromPath(pathY + 1); worldY < getWorldPosFromPath(pathY + 1) + wallThickness; worldY++) {
+                placePrefab(worldX, worldY, prefabWall);
+            }
+        }
+    }
+
+    private int getWorldPosFromPath(int num) {
+        return num * (roomWidth + wallThickness);
+    }
+
+    private void placePrefab(int x, int y, GameObject prefab) {
+        dungeon.SetValue(x, y, Instantiate(prefab, new Vector2(x * dungeon.Scale, y * dungeon.Scale), Quaternion.identity));
+        dungeon.GetValue(x, y).transform.parent = gameObject.transform;
+        dungeon.GetValue(x, y).name = dungeon.GetValue(x, y).GetComponent<TileGameObject>().tileType + ": (" + x + ", " + y + ")";
     }
 
     private TileGrid<char> setupPath(int start, int end) {
@@ -222,7 +234,7 @@ public class DungeonManager : MonoBehaviour
         int posY = start;
 
         //Path grid setup
-        TileGrid<char> path = new TileGrid<char>(roomsX, roomsY, 1);
+        TileGrid<char> path = new TileGrid<char>(roomsX, roomsY, -1);
 
         for (int i = 0; i < roomsX; i++) {
             for (int j = 0; j < roomsY; j++) {

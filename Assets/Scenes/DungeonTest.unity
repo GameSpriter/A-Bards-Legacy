@@ -672,7 +672,7 @@ PrefabInstance:
     - target: {fileID: 26167636277275997, guid: 2b891379d1cafe7428753a780a4e1f36,
         type: 3}
       propertyPath: orthographic size
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 26167636277275997, guid: 2b891379d1cafe7428753a780a4e1f36,
         type: 3}
@@ -1181,29 +1181,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomsX: 3
   roomsY: 3
-  prefabStartRoom: {fileID: 5560703806599685745, guid: 8748c62bf17822a4b802a4cdda825e01,
+  prefabWall: {fileID: 3750169659694260681, guid: 1c57e8e4225b62144b006875c7e78be2,
     type: 3}
-  prefabEndRoom: {fileID: 8639068951485936662, guid: 7ddd9048c579ef94fbf5dcc54cc8c393,
+  prefabFloor: {fileID: 7511285029791515846, guid: f69f16e24180a1549a643755146fe3d0,
     type: 3}
-  prefabPlaceholder: {fileID: 992184377953002082, guid: 8c533a38faf97334da466d1cc3322498,
-    type: 3}
-  prefabWall: {fileID: 3051767622077802559, guid: f9270f5469693ee41a8a944e54a53480,
-    type: 3}
-  prefabDoor: {fileID: 2092515665979460798, guid: 9310469d0eed6764185f5da94a7e52be,
-    type: 3}
-  prefabFilledRoom: {fileID: 3787885664245407293, guid: bc3008174c514a643a4f4940f594ac9b,
-    type: 3}
-  prefabRooms:
-  - {fileID: 9029877480968231591, guid: 6395cb470367bdf428ddc8a29dcfde5f, type: 3}
-  - {fileID: 2310242586670786184, guid: b5f70d3e117a44b419e943ca3ad3e505, type: 3}
-  - {fileID: 4789652022013385130, guid: ca8d2abe49e483b4690a4f4b82f8d680, type: 3}
-  - {fileID: 326083800895357520, guid: f7fd6a5ad4df9364ebd31bf3304fc7d5, type: 3}
-  - {fileID: 5875730425936224595, guid: 28e3b43c22da6c1418b3992f8a78aba8, type: 3}
-  - {fileID: 5006913286564864617, guid: 325ae734fb687ac44862d21cccc83f3b, type: 3}
-  - {fileID: 7885680244364997798, guid: a793bc81ec3c93f4ea2f00b08f28c751, type: 3}
-  - {fileID: 1493264796226321460, guid: 516d05f60ad11a14d91779454aebf40a, type: 3}
-  - {fileID: 7074000778581567811, guid: ca74fe78e5d434843bc241a2832cdce9, type: 3}
-  - {fileID: 5334305981575363946, guid: 659f00a14b058074fb767575b040ae70, type: 3}
+  scriptableStartRoom: {fileID: 11400000, guid: 6bf82fd84244a3748b9f458f87e549ee,
+    type: 2}
+  scriptableEndRoom: {fileID: 11400000, guid: 38b32fb43e01ead4e8a23c8d8ee117f7, type: 2}
+  scriptableRooms:
+  - {fileID: 11400000, guid: 724bf4f18c3668d40aa6b5f4ffbb7039, type: 2}
+  - {fileID: 11400000, guid: c0a0e4297ea764143a8f9c2cac314067, type: 2}
+  - {fileID: 11400000, guid: 1152688a99717364e99ad49939a22f9d, type: 2}
+  - {fileID: 11400000, guid: 27eee1b26c8cae740b462d33ee7cb99f, type: 2}
+  - {fileID: 11400000, guid: 59758eccb5f8f8c4e87554dfe13283ff, type: 2}
+  - {fileID: 11400000, guid: abbf5fe362143fb4f945de0978606561, type: 2}
+  - {fileID: 11400000, guid: 1bd3fd37a4f5a3942a1fd932560bdbdb, type: 2}
+  - {fileID: 11400000, guid: 02831696261eda644bd95dfd29ba715a, type: 2}
+  - {fileID: 11400000, guid: 373c7abbbb5e4c04bb490dd84db4875c, type: 2}
+  - {fileID: 11400000, guid: c7f9dee5cd1e5a4499212b9ea1f135ae, type: 2}
+  - {fileID: 11400000, guid: 5de448161da091b469ca0f01af194974, type: 2}
+  - {fileID: 11400000, guid: 43e09f82300a65b4c927f52e13f634d2, type: 2}
+  - {fileID: 11400000, guid: 761bf8bdf7caa044d92a28f92f54e309, type: 2}
+  - {fileID: 11400000, guid: 93c698fefb7fbcd4491343e7b14b8917, type: 2}
+  - {fileID: 11400000, guid: 1cc2f2d1da9f55c449cc2dc2dbd7146a, type: 2}
 --- !u!1 &1077486261
 GameObject:
   m_ObjectHideFlags: 0
