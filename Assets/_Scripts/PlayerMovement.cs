@@ -282,30 +282,12 @@ public class PlayerMovement : MonoBehaviour
                 dashBlocked = true;
                 playerHitbox.SetActive(false);
                 anim.SetBool("dashing", true);
-                StartCoroutine(dashUnblock(.40f));
+                StartCoroutine(dashUnblock(1.1f));
                 StartCoroutine(stopDashAnimation(.001f));
                 dashTimer = 5;
                 positionAfterLeftDash = Vector2.left * 1000;
             }
         }
-
-        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W))
-        {
-            Debug.Log(dashBlocked);
-            if (Input.GetKeyDown(KeyCode.Space) && dashBlocked == false)
-            {
-                Debug.Log("Hi");
-                dashBlocked = true;
-                playerHitbox.SetActive(false);
-                anim.SetBool("dashing", true);
-                StartCoroutine(dashUnblock(.40f));
-                StartCoroutine(stopDashAnimation(.001f));
-                dashTimer = 5;
-                positionAfterLeftDash = Vector2.left * 1000;
-            }
-        }
-
-
         else if (Input.GetKey(KeyCode.D))
         {
             if (Input.GetKeyDown(KeyCode.Space) && dashBlocked == false)
@@ -313,7 +295,7 @@ public class PlayerMovement : MonoBehaviour
                 dashBlocked = true;
                 playerHitbox.SetActive(false);
                 anim.SetBool("dashing", true);
-                StartCoroutine(dashUnblock(.40f));
+                StartCoroutine(dashUnblock(1.1f));
                 StartCoroutine(stopDashAnimation(.0001f));
                 dashTimer = 5;
                 positionAfterRightDash = Vector2.right * 1000;
@@ -326,7 +308,7 @@ public class PlayerMovement : MonoBehaviour
                 dashBlocked = true;
                 playerHitbox.SetActive(false);
                 anim.SetBool("dashing", true);
-                StartCoroutine(dashUnblock(.40f));
+                StartCoroutine(dashUnblock(1.1f));
                 StartCoroutine(stopDashAnimation(.001f));
                 dashTimer = 5;
                 positionAfterUpDash = Vector2.up * 1000;
@@ -339,7 +321,7 @@ public class PlayerMovement : MonoBehaviour
                 dashBlocked = true;
                 playerHitbox.SetActive(false);
                 anim.SetBool("dashing", true);
-                StartCoroutine(dashUnblock(.40f));
+                StartCoroutine(dashUnblock(1.1f));
                 StartCoroutine(stopDashAnimation(.001f));
                 dashTimer = 5;
                 positionAfterDownDash = Vector2.down * 1000;
