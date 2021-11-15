@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     bool bowActive;
     bool shiftForDashAttack = false;
     bool attackForDashAttack = false;
+    bool dashBlocked = false;
 
     private string lastWeaponUsed;
 
@@ -102,7 +103,6 @@ public class PlayerMovement : MonoBehaviour
         longSwordActive = false;
         bowActive = false;
         shortSwordActive = true;
-        Debug.Log("Long sword is: " + longSwordActive);
     }
 
     //Stops the dash animation and then based on the last weapon the player had the proper weapon will be brought back out 
@@ -147,6 +147,17 @@ public class PlayerMovement : MonoBehaviour
             yield return new WaitForSeconds(.001f);
         }
         anim.SetBool("dashAttack", false);
+    }
+
+    IEnumerator dashUnblock(float seconds)
+    {
+        float counter = seconds; 
+        while (counter > 0f)
+        {
+            counter--;
+            yield return new WaitForSeconds(1);
+        }
+        dashBlocked = false;
     }
 
     void Update()
@@ -203,7 +214,6 @@ public class PlayerMovement : MonoBehaviour
                 StartCoroutine(BackToSword(10f));
                 lastWeaponUsed = "Bow";
             }
-            Debug.Log("After the loop the long sword is: " + longSwordActive);
         }
         
 
@@ -267,42 +277,56 @@ public class PlayerMovement : MonoBehaviour
         //Dash code, we need a way to lock the player out of spamming the dash through locking the use of the shift key out for a certain amount of time.
         if (Input.GetKey(KeyCode.A))
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (Input.GetKeyDown(KeyCode.Space) && dashBlocked == false)
             {
+                dashBlocked = true;
                 playerHitbox.SetActive(false);
                 anim.SetBool("dashing", true);
+                StartCoroutine(dashUnblock(.40f));
                 StartCoroutine(stopDashAnimation(.001f));
                 dashTimer = 5;
                 positionAfterLeftDash = Vector2.left * 1000;
             }
         }
-        else if (Input.GetKey(KeyCode.D))
+
+        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W))
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            Debug.Log(dashBlocked);
+            if (Input.GetKeyDown(KeyCode.Space) && dashBlocked == false)
             {
-                shiftForDashAttack = true;
+                Debug.Log("Hi");
+                dashBlocked = true;
                 playerHitbox.SetActive(false);
                 anim.SetBool("dashing", true);
-                
-                if (shiftForDashAttack == true && shortSwordActive == true)
-                {
-                    anim.SetBool("dashAttack", true);
-                    StartCoroutine(timer(.01f));
-                }
-                shiftForDashAttack = false;
+                StartCoroutine(dashUnblock(.40f));
+                StartCoroutine(stopDashAnimation(.001f));
+                dashTimer = 5;
+                positionAfterLeftDash = Vector2.left * 1000;
+            }
+        }
+
+
+        else if (Input.GetKey(KeyCode.D))
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && dashBlocked == false)
+            {
+                dashBlocked = true;
+                playerHitbox.SetActive(false);
+                anim.SetBool("dashing", true);
+                StartCoroutine(dashUnblock(.40f));
                 StartCoroutine(stopDashAnimation(.0001f));
-                Debug.Log(shiftForDashAttack);
-                Debug.Log(shortSwordActive);
                 dashTimer = 5;
                 positionAfterRightDash = Vector2.right * 1000;
             }
         }
-        else if (Input.GetKey(KeyCode.W))
+        else if (Input.GetKey(KeyCode.W) && dashBlocked == false)
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
+                dashBlocked = true;
                 playerHitbox.SetActive(false);
                 anim.SetBool("dashing", true);
+                StartCoroutine(dashUnblock(.40f));
                 StartCoroutine(stopDashAnimation(.001f));
                 dashTimer = 5;
                 positionAfterUpDash = Vector2.up * 1000;
@@ -310,10 +334,12 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (Input.GetKeyDown(KeyCode.Space) && dashBlocked == false)
             {
+                dashBlocked = true;
                 playerHitbox.SetActive(false);
                 anim.SetBool("dashing", true);
+                StartCoroutine(dashUnblock(.40f));
                 StartCoroutine(stopDashAnimation(.001f));
                 dashTimer = 5;
                 positionAfterDownDash = Vector2.down * 1000;
