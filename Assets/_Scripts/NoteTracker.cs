@@ -178,6 +178,7 @@ public class NoteTracker : MonoBehaviour
                 }
             }
         }
+        playedSequences.Clear();
         IsActivated = false;
     }
 

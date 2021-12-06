@@ -168,11 +168,14 @@ public class PlayerMovement : MonoBehaviour
         //Gets components
         shortSwordActive = noteTracker.GetComponent<NoteTracker>().shortSwordChange;
         longSwordActive = noteTracker.GetComponent<NoteTracker>().longSwordChange;
-        Debug.Log("Long Sword is " + longSwordActive);
+        //Debug.Log("Long Sword is " + longSwordActive);
         bowActive = noteTracker.GetComponent<NoteTracker>().bowChange;
 
         if (Input.GetMouseButtonDown(2))
         {
+            Debug.Log("Short Sword is " + shortSwordActive);
+            Debug.Log("Long Sword is " + longSwordActive);
+            Debug.Log("Bow is " + bowActive);
             mouseButtonDown = !mouseButtonDown;
         }
 
@@ -304,7 +307,7 @@ public class PlayerMovement : MonoBehaviour
                 playerHitbox.SetActive(false);
                 anim.SetBool("dashing", true);
                 StartCoroutine(dashUnblock(1.1f));
-                StartCoroutine(stopDashAnimation(.001f));
+                //StartCoroutine(stopDashAnimation(.001f));
                 dashTimer = 5;
                 positionAfterLeftDash = Vector2.left * 1000;
             }
