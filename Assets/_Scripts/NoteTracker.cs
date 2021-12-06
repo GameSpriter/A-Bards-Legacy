@@ -203,6 +203,9 @@ public class NoteTracker : MonoBehaviour
                 Camera.main.GetComponent<CameraRefs>().player.GetComponent<PlayerMovement>().StopAllCoroutines();
                 break;
             default:
+                longSwordChange = false;
+                shortSwordChange = true;
+                Camera.main.GetComponent<CameraRefs>().player.GetComponent<PlayerMovement>().StopAllCoroutines();
                 break;
         }
     }
