@@ -548,6 +548,42 @@ TextureImporter:
   - first:
       213: 8606812625081881082
     second: Bard 179
+  - first:
+      213: -7798333675753220962
+    second: Bard 180
+  - first:
+      213: -3200137388387496718
+    second: Bard 181
+  - first:
+      213: 7440950399519745669
+    second: Bard 182
+  - first:
+      213: -8389968409708710767
+    second: Bard 183
+  - first:
+      213: 573521258377469312
+    second: Bard 184
+  - first:
+      213: -7523153080003531821
+    second: Bard 185
+  - first:
+      213: -3664739645601318473
+    second: Bard 186
+  - first:
+      213: -6493812208696733873
+    second: Bard 187
+  - first:
+      213: 4028388009691992211
+    second: Bard 188
+  - first:
+      213: 8979331802133875809
+    second: Bard 189
+  - first:
+      213: -1572353839408982962
+    second: Bard 190
+  - first:
+      213: -4389245024632269299
+    second: Bard 191
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -607,7 +643,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1056
+    maxTextureSize: 1152
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -649,7 +685,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 640
+        y: 704
         width: 96
         height: 64
       alignment: 0
@@ -670,7 +706,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 640
+        y: 704
         width: 96
         height: 64
       alignment: 0
@@ -691,7 +727,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 640
+        y: 704
         width: 96
         height: 64
       alignment: 0
@@ -712,7 +748,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 640
+        y: 704
         width: 96
         height: 64
       alignment: 0
@@ -733,7 +769,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 640
+        y: 704
         width: 96
         height: 64
       alignment: 0
@@ -754,7 +790,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 288
-        y: 640
+        y: 704
         width: 96
         height: 64
       alignment: 0
@@ -775,7 +811,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 640
+        y: 704
         width: 96
         height: 64
       alignment: 0
@@ -796,7 +832,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 640
+        y: 704
         width: 96
         height: 64
       alignment: 0
@@ -817,7 +853,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 480
-        y: 640
+        y: 704
         width: 96
         height: 64
       alignment: 0
@@ -838,7 +874,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 640
+        y: 704
         width: 96
         height: 64
       alignment: 0
@@ -859,7 +895,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 640
+        y: 704
         width: 96
         height: 64
       alignment: 0
@@ -880,7 +916,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 576
-        y: 640
+        y: 704
         width: 96
         height: 64
       alignment: 0
@@ -901,7 +937,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 672
-        y: 640
+        y: 704
         width: 96
         height: 64
       alignment: 0
@@ -922,7 +958,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 576
-        y: 640
+        y: 704
         width: 96
         height: 64
       alignment: 0
@@ -943,7 +979,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 640
+        y: 704
         width: 96
         height: 64
       alignment: 0
@@ -964,7 +1000,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 768
-        y: 640
+        y: 704
         width: 96
         height: 64
       alignment: 0
@@ -985,7 +1021,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 864
-        y: 640
+        y: 704
         width: 96
         height: 64
       alignment: 0
@@ -1006,7 +1042,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 768
-        y: 640
+        y: 704
         width: 96
         height: 64
       alignment: 0
@@ -1027,7 +1063,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 640
+        y: 704
         width: 96
         height: 64
       alignment: 0
@@ -1048,7 +1084,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 960
-        y: 640
+        y: 704
         width: 96
         height: 64
       alignment: 0
@@ -1068,8 +1104,8 @@ TextureImporter:
       name: Bard 20
       rect:
         serializedVersion: 2
-        x: 0
-        y: 576
+        x: 1056
+        y: 704
         width: 96
         height: 64
       alignment: 0
@@ -1090,7 +1126,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 960
-        y: 640
+        y: 704
         width: 96
         height: 64
       alignment: 0
@@ -1110,8 +1146,8 @@ TextureImporter:
       name: Bard 22
       rect:
         serializedVersion: 2
-        x: 96
-        y: 576
+        x: 0
+        y: 640
         width: 96
         height: 64
       alignment: 0
@@ -1131,8 +1167,8 @@ TextureImporter:
       name: Bard 23
       rect:
         serializedVersion: 2
-        x: 192
-        y: 576
+        x: 96
+        y: 640
         width: 96
         height: 64
       alignment: 0
@@ -1152,8 +1188,8 @@ TextureImporter:
       name: Bard 24
       rect:
         serializedVersion: 2
-        x: 288
-        y: 576
+        x: 192
+        y: 640
         width: 96
         height: 64
       alignment: 0
@@ -1173,8 +1209,8 @@ TextureImporter:
       name: Bard 25
       rect:
         serializedVersion: 2
-        x: 384
-        y: 576
+        x: 288
+        y: 640
         width: 96
         height: 64
       alignment: 0
@@ -1194,8 +1230,8 @@ TextureImporter:
       name: Bard 26
       rect:
         serializedVersion: 2
-        x: 480
-        y: 576
+        x: 384
+        y: 640
         width: 96
         height: 64
       alignment: 0
@@ -1215,8 +1251,8 @@ TextureImporter:
       name: Bard 27
       rect:
         serializedVersion: 2
-        x: 576
-        y: 576
+        x: 480
+        y: 640
         width: 96
         height: 64
       alignment: 0
@@ -1236,8 +1272,8 @@ TextureImporter:
       name: Bard 28
       rect:
         serializedVersion: 2
-        x: 672
-        y: 576
+        x: 576
+        y: 640
         width: 96
         height: 64
       alignment: 0
@@ -1257,8 +1293,8 @@ TextureImporter:
       name: Bard 29
       rect:
         serializedVersion: 2
-        x: 672
-        y: 576
+        x: 576
+        y: 640
         width: 96
         height: 64
       alignment: 0
@@ -1278,8 +1314,8 @@ TextureImporter:
       name: Bard 30
       rect:
         serializedVersion: 2
-        x: 768
-        y: 576
+        x: 672
+        y: 640
         width: 96
         height: 64
       alignment: 0
@@ -1299,8 +1335,8 @@ TextureImporter:
       name: Bard 31
       rect:
         serializedVersion: 2
-        x: 864
-        y: 576
+        x: 768
+        y: 640
         width: 96
         height: 64
       alignment: 0
@@ -1320,8 +1356,8 @@ TextureImporter:
       name: Bard 32
       rect:
         serializedVersion: 2
-        x: 864
-        y: 576
+        x: 768
+        y: 640
         width: 96
         height: 64
       alignment: 0
@@ -1341,8 +1377,8 @@ TextureImporter:
       name: Bard 33
       rect:
         serializedVersion: 2
-        x: 960
-        y: 576
+        x: 864
+        y: 640
         width: 96
         height: 64
       alignment: 0
@@ -1362,8 +1398,8 @@ TextureImporter:
       name: Bard 34
       rect:
         serializedVersion: 2
-        x: 672
-        y: 576
+        x: 576
+        y: 640
         width: 96
         height: 64
       alignment: 0
@@ -1383,8 +1419,8 @@ TextureImporter:
       name: Bard 35
       rect:
         serializedVersion: 2
-        x: 0
-        y: 512
+        x: 960
+        y: 640
         width: 96
         height: 64
       alignment: 0
@@ -1404,8 +1440,8 @@ TextureImporter:
       name: Bard 36
       rect:
         serializedVersion: 2
-        x: 96
-        y: 512
+        x: 1056
+        y: 640
         width: 96
         height: 64
       alignment: 0
@@ -1425,8 +1461,8 @@ TextureImporter:
       name: Bard 37
       rect:
         serializedVersion: 2
-        x: 192
-        y: 512
+        x: 0
+        y: 576
         width: 96
         height: 64
       alignment: 0
@@ -1446,8 +1482,8 @@ TextureImporter:
       name: Bard 38
       rect:
         serializedVersion: 2
-        x: 672
-        y: 576
+        x: 576
+        y: 640
         width: 96
         height: 64
       alignment: 0
@@ -1467,8 +1503,8 @@ TextureImporter:
       name: Bard 39
       rect:
         serializedVersion: 2
-        x: 288
-        y: 512
+        x: 96
+        y: 576
         width: 96
         height: 64
       alignment: 0
@@ -1488,8 +1524,8 @@ TextureImporter:
       name: Bard 40
       rect:
         serializedVersion: 2
-        x: 384
-        y: 512
+        x: 192
+        y: 576
         width: 96
         height: 64
       alignment: 0
@@ -1509,8 +1545,8 @@ TextureImporter:
       name: Bard 41
       rect:
         serializedVersion: 2
-        x: 288
-        y: 512
+        x: 96
+        y: 576
         width: 96
         height: 64
       alignment: 0
@@ -1530,8 +1566,8 @@ TextureImporter:
       name: Bard 42
       rect:
         serializedVersion: 2
-        x: 480
-        y: 512
+        x: 288
+        y: 576
         width: 96
         height: 64
       alignment: 0
@@ -1551,8 +1587,8 @@ TextureImporter:
       name: Bard 43
       rect:
         serializedVersion: 2
-        x: 576
-        y: 512
+        x: 384
+        y: 576
         width: 96
         height: 64
       alignment: 0
@@ -1572,8 +1608,8 @@ TextureImporter:
       name: Bard 44
       rect:
         serializedVersion: 2
-        x: 672
-        y: 512
+        x: 480
+        y: 576
         width: 96
         height: 64
       alignment: 0
@@ -1593,8 +1629,8 @@ TextureImporter:
       name: Bard 45
       rect:
         serializedVersion: 2
-        x: 576
-        y: 512
+        x: 384
+        y: 576
         width: 96
         height: 64
       alignment: 0
@@ -1614,8 +1650,8 @@ TextureImporter:
       name: Bard 46
       rect:
         serializedVersion: 2
-        x: 480
-        y: 512
+        x: 288
+        y: 576
         width: 96
         height: 64
       alignment: 0
@@ -1635,8 +1671,8 @@ TextureImporter:
       name: Bard 47
       rect:
         serializedVersion: 2
-        x: 768
-        y: 512
+        x: 576
+        y: 576
         width: 96
         height: 64
       alignment: 0
@@ -1656,8 +1692,8 @@ TextureImporter:
       name: Bard 48
       rect:
         serializedVersion: 2
-        x: 864
-        y: 512
+        x: 672
+        y: 576
         width: 96
         height: 64
       alignment: 0
@@ -1677,8 +1713,8 @@ TextureImporter:
       name: Bard 49
       rect:
         serializedVersion: 2
-        x: 768
-        y: 512
+        x: 576
+        y: 576
         width: 96
         height: 64
       alignment: 0
@@ -1698,8 +1734,8 @@ TextureImporter:
       name: Bard 50
       rect:
         serializedVersion: 2
-        x: 960
-        y: 512
+        x: 768
+        y: 576
         width: 96
         height: 64
       alignment: 0
@@ -1719,8 +1755,8 @@ TextureImporter:
       name: Bard 51
       rect:
         serializedVersion: 2
-        x: 0
-        y: 448
+        x: 864
+        y: 576
         width: 96
         height: 64
       alignment: 0
@@ -1740,8 +1776,8 @@ TextureImporter:
       name: Bard 52
       rect:
         serializedVersion: 2
-        x: 96
-        y: 448
+        x: 960
+        y: 576
         width: 96
         height: 64
       alignment: 0
@@ -1761,8 +1797,8 @@ TextureImporter:
       name: Bard 53
       rect:
         serializedVersion: 2
-        x: 192
-        y: 448
+        x: 1056
+        y: 576
         width: 96
         height: 64
       alignment: 0
@@ -1782,8 +1818,8 @@ TextureImporter:
       name: Bard 54
       rect:
         serializedVersion: 2
-        x: 288
-        y: 448
+        x: 0
+        y: 512
         width: 96
         height: 64
       alignment: 0
@@ -1803,8 +1839,8 @@ TextureImporter:
       name: Bard 55
       rect:
         serializedVersion: 2
-        x: 384
-        y: 448
+        x: 96
+        y: 512
         width: 96
         height: 64
       alignment: 0
@@ -1824,8 +1860,8 @@ TextureImporter:
       name: Bard 56
       rect:
         serializedVersion: 2
-        x: 480
-        y: 448
+        x: 192
+        y: 512
         width: 96
         height: 64
       alignment: 0
@@ -1845,8 +1881,8 @@ TextureImporter:
       name: Bard 57
       rect:
         serializedVersion: 2
-        x: 576
-        y: 448
+        x: 288
+        y: 512
         width: 96
         height: 64
       alignment: 0
@@ -1866,8 +1902,8 @@ TextureImporter:
       name: Bard 58
       rect:
         serializedVersion: 2
-        x: 672
-        y: 448
+        x: 384
+        y: 512
         width: 96
         height: 64
       alignment: 0
@@ -1887,8 +1923,8 @@ TextureImporter:
       name: Bard 59
       rect:
         serializedVersion: 2
-        x: 768
-        y: 448
+        x: 480
+        y: 512
         width: 96
         height: 64
       alignment: 0
@@ -1908,8 +1944,8 @@ TextureImporter:
       name: Bard 60
       rect:
         serializedVersion: 2
-        x: 864
-        y: 448
+        x: 576
+        y: 512
         width: 96
         height: 64
       alignment: 0
@@ -1929,8 +1965,8 @@ TextureImporter:
       name: Bard 61
       rect:
         serializedVersion: 2
-        x: 960
-        y: 448
+        x: 672
+        y: 512
         width: 96
         height: 64
       alignment: 0
@@ -1950,8 +1986,8 @@ TextureImporter:
       name: Bard 62
       rect:
         serializedVersion: 2
-        x: 0
-        y: 384
+        x: 768
+        y: 512
         width: 96
         height: 64
       alignment: 0
@@ -1971,8 +2007,8 @@ TextureImporter:
       name: Bard 63
       rect:
         serializedVersion: 2
-        x: 96
-        y: 384
+        x: 864
+        y: 512
         width: 96
         height: 64
       alignment: 0
@@ -1992,8 +2028,8 @@ TextureImporter:
       name: Bard 64
       rect:
         serializedVersion: 2
-        x: 192
-        y: 384
+        x: 960
+        y: 512
         width: 96
         height: 64
       alignment: 0
@@ -2013,8 +2049,8 @@ TextureImporter:
       name: Bard 65
       rect:
         serializedVersion: 2
-        x: 288
-        y: 384
+        x: 1056
+        y: 512
         width: 96
         height: 64
       alignment: 0
@@ -2034,8 +2070,8 @@ TextureImporter:
       name: Bard 66
       rect:
         serializedVersion: 2
-        x: 384
-        y: 384
+        x: 0
+        y: 448
         width: 96
         height: 64
       alignment: 0
@@ -2055,8 +2091,8 @@ TextureImporter:
       name: Bard 67
       rect:
         serializedVersion: 2
-        x: 384
-        y: 384
+        x: 0
+        y: 448
         width: 96
         height: 64
       alignment: 0
@@ -2076,8 +2112,8 @@ TextureImporter:
       name: Bard 68
       rect:
         serializedVersion: 2
-        x: 480
-        y: 384
+        x: 96
+        y: 448
         width: 96
         height: 64
       alignment: 0
@@ -2097,8 +2133,8 @@ TextureImporter:
       name: Bard 69
       rect:
         serializedVersion: 2
-        x: 576
-        y: 384
+        x: 192
+        y: 448
         width: 96
         height: 64
       alignment: 0
@@ -2118,8 +2154,8 @@ TextureImporter:
       name: Bard 70
       rect:
         serializedVersion: 2
-        x: 576
-        y: 384
+        x: 192
+        y: 448
         width: 96
         height: 64
       alignment: 0
@@ -2139,8 +2175,8 @@ TextureImporter:
       name: Bard 71
       rect:
         serializedVersion: 2
-        x: 672
-        y: 384
+        x: 288
+        y: 448
         width: 96
         height: 64
       alignment: 0
@@ -2160,8 +2196,8 @@ TextureImporter:
       name: Bard 72
       rect:
         serializedVersion: 2
-        x: 384
-        y: 384
+        x: 0
+        y: 448
         width: 96
         height: 64
       alignment: 0
@@ -2181,8 +2217,8 @@ TextureImporter:
       name: Bard 73
       rect:
         serializedVersion: 2
-        x: 768
-        y: 384
+        x: 384
+        y: 448
         width: 96
         height: 64
       alignment: 0
@@ -2202,8 +2238,8 @@ TextureImporter:
       name: Bard 74
       rect:
         serializedVersion: 2
-        x: 864
-        y: 384
+        x: 480
+        y: 448
         width: 96
         height: 64
       alignment: 0
@@ -2223,8 +2259,8 @@ TextureImporter:
       name: Bard 75
       rect:
         serializedVersion: 2
-        x: 768
-        y: 384
+        x: 384
+        y: 448
         width: 96
         height: 64
       alignment: 0
@@ -2244,8 +2280,8 @@ TextureImporter:
       name: Bard 76
       rect:
         serializedVersion: 2
-        x: 384
-        y: 384
+        x: 0
+        y: 448
         width: 96
         height: 64
       alignment: 0
@@ -2265,8 +2301,8 @@ TextureImporter:
       name: Bard 77
       rect:
         serializedVersion: 2
-        x: 960
-        y: 384
+        x: 576
+        y: 448
         width: 96
         height: 64
       alignment: 0
@@ -2286,8 +2322,8 @@ TextureImporter:
       name: Bard 78
       rect:
         serializedVersion: 2
-        x: 0
-        y: 320
+        x: 672
+        y: 448
         width: 96
         height: 64
       alignment: 0
@@ -2307,8 +2343,8 @@ TextureImporter:
       name: Bard 79
       rect:
         serializedVersion: 2
-        x: 960
-        y: 384
+        x: 576
+        y: 448
         width: 96
         height: 64
       alignment: 0
@@ -2328,8 +2364,8 @@ TextureImporter:
       name: Bard 80
       rect:
         serializedVersion: 2
-        x: 576
-        y: 384
+        x: 192
+        y: 448
         width: 96
         height: 64
       alignment: 0
@@ -2349,8 +2385,8 @@ TextureImporter:
       name: Bard 81
       rect:
         serializedVersion: 2
-        x: 96
-        y: 320
+        x: 768
+        y: 448
         width: 96
         height: 64
       alignment: 0
@@ -2370,8 +2406,8 @@ TextureImporter:
       name: Bard 82
       rect:
         serializedVersion: 2
-        x: 192
-        y: 320
+        x: 864
+        y: 448
         width: 96
         height: 64
       alignment: 0
@@ -2391,8 +2427,8 @@ TextureImporter:
       name: Bard 83
       rect:
         serializedVersion: 2
-        x: 96
-        y: 320
+        x: 768
+        y: 448
         width: 96
         height: 64
       alignment: 0
@@ -2412,8 +2448,8 @@ TextureImporter:
       name: Bard 84
       rect:
         serializedVersion: 2
-        x: 576
-        y: 384
+        x: 192
+        y: 448
         width: 96
         height: 64
       alignment: 0
@@ -2433,8 +2469,8 @@ TextureImporter:
       name: Bard 85
       rect:
         serializedVersion: 2
-        x: 288
-        y: 320
+        x: 960
+        y: 448
         width: 96
         height: 64
       alignment: 0
@@ -2454,8 +2490,8 @@ TextureImporter:
       name: Bard 86
       rect:
         serializedVersion: 2
-        x: 384
-        y: 320
+        x: 1056
+        y: 448
         width: 96
         height: 64
       alignment: 0
@@ -2475,8 +2511,8 @@ TextureImporter:
       name: Bard 87
       rect:
         serializedVersion: 2
-        x: 288
-        y: 320
+        x: 960
+        y: 448
         width: 96
         height: 64
       alignment: 0
@@ -2496,8 +2532,8 @@ TextureImporter:
       name: Bard 88
       rect:
         serializedVersion: 2
-        x: 480
-        y: 320
+        x: 0
+        y: 384
         width: 96
         height: 64
       alignment: 0
@@ -2517,8 +2553,8 @@ TextureImporter:
       name: Bard 89
       rect:
         serializedVersion: 2
-        x: 576
-        y: 320
+        x: 96
+        y: 384
         width: 96
         height: 64
       alignment: 0
@@ -2538,8 +2574,8 @@ TextureImporter:
       name: Bard 90
       rect:
         serializedVersion: 2
-        x: 672
-        y: 320
+        x: 192
+        y: 384
         width: 96
         height: 64
       alignment: 0
@@ -2559,8 +2595,8 @@ TextureImporter:
       name: Bard 91
       rect:
         serializedVersion: 2
-        x: 672
-        y: 320
+        x: 192
+        y: 384
         width: 96
         height: 64
       alignment: 0
@@ -2580,8 +2616,8 @@ TextureImporter:
       name: Bard 92
       rect:
         serializedVersion: 2
-        x: 768
-        y: 320
+        x: 288
+        y: 384
         width: 96
         height: 64
       alignment: 0
@@ -2601,8 +2637,8 @@ TextureImporter:
       name: Bard 93
       rect:
         serializedVersion: 2
-        x: 864
-        y: 320
+        x: 384
+        y: 384
         width: 96
         height: 64
       alignment: 0
@@ -2622,8 +2658,8 @@ TextureImporter:
       name: Bard 94
       rect:
         serializedVersion: 2
-        x: 960
-        y: 320
+        x: 480
+        y: 384
         width: 96
         height: 64
       alignment: 0
@@ -2643,8 +2679,8 @@ TextureImporter:
       name: Bard 95
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
+        x: 576
+        y: 384
         width: 96
         height: 64
       alignment: 0
@@ -2664,8 +2700,8 @@ TextureImporter:
       name: Bard 96
       rect:
         serializedVersion: 2
-        x: 96
-        y: 256
+        x: 672
+        y: 384
         width: 96
         height: 64
       alignment: 0
@@ -2685,8 +2721,8 @@ TextureImporter:
       name: Bard 97
       rect:
         serializedVersion: 2
-        x: 96
-        y: 256
+        x: 672
+        y: 384
         width: 96
         height: 64
       alignment: 0
@@ -2706,8 +2742,8 @@ TextureImporter:
       name: Bard 98
       rect:
         serializedVersion: 2
-        x: 192
-        y: 256
+        x: 768
+        y: 384
         width: 96
         height: 64
       alignment: 0
@@ -2727,8 +2763,8 @@ TextureImporter:
       name: Bard 99
       rect:
         serializedVersion: 2
-        x: 288
-        y: 256
+        x: 864
+        y: 384
         width: 96
         height: 64
       alignment: 0
@@ -2748,8 +2784,8 @@ TextureImporter:
       name: Bard 100
       rect:
         serializedVersion: 2
-        x: 384
-        y: 256
+        x: 960
+        y: 384
         width: 96
         height: 64
       alignment: 0
@@ -2769,8 +2805,8 @@ TextureImporter:
       name: Bard 101
       rect:
         serializedVersion: 2
-        x: 384
-        y: 256
+        x: 960
+        y: 384
         width: 96
         height: 64
       alignment: 0
@@ -2790,8 +2826,8 @@ TextureImporter:
       name: Bard 102
       rect:
         serializedVersion: 2
-        x: 480
-        y: 256
+        x: 1056
+        y: 384
         width: 96
         height: 64
       alignment: 0
@@ -2811,8 +2847,8 @@ TextureImporter:
       name: Bard 103
       rect:
         serializedVersion: 2
-        x: 576
-        y: 256
+        x: 0
+        y: 320
         width: 96
         height: 64
       alignment: 0
@@ -2832,8 +2868,8 @@ TextureImporter:
       name: Bard 104
       rect:
         serializedVersion: 2
-        x: 672
-        y: 256
+        x: 96
+        y: 320
         width: 96
         height: 64
       alignment: 0
@@ -2853,8 +2889,8 @@ TextureImporter:
       name: Bard 105
       rect:
         serializedVersion: 2
-        x: 768
-        y: 256
+        x: 192
+        y: 320
         width: 96
         height: 64
       alignment: 0
@@ -2874,8 +2910,8 @@ TextureImporter:
       name: Bard 106
       rect:
         serializedVersion: 2
-        x: 864
-        y: 256
+        x: 288
+        y: 320
         width: 96
         height: 64
       alignment: 0
@@ -2895,8 +2931,8 @@ TextureImporter:
       name: Bard 107
       rect:
         serializedVersion: 2
-        x: 864
-        y: 256
+        x: 288
+        y: 320
         width: 96
         height: 64
       alignment: 0
@@ -2916,8 +2952,8 @@ TextureImporter:
       name: Bard 108
       rect:
         serializedVersion: 2
-        x: 960
-        y: 256
+        x: 384
+        y: 320
         width: 96
         height: 64
       alignment: 0
@@ -2937,8 +2973,8 @@ TextureImporter:
       name: Bard 109
       rect:
         serializedVersion: 2
-        x: 960
-        y: 256
+        x: 480
+        y: 320
         width: 96
         height: 64
       alignment: 0
@@ -2958,8 +2994,8 @@ TextureImporter:
       name: Bard 110
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
+        x: 576
+        y: 320
         width: 96
         height: 64
       alignment: 0
@@ -2979,8 +3015,8 @@ TextureImporter:
       name: Bard 111
       rect:
         serializedVersion: 2
-        x: 96
-        y: 192
+        x: 672
+        y: 320
         width: 96
         height: 64
       alignment: 0
@@ -3000,8 +3036,8 @@ TextureImporter:
       name: Bard 112
       rect:
         serializedVersion: 2
-        x: 96
-        y: 192
+        x: 672
+        y: 320
         width: 96
         height: 64
       alignment: 0
@@ -3021,8 +3057,8 @@ TextureImporter:
       name: Bard 113
       rect:
         serializedVersion: 2
-        x: 192
-        y: 192
+        x: 768
+        y: 320
         width: 96
         height: 64
       alignment: 0
@@ -3042,8 +3078,8 @@ TextureImporter:
       name: Bard 114
       rect:
         serializedVersion: 2
-        x: 288
-        y: 192
+        x: 864
+        y: 320
         width: 96
         height: 64
       alignment: 0
@@ -3063,8 +3099,8 @@ TextureImporter:
       name: Bard 115
       rect:
         serializedVersion: 2
-        x: 384
-        y: 192
+        x: 960
+        y: 320
         width: 96
         height: 64
       alignment: 0
@@ -3084,8 +3120,8 @@ TextureImporter:
       name: Bard 116
       rect:
         serializedVersion: 2
-        x: 480
-        y: 192
+        x: 1056
+        y: 320
         width: 96
         height: 64
       alignment: 0
@@ -3105,8 +3141,8 @@ TextureImporter:
       name: Bard 117
       rect:
         serializedVersion: 2
-        x: 384
-        y: 192
+        x: 0
+        y: 256
         width: 96
         height: 64
       alignment: 0
@@ -3126,8 +3162,8 @@ TextureImporter:
       name: Bard 118
       rect:
         serializedVersion: 2
-        x: 576
-        y: 192
+        x: 0
+        y: 256
         width: 96
         height: 64
       alignment: 0
@@ -3147,8 +3183,8 @@ TextureImporter:
       name: Bard 119
       rect:
         serializedVersion: 2
-        x: 672
-        y: 192
+        x: 96
+        y: 256
         width: 96
         height: 64
       alignment: 0
@@ -3168,8 +3204,8 @@ TextureImporter:
       name: Bard 120
       rect:
         serializedVersion: 2
-        x: 768
-        y: 192
+        x: 192
+        y: 256
         width: 96
         height: 64
       alignment: 0
@@ -3189,8 +3225,8 @@ TextureImporter:
       name: Bard 121
       rect:
         serializedVersion: 2
-        x: 672
-        y: 192
+        x: 192
+        y: 256
         width: 96
         height: 64
       alignment: 0
@@ -3210,8 +3246,8 @@ TextureImporter:
       name: Bard 122
       rect:
         serializedVersion: 2
-        x: 864
-        y: 192
+        x: 288
+        y: 256
         width: 96
         height: 64
       alignment: 0
@@ -3231,8 +3267,8 @@ TextureImporter:
       name: Bard 123
       rect:
         serializedVersion: 2
-        x: 960
-        y: 192
+        x: 384
+        y: 256
         width: 96
         height: 64
       alignment: 0
@@ -3252,8 +3288,8 @@ TextureImporter:
       name: Bard 124
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
+        x: 384
+        y: 256
         width: 96
         height: 64
       alignment: 0
@@ -3273,8 +3309,8 @@ TextureImporter:
       name: Bard 125
       rect:
         serializedVersion: 2
-        x: 960
-        y: 192
+        x: 480
+        y: 256
         width: 96
         height: 64
       alignment: 0
@@ -3294,8 +3330,8 @@ TextureImporter:
       name: Bard 126
       rect:
         serializedVersion: 2
-        x: 864
-        y: 192
+        x: 576
+        y: 256
         width: 96
         height: 64
       alignment: 0
@@ -3315,8 +3351,8 @@ TextureImporter:
       name: Bard 127
       rect:
         serializedVersion: 2
-        x: 96
-        y: 128
+        x: 672
+        y: 256
         width: 96
         height: 64
       alignment: 0
@@ -3336,8 +3372,8 @@ TextureImporter:
       name: Bard 128
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
+        x: 768
+        y: 256
         width: 96
         height: 64
       alignment: 0
@@ -3357,8 +3393,8 @@ TextureImporter:
       name: Bard 129
       rect:
         serializedVersion: 2
-        x: 96
-        y: 128
+        x: 672
+        y: 256
         width: 96
         height: 64
       alignment: 0
@@ -3378,8 +3414,8 @@ TextureImporter:
       name: Bard 130
       rect:
         serializedVersion: 2
-        x: 288
-        y: 128
+        x: 864
+        y: 256
         width: 96
         height: 64
       alignment: 0
@@ -3399,8 +3435,8 @@ TextureImporter:
       name: Bard 131
       rect:
         serializedVersion: 2
-        x: 288
-        y: 128
+        x: 960
+        y: 256
         width: 96
         height: 64
       alignment: 0
@@ -3420,8 +3456,8 @@ TextureImporter:
       name: Bard 132
       rect:
         serializedVersion: 2
-        x: 384
-        y: 128
+        x: 1056
+        y: 256
         width: 96
         height: 64
       alignment: 0
@@ -3441,8 +3477,8 @@ TextureImporter:
       name: Bard 133
       rect:
         serializedVersion: 2
-        x: 480
-        y: 128
+        x: 960
+        y: 256
         width: 96
         height: 64
       alignment: 0
@@ -3462,8 +3498,8 @@ TextureImporter:
       name: Bard 134
       rect:
         serializedVersion: 2
-        x: 480
-        y: 128
+        x: 0
+        y: 192
         width: 96
         height: 64
       alignment: 0
@@ -3483,8 +3519,8 @@ TextureImporter:
       name: Bard 135
       rect:
         serializedVersion: 2
-        x: 576
-        y: 128
+        x: 96
+        y: 192
         width: 96
         height: 64
       alignment: 0
@@ -3504,8 +3540,8 @@ TextureImporter:
       name: Bard 136
       rect:
         serializedVersion: 2
-        x: 672
-        y: 128
+        x: 192
+        y: 192
         width: 96
         height: 64
       alignment: 0
@@ -3525,8 +3561,8 @@ TextureImporter:
       name: Bard 137
       rect:
         serializedVersion: 2
-        x: 768
-        y: 128
+        x: 96
+        y: 192
         width: 96
         height: 64
       alignment: 0
@@ -3546,8 +3582,8 @@ TextureImporter:
       name: Bard 138
       rect:
         serializedVersion: 2
-        x: 864
-        y: 128
+        x: 0
+        y: 192
         width: 96
         height: 64
       alignment: 0
@@ -3567,8 +3603,8 @@ TextureImporter:
       name: Bard 139
       rect:
         serializedVersion: 2
-        x: 960
-        y: 128
+        x: 288
+        y: 192
         width: 96
         height: 64
       alignment: 0
@@ -3588,8 +3624,8 @@ TextureImporter:
       name: Bard 140
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 384
+        y: 192
         width: 96
         height: 64
       alignment: 0
@@ -3609,8 +3645,8 @@ TextureImporter:
       name: Bard 141
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
+        x: 288
+        y: 192
         width: 96
         height: 64
       alignment: 0
@@ -3630,8 +3666,8 @@ TextureImporter:
       name: Bard 142
       rect:
         serializedVersion: 2
-        x: 288
-        y: 128
+        x: 480
+        y: 192
         width: 96
         height: 64
       alignment: 0
@@ -3651,8 +3687,8 @@ TextureImporter:
       name: Bard 143
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
+        x: 576
+        y: 192
         width: 96
         height: 64
       alignment: 0
@@ -3672,8 +3708,8 @@ TextureImporter:
       name: Bard 144
       rect:
         serializedVersion: 2
-        x: 288
-        y: 64
+        x: 672
+        y: 192
         width: 96
         height: 64
       alignment: 0
@@ -3693,8 +3729,8 @@ TextureImporter:
       name: Bard 145
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
+        x: 768
+        y: 192
         width: 96
         height: 64
       alignment: 0
@@ -3714,8 +3750,8 @@ TextureImporter:
       name: Bard 146
       rect:
         serializedVersion: 2
-        x: 288
-        y: 128
+        x: 864
+        y: 192
         width: 96
         height: 64
       alignment: 0
@@ -3735,8 +3771,8 @@ TextureImporter:
       name: Bard 147
       rect:
         serializedVersion: 2
-        x: 384
-        y: 64
+        x: 960
+        y: 192
         width: 96
         height: 64
       alignment: 0
@@ -3756,8 +3792,8 @@ TextureImporter:
       name: Bard 148
       rect:
         serializedVersion: 2
-        x: 480
-        y: 64
+        x: 1056
+        y: 192
         width: 96
         height: 64
       alignment: 0
@@ -3777,8 +3813,8 @@ TextureImporter:
       name: Bard 149
       rect:
         serializedVersion: 2
-        x: 384
-        y: 64
+        x: 1056
+        y: 192
         width: 96
         height: 64
       alignment: 0
@@ -3798,7 +3834,7 @@ TextureImporter:
       name: Bard 150
       rect:
         serializedVersion: 2
-        x: 480
+        x: 0
         y: 128
         width: 96
         height: 64
@@ -3819,8 +3855,8 @@ TextureImporter:
       name: Bard 151
       rect:
         serializedVersion: 2
-        x: 576
-        y: 64
+        x: 96
+        y: 128
         width: 96
         height: 64
       alignment: 0
@@ -3840,8 +3876,8 @@ TextureImporter:
       name: Bard 152
       rect:
         serializedVersion: 2
-        x: 672
-        y: 64
+        x: 96
+        y: 128
         width: 96
         height: 64
       alignment: 0
@@ -3861,8 +3897,8 @@ TextureImporter:
       name: Bard 153
       rect:
         serializedVersion: 2
-        x: 576
-        y: 64
+        x: 192
+        y: 128
         width: 96
         height: 64
       alignment: 0
@@ -3882,7 +3918,7 @@ TextureImporter:
       name: Bard 154
       rect:
         serializedVersion: 2
-        x: 480
+        x: 288
         y: 128
         width: 96
         height: 64
@@ -3903,8 +3939,8 @@ TextureImporter:
       name: Bard 155
       rect:
         serializedVersion: 2
-        x: 768
-        y: 64
+        x: 384
+        y: 128
         width: 96
         height: 64
       alignment: 0
@@ -3924,8 +3960,8 @@ TextureImporter:
       name: Bard 156
       rect:
         serializedVersion: 2
-        x: 864
-        y: 64
+        x: 480
+        y: 128
         width: 96
         height: 64
       alignment: 0
@@ -3945,8 +3981,8 @@ TextureImporter:
       name: Bard 157
       rect:
         serializedVersion: 2
-        x: 768
-        y: 64
+        x: 576
+        y: 128
         width: 96
         height: 64
       alignment: 0
@@ -3987,8 +4023,8 @@ TextureImporter:
       name: Bard 159
       rect:
         serializedVersion: 2
-        x: 960
-        y: 64
+        x: 768
+        y: 128
         width: 96
         height: 64
       alignment: 0
@@ -4008,8 +4044,8 @@ TextureImporter:
       name: Bard 160
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 1056
+        y: 192
         width: 96
         height: 64
       alignment: 0
@@ -4029,8 +4065,8 @@ TextureImporter:
       name: Bard 161
       rect:
         serializedVersion: 2
-        x: 960
-        y: 64
+        x: 864
+        y: 128
         width: 96
         height: 64
       alignment: 0
@@ -4050,7 +4086,7 @@ TextureImporter:
       name: Bard 162
       rect:
         serializedVersion: 2
-        x: 672
+        x: 960
         y: 128
         width: 96
         height: 64
@@ -4071,8 +4107,8 @@ TextureImporter:
       name: Bard 163
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
+        x: 864
+        y: 128
         width: 96
         height: 64
       alignment: 0
@@ -4092,8 +4128,8 @@ TextureImporter:
       name: Bard 164
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
+        x: 1056
+        y: 192
         width: 96
         height: 64
       alignment: 0
@@ -4113,8 +4149,8 @@ TextureImporter:
       name: Bard 165
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
+        x: 1056
+        y: 128
         width: 96
         height: 64
       alignment: 0
@@ -4134,8 +4170,8 @@ TextureImporter:
       name: Bard 166
       rect:
         serializedVersion: 2
-        x: 960
-        y: 128
+        x: 0
+        y: 64
         width: 96
         height: 64
       alignment: 0
@@ -4155,8 +4191,8 @@ TextureImporter:
       name: Bard 167
       rect:
         serializedVersion: 2
-        x: 288
-        y: 0
+        x: 1056
+        y: 128
         width: 96
         height: 64
       alignment: 0
@@ -4176,8 +4212,8 @@ TextureImporter:
       name: Bard 168
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
+        x: 96
+        y: 128
         width: 96
         height: 64
       alignment: 0
@@ -4197,8 +4233,8 @@ TextureImporter:
       name: Bard 169
       rect:
         serializedVersion: 2
-        x: 288
-        y: 0
+        x: 96
+        y: 64
         width: 96
         height: 64
       alignment: 0
@@ -4218,8 +4254,8 @@ TextureImporter:
       name: Bard 170
       rect:
         serializedVersion: 2
-        x: 960
-        y: 128
+        x: 192
+        y: 64
         width: 96
         height: 64
       alignment: 0
@@ -4239,8 +4275,8 @@ TextureImporter:
       name: Bard 171
       rect:
         serializedVersion: 2
-        x: 480
-        y: 0
+        x: 96
+        y: 64
         width: 96
         height: 64
       alignment: 0
@@ -4260,8 +4296,8 @@ TextureImporter:
       name: Bard 172
       rect:
         serializedVersion: 2
-        x: 576
-        y: 0
+        x: 96
+        y: 128
         width: 96
         height: 64
       alignment: 0
@@ -4281,8 +4317,8 @@ TextureImporter:
       name: Bard 173
       rect:
         serializedVersion: 2
-        x: 480
-        y: 0
+        x: 288
+        y: 64
         width: 96
         height: 64
       alignment: 0
@@ -4294,6 +4330,384 @@ TextureImporter:
       bones: []
       spriteID: 670216306982a6800800000000000000
       internalID: 606341724601655414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bard 174
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b7665f102b524590800000000000000
+      internalID: -7691485020072548431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bard 175
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 64
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1907aa7ce91085080800000000000000
+      internalID: -9198600457437941615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bard 176
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 128
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66b6282e44de245a0800000000000000
+      internalID: -6538402828874781850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bard 177
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 64
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51a39ed2b2d06c010800000000000000
+      internalID: 1208668029100571157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bard 178
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 64
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f947eee0fbebe2c0800000000000000
+      internalID: -4401164790791714314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bard 179
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 64
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af15a5e4b7a817770800000000000000
+      internalID: 8606812625081881082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bard 180
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 128
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9453c8d6d0c6c390800000000000000
+      internalID: -7798333675753220962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bard 181
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 64
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fc87b41004d693d0800000000000000
+      internalID: -3200137388387496718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bard 182
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 64
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 586ecaae6f0934760800000000000000
+      internalID: 7440950399519745669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bard 183
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 64
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 194309eee28d09b80800000000000000
+      internalID: -8389968409708710767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bard 184
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 128
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08d59bcbb8e85f700800000000000000
+      internalID: 573521258377469312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bard 185
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 64
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dbe0831224689790800000000000000
+      internalID: -7523153080003531821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bard 186
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 64
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b974ad75ba342dc0800000000000000
+      internalID: -3664739645601318473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bard 187
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 64
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4f498ea33851e5a0800000000000000
+      internalID: -6493812208696733873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bard 188
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 128
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 390522f2d85b7e730800000000000000
+      internalID: 4028388009691992211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bard 189
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 64
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16cce8213befc9c70800000000000000
+      internalID: 8979331802133875809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bard 190
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e445ec48380ed2ae0800000000000000
+      internalID: -1572353839408982962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bard 191
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 64
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0694a2c7e44613c0800000000000000
+      internalID: -4389245024632269299
       vertices: []
       indices: 
       edges: []
