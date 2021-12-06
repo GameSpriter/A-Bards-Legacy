@@ -39,10 +39,10 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
     }
 
-    public void OptionsMenu()
-    {
-        Debug.Log("Options menu...");
-    }
+    //public void OptionsMenu()
+    //{
+    //    Debug.Log("Options menu...");
+    //}
 
     public void ReturnToTitle()
     {
