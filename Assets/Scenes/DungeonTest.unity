@@ -1156,6 +1156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 942866898}
   - component: {fileID: 942866899}
+  - component: {fileID: 942866900}
   m_Layer: 0
   m_Name: DungeonHolder
   m_TagString: Untagged
@@ -1214,6 +1215,53 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 761bf8bdf7caa044d92a28f92f54e309, type: 2}
   - {fileID: 11400000, guid: 93c698fefb7fbcd4491343e7b14b8917, type: 2}
   - {fileID: 11400000, guid: 1cc2f2d1da9f55c449cc2dc2dbd7146a, type: 2}
+--- !u!114 &942866900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942866897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba99eb0dd3c011544bc712edcbd55014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BrickWall_E: {fileID: 21300000, guid: d6f55a1a957f4b747811537ec42cce29, type: 3}
+  BrickWall_N: {fileID: 21300000, guid: 0d9cca72dfa2a7e4181934e167d142e5, type: 3}
+  BrickWall_NE_NW_SE: {fileID: 21300000, guid: 54e3658befbcb764eb0fa8f6d35f2b4d, type: 3}
+  BrickWall_NE_NW_SW: {fileID: 21300000, guid: e3100f1e2a334444db9dc10023321f63, type: 3}
+  BrickWall_NE_NW: {fileID: 21300000, guid: 1b059583f459b5643baeeb55c008a24d, type: 3}
+  BrickWall_NE_SE: {fileID: 21300000, guid: 24ee2084886cc8347b6f28d3b08e3807, type: 3}
+  BrickWall_NE_SW_SE: {fileID: 21300000, guid: ad4e2bd36a4b9d64cbed46a504d57776, type: 3}
+  BrickWall_NE_SW: {fileID: 21300000, guid: 0904c76a62abafc44b719d4e7ed8c8ce, type: 3}
+  BrickWall_NE_Inner: {fileID: 21300000, guid: 20be55f20195fe34d8f5d58f67351ffe, type: 3}
+  BrickWall_NE_Outer: {fileID: 21300000, guid: bf2393f69f4d3224fa4e48db35bafa98, type: 3}
+  BrickWall_NW_SE: {fileID: 21300000, guid: 324bbc86cff409943a96b68829165fe2, type: 3}
+  BrickWall_NW_SW_SE: {fileID: 21300000, guid: ddb07286b5cec0f4ba3a0260c145bd7c, type: 3}
+  BrickWall_NW_SW: {fileID: 21300000, guid: b5d8d6dc8282ad54597e4cc40c4921c9, type: 3}
+  BrickWall_NW_Inner: {fileID: 21300000, guid: 09514cf3f7c4cc94d8c1b433b356d781, type: 3}
+  BrickWall_NW_Outer: {fileID: 21300000, guid: 18aab2bd44a084a4c9712c8f13ee1fbe, type: 3}
+  BrickWall_Parallel_E_W: {fileID: 21300000, guid: 2530cbf1bde0f884ab496e1115b05814,
+    type: 3}
+  BrickWall_Parallel_N_S: {fileID: 21300000, guid: 16021937e2d54ea44b4d912086c87907,
+    type: 3}
+  BrickWall_S: {fileID: 21300000, guid: 2f5319794dc1a7f4a8898f8106f3f069, type: 3}
+  BrickWall_SE_Inner: {fileID: 21300000, guid: b50a6dc3f857b124d9ebb890d40c1ad6, type: 3}
+  BrickWall_Side_Pillar_E: {fileID: 21300000, guid: e9d329fbd43dd8a4cb85f2e7c5dedb65,
+    type: 3}
+  BrickWall_Side_Pillar_W: {fileID: 21300000, guid: 2587886b433942d4b9eea56955a06fee,
+    type: 3}
+  BrickWall_Solo: {fileID: 21300000, guid: fc4273d1e9689894abcb95e22057aee8, type: 3}
+  BrickWall_SW_SE: {fileID: 21300000, guid: e8139dc9d89405f4cb3a76dd59874e5e, type: 3}
+  BrickWall_SW_Inner: {fileID: 21300000, guid: 3017234048f18a849ade315259ee292f, type: 3}
+  BrickWall_U_East: {fileID: 21300000, guid: 971d2d5bc3afaea4fac204f1f5c3e983, type: 3}
+  BrickWall_U_North: {fileID: 21300000, guid: 712d15b010429b04091541dff26c89bc, type: 3}
+  BrickWall_U_South: {fileID: 21300000, guid: 2f83a9a064f9ea449a246bef0972315a, type: 3}
+  BrickWall_U_West: {fileID: 21300000, guid: 73ef97cbe3c12b143b6dbf54fe5217a8, type: 3}
+  BrickWall_Void: {fileID: 21300000, guid: 5ec2bcc14a445c54cb7be8ca3417976d, type: 3}
+  BrickWall_W_SE: {fileID: 21300000, guid: 1c2be28c6034d86479879174d954edea, type: 3}
+  BrickWall_W: {fileID: 21300000, guid: 36dee141537a83c49a12085c208645b0, type: 3}
 --- !u!1 &1077486261
 GameObject:
   m_ObjectHideFlags: 0

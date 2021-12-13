@@ -79,8 +79,6 @@ public class DungeonManager : MonoBehaviour
 
                 placeRoom(pathX, pathY, tileGridStartRoom);
 
-                //TODO: Move Player here
-
                 pathX++;
             } else if(path.GetValue(pathX, pathY) == 'N') {
                 if(path.GetValue(pathX, pathY - 1) != 'N') {//South Wall
@@ -156,7 +154,10 @@ public class DungeonManager : MonoBehaviour
                 break;
             }
         }
+        
+        GetComponent<TilesetController>().setupTileset(dungeon);
     }
+
     private void placeRoom(int pathX, int pathY, TileGrid<Tile> tileGridRoom) {
         //For each tile int the room, place a floor or wall tile
         for (int roomX = 0; roomX < roomWidth; roomX++) {
@@ -181,7 +182,6 @@ public class DungeonManager : MonoBehaviour
                     halfWayPoint++;
                     if(worldX >= halfWayPoint - 1 && worldX <= halfWayPoint + 1) {
                         placePrefab(worldX, worldY, prefabFloor);
-                        Debug.Log("X: " + worldX + "; Y: " + worldY);
                     } else {
                         placePrefab(worldX, worldY, prefabWall);
                     }
