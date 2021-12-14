@@ -31,9 +31,10 @@ public class PlayerMovement : MonoBehaviour
 
     //NoteTracker noteTracker;
     public Transform shotSpawn;
+    private Vector3 shotSpawnPos;
     public GameObject arrowPrefab;
 
-    float speed = 8f; 
+    float speed = 20f; 
     public float playerSpeed = 4f;
     public float playerDashSpeed = 50f;
 
@@ -47,6 +48,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        //shotSpawn = Add;
+        //Vector3 mousePos = Input.mousePosition;
+        //mousePos.z = Camera.main.nearClipPlane;
+        //shotSpawn.position = mousePos;
+
         //Getting components and setting active hitboxes to false 
         anim = gameObject.GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -165,6 +171,17 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
+        Vector3 dir = Input.mousePosition - pos;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+
+        //transform.rotation.SetAxisAngle(Vector3.forward, angle);
+        shotSpawn.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        //Vector3 mousePos = Input.mousePosition;
+        //mousePos.z = Camera.main.nearClipPlane;
+        //shotSpawn.position = mousePos;
+        //Debug.Log("Distance from Player: " + Vector2.Distance(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition)));
         //Gets components
         shortSwordActive = noteTracker.GetComponent<NoteTracker>().shortSwordChange;
         longSwordActive = noteTracker.GetComponent<NoteTracker>().longSwordChange;
@@ -179,9 +196,9 @@ public class PlayerMovement : MonoBehaviour
             mouseButtonDown = !mouseButtonDown;
         }
 
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Bard_Short_Sword_Idle_D"))
+        //if (anim.GetCurrentAnimatorStateInfo(0).IsName("Bard_Short_Sword_Idle_D"))
         {
-            anim.SetBool("backToShortSword", false);
+         //   anim.SetBool("backToShortSword", false);
         }
 
         //Sets harmonics system to true if the middle mouse button is clicked, otherwise runs weapon specific code 
@@ -205,10 +222,11 @@ public class PlayerMovement : MonoBehaviour
                 bowActive = false;
                 noteTracker.GetComponent<NoteTracker>().shortSwordChange = false;
                 noteTracker.GetComponent<NoteTracker>().longSwordChange = true;
-                if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Bard_Short_Sword_Idle_D"))
+                //if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Bard_Short_Sword_Idle_D"))
                 {
-                    StartCoroutine(BackToSword(3f));
+                //    StartCoroutine(BackToSword(3f));
                 }
+                StartCoroutine(BackToSword(3f));
                 lastWeaponUsed = "Long sword";
             }
             else if (shortSwordActive == true)
@@ -231,7 +249,7 @@ public class PlayerMovement : MonoBehaviour
                 noteTracker.GetComponent<NoteTracker>().shortSwordChange = false;
                 noteTracker.GetComponent<NoteTracker>().longSwordChange = false;
                 noteTracker.GetComponent<NoteTracker>().bowChange = true;
-                StartCoroutine(BackToSword(10f));
+                StartCoroutine(BackToSword(50f));
                 lastWeaponUsed = "Bow";
             }
         }        
@@ -258,8 +276,8 @@ public class PlayerMovement : MonoBehaviour
                 longSwordHitbox.SetActive(true);
                 longSwordActive = true;
                 shortSwordActive = false;
-                noteTracker.GetComponent<NoteTracker>().shortSwordChange = false;
-                noteTracker.GetComponent<NoteTracker>().longSwordChange = true;
+                //noteTracker.GetComponent<NoteTracker>().shortSwordChange = false;
+                //noteTracker.GetComponent<NoteTracker>().longSwordChange = true;
                 bowActive = false;
                 StartCoroutine(DeactivateLongSwordHitbox(.1f));
             }
@@ -268,8 +286,8 @@ public class PlayerMovement : MonoBehaviour
                 shortSwordHitbox.SetActive(true);
                 longSwordActive = false;
                 bowActive = false;
-                noteTracker.GetComponent<NoteTracker>().shortSwordChange = true;
-                noteTracker.GetComponent<NoteTracker>().longSwordChange = false;
+                //noteTracker.GetComponent<NoteTracker>().shortSwordChange = true;
+                //noteTracker.GetComponent<NoteTracker>().longSwordChange = false;
                 StartCoroutine(DeactivateShortSwordHitbox(.1f));
             }
             if (bowActive == true)
@@ -307,7 +325,7 @@ public class PlayerMovement : MonoBehaviour
                 playerHitbox.SetActive(false);
                 anim.SetBool("dashing", true);
                 StartCoroutine(dashUnblock(1.1f));
-                //StartCoroutine(stopDashAnimation(.001f));
+                StartCoroutine(stopDashAnimation(.001f));
                 dashTimer = 5;
                 positionAfterLeftDash = Vector2.left * 1000;
             }
@@ -356,19 +374,8 @@ public class PlayerMovement : MonoBehaviour
 
     void FireBow()
     {
-        GameObject arrowRBGameObject = Instantiate(arrowPrefab, shotSpawn.position, shotSpawn.rotation);
-        
-        if (playerScale.x == -1)
-        {
-            arrowRBGameObject.GetComponent<Rigidbody2D>().velocity = -transform.right * speed;
-            arrowRBGameObject.GetComponent<SpriteRenderer>().flipX = true;
-        }
-        else
-        {
-            arrowRBGameObject.GetComponent<Rigidbody2D>().velocity = transform.right * speed;
-            arrowRBGameObject.GetComponent<SpriteRenderer>().flipX = false;
-        }
-        
+        GameObject arrowRBGameObject = Instantiate(arrowPrefab, shotSpawn.GetChild(0).position, shotSpawn.GetChild(0).rotation);
+        arrowRBGameObject.GetComponent<Rigidbody2D>().velocity = shotSpawn.transform.right * Time.deltaTime * speed;
         Destroy(arrowRBGameObject, 2f);
     }
 
