@@ -21,6 +21,11 @@ public class NoteTracker : MonoBehaviour
     public int songlength = 0;
     private string songSubstring = "";
 
+    public AudioSource fNote;
+    public AudioSource aNote;
+    public AudioSource cNote;
+    public AudioSource eNote;
+
     private const string swordSequence_c = "UUDUU";
     private const string bowSequence_c = "LLRLL";
 
@@ -48,7 +53,9 @@ public class NoteTracker : MonoBehaviour
         {
             song += "U";
             songSubstring += "U";
+            eNote.Play();
             //Debug.Log(song);
+            
             Debug.Log(songSubstring);
             //Debug.Log(songSubstring + isValidSong());
         }
@@ -57,6 +64,7 @@ public class NoteTracker : MonoBehaviour
             song += "R";
             songSubstring += "R";
             //Debug.Log(song);
+            cNote.Play();
             Debug.Log(songSubstring);
             //Debug.Log(songSubstring + isValidSong());
         }
@@ -65,6 +73,7 @@ public class NoteTracker : MonoBehaviour
             song += "L";
             songSubstring += "L";
             //Debug.Log(song);
+            aNote.Play();
             Debug.Log(songSubstring);
             //Debug.Log(songSubstring + isValidSong());
         }
@@ -73,6 +82,7 @@ public class NoteTracker : MonoBehaviour
             song += "D";
             songSubstring += "D";
             //Debug.Log(song);
+            fNote.Play();
             Debug.Log(songSubstring);
             //Debug.Log(songSubstring + isValidSong());
         }
