@@ -1,0 +1,1220 @@
+fileFormatVersion: 2
+guid: a9c9680807c3d0c4b8c18176a5a0436b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5535787661190200837
+    second: Title Background 0
+  - first:
+      213: 555891066451208319
+    second: Title Background 1
+  - first:
+      213: -3150081349998511593
+    second: Title Background 2
+  - first:
+      213: -11561413153025599
+    second: Title Background 3
+  - first:
+      213: 6819917477007195601
+    second: Title Background 4
+  - first:
+      213: 466060737931025273
+    second: Title Background 5
+  - first:
+      213: 7721081311017284798
+    second: Title Background 6
+  - first:
+      213: 3112580839981849588
+    second: Title Background 7
+  - first:
+      213: -721137564230363040
+    second: Title Background 8
+  - first:
+      213: 7803773916520880491
+    second: Title Background 9
+  - first:
+      213: -6899318968829726361
+    second: Title Background 10
+  - first:
+      213: 7939261721306851843
+    second: Title Background 11
+  - first:
+      213: -3150715210753610956
+    second: Title Background 12
+  - first:
+      213: -2424588723661071896
+    second: Title Background 13
+  - first:
+      213: -8224475454941824747
+    second: Title Background 14
+  - first:
+      213: -5148792123903508151
+    second: Title Background 15
+  - first:
+      213: 8646179368888196056
+    second: Title Background 16
+  - first:
+      213: -9012300228391042806
+    second: Title Background 17
+  - first:
+      213: -7883169918568156859
+    second: Title Background 18
+  - first:
+      213: 7941395192703319761
+    second: Title Background 19
+  - first:
+      213: 7482988031062211951
+    second: Title Background 20
+  - first:
+      213: 3387486155149189594
+    second: Title Background 21
+  - first:
+      213: 4977591456573989707
+    second: Title Background 22
+  - first:
+      213: 3763569326043789006
+    second: Title Background 23
+  - first:
+      213: -5361056927626398796
+    second: Title Background 24
+  - first:
+      213: 5275871991730368746
+    second: Title Background 25
+  - first:
+      213: -7555592172961712934
+    second: Title Background 26
+  - first:
+      213: 3553542988411933035
+    second: Title Background 27
+  - first:
+      213: 4778919300915123803
+    second: Title Background 28
+  - first:
+      213: 3768117203404052814
+    second: Title Background 29
+  - first:
+      213: -7158235193822246956
+    second: Title Background 30
+  - first:
+      213: -5462438159376432073
+    second: Title Background 31
+  - first:
+      213: 6063074790522525675
+    second: Title Background 32
+  - first:
+      213: -3790566919402779451
+    second: Title Background 33
+  - first:
+      213: 458289436251524826
+    second: Title Background 34
+  - first:
+      213: -8280506723618956971
+    second: Title Background 35
+  - first:
+      213: 7066336175102438574
+    second: Title Background 36
+  - first:
+      213: 3505423695926098398
+    second: Title Background 37
+  - first:
+      213: -3586738797267570540
+    second: Title Background 38
+  - first:
+      213: 6147175133471894788
+    second: Title Background 39
+  - first:
+      213: 3927355046851757125
+    second: Title Background 40
+  - first:
+      213: -8373154648948584382
+    second: Title Background 41
+  - first:
+      213: 333013192079602593
+    second: Title Background 42
+  - first:
+      213: -7388144591343925570
+    second: Title Background 43
+  - first:
+      213: 501105035413388826
+    second: Title Background 44
+  - first:
+      213: 7861648793129497558
+    second: Title Background 45
+  - first:
+      213: 3237774573923357467
+    second: Title Background 46
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4620
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Title Background 0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1320
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf184c6b37eec23b0800000000000000
+      internalID: -5535787661190200837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 1
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1320
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7823adcafbe6b700800000000000000
+      internalID: 555891066451208319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 2
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1320
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71a71c7b3b9a844d0800000000000000
+      internalID: -3150081349998511593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 3
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1320
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c199ebb4fce6dff0800000000000000
+      internalID: -11561413153025599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 4
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1320
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ddfd76dfc635ae50800000000000000
+      internalID: 6819917477007195601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 5
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 1320
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97b922895c7c77600800000000000000
+      internalID: 466060737931025273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 6
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 1320
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb4b7195b8ac62b60800000000000000
+      internalID: 7721081311017284798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1100
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fb1ec568cb123b20800000000000000
+      internalID: 3112580839981849588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 8
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1100
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 068dbd1c4310ef5f0800000000000000
+      internalID: -721137564230363040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 9
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1100
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b699fa9e7039c4c60800000000000000
+      internalID: 7803773916520880491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 10
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1100
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7613ac6b3f1b040a0800000000000000
+      internalID: -6899318968829726361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 11
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1100
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30ae955b87ced2e60800000000000000
+      internalID: 7939261721306851843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 12
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 1100
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43b6c9285396644d0800000000000000
+      internalID: -3150715210753610956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 13
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 1100
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e993cfd6612a5ed0800000000000000
+      internalID: -2424588723661071896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 880
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 519f54c162bccdd80800000000000000
+      internalID: -8224475454941824747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 15
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 880
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9410760c7d0db88b0800000000000000
+      internalID: -5148792123903508151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 16
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 880
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8db54ea93566df770800000000000000
+      internalID: 8646179368888196056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 17
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 880
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a01849501b0ede280800000000000000
+      internalID: -9012300228391042806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 18
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 880
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54133b3d9ba599290800000000000000
+      internalID: -7883169918568156859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 19
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 880
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1de731a3ad0853e60800000000000000
+      internalID: 7941395192703319761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 20
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 880
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6d76f9b7f9e8d760800000000000000
+      internalID: 7482988031062211951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 660
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad1a83fd5b4c20f20800000000000000
+      internalID: 3387486155149189594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 22
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 660
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b43ac1eae05f31540800000000000000
+      internalID: 4977591456573989707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 23
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 660
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec6756e9c52ea3430800000000000000
+      internalID: 3763569326043789006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 24
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 660
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b37e20e023b995b0800000000000000
+      internalID: -5361056927626398796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 25
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 660
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae0758baf99a73940800000000000000
+      internalID: 5275871991730368746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 26
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 660
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad435ee23f4252790800000000000000
+      internalID: -7555592172961712934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 27
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 660
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b619f5e3588b05130800000000000000
+      internalID: 3553542988411933035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 440
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b56dd4dc8c1225240800000000000000
+      internalID: 4778919300915123803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 29
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 440
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e49dfe4d1aa0b4430800000000000000
+      internalID: 3768117203404052814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 30
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 440
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d786856407d8ac90800000000000000
+      internalID: -7158235193822246956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 31
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 440
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73444de6f658134b0800000000000000
+      internalID: -5462438159376432073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 32
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 440
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be798bff56e542450800000000000000
+      internalID: 6063074790522525675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 33
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 440
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cc86a75873356bc0800000000000000
+      internalID: -3790566919402779451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 34
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 440
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ade061c60db2c5600800000000000000
+      internalID: 458289436251524826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 220
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5595572c10bb51d80800000000000000
+      internalID: -8280506723618956971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 36
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 220
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eac297cef4ba01260800000000000000
+      internalID: 7066336175102438574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 37
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 220
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed979e66744c5a030800000000000000
+      internalID: 3505423695926098398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 38
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 220
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49031c63118593ec0800000000000000
+      internalID: -3586738797267570540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 39
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 220
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40de4baf6372f4550800000000000000
+      internalID: 6147175133471894788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 40
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 220
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 544cf6a6b94c08630800000000000000
+      internalID: 3927355046851757125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 41
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 220
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 240520ca5349ccb80800000000000000
+      internalID: -8373154648948584382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a37c6bdbb91f9400800000000000000
+      internalID: 333013192079602593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 43
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 0
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb6c8b363a9087990800000000000000
+      internalID: -7388144591343925570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 44
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 0
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1e79feef5844f600800000000000000
+      internalID: 501105035413388826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 45
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 0
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d3bc5facef2a1d60800000000000000
+      internalID: 7861648793129497558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background 46
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 0
+        width: 660
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b135e7d02d2eeec20800000000000000
+      internalID: 3237774573923357467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

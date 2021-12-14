@@ -46,6 +46,10 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 positionAfterDownDash;
     private Vector2 positionAfterUpDash;
 
+    public AudioSource shortSwordSound;
+    public AudioSource longSwordSound;
+    public AudioSource bowSound;
+
     void Start()
     {
         //shotSpawn = Add;
@@ -214,6 +218,7 @@ public class PlayerMovement : MonoBehaviour
             if (longSwordActive == true)
             {
                 //Debug.Log("Long Sword is Active");
+
                 anim.SetBool("shortSwordAnim", false);
                 anim.SetBool("longSwordAnim", true);
                 anim.SetBool("bowAnim", false);
@@ -273,6 +278,7 @@ public class PlayerMovement : MonoBehaviour
             //shortSwordActive = true;
             if (longSwordActive == true)
             {
+                longSwordSound.Play();
                 longSwordHitbox.SetActive(true);
                 longSwordActive = true;
                 shortSwordActive = false;
@@ -283,6 +289,7 @@ public class PlayerMovement : MonoBehaviour
             }
             if (shortSwordActive == true)
             {
+                shortSwordSound.Play();
                 shortSwordHitbox.SetActive(true);
                 longSwordActive = false;
                 bowActive = false;
@@ -292,6 +299,7 @@ public class PlayerMovement : MonoBehaviour
             }
             if (bowActive == true)
             {
+                bowSound.Play();
                 FireBow();
             }
         }

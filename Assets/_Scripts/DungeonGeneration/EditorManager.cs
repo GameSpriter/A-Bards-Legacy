@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-using UnityEditor;
+// using UnityEditor;
 using DUtils;
 
 public class EditorManager : MonoBehaviour
@@ -191,6 +191,7 @@ public class EditorManager : MonoBehaviour
     }
 }
 
+/*
 
 [CustomEditor(typeof(EditorManager))]
  class EditorManagerEditor : Editor{
@@ -212,3 +213,5 @@ public class EditorManager : MonoBehaviour
         }
     }
  }
+
+ */
