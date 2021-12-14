@@ -34,7 +34,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 shotSpawnPos;
     public GameObject arrowPrefab;
 
-    float speed = 20f; 
+    [SerializeField]
+    float speed = 500f; 
     public float playerSpeed = 4f;
     public float playerDashSpeed = 50f;
 
