@@ -14,9 +14,17 @@ public class DungeonManager : MonoBehaviour
     private int roomWidth;
     #endregion
 
+    #region Enemies
+    public float EnemySpawnChance = 0.005f;
+    public GameObject PrefabEnemyChompyBoy;
+    public GameObject PrefabEnemyQuarterChompy;
+    public float EnemyQuaterChompySpawnChance = 0.25f;
+    #endregion
+
     #region Prefabs
     public GameObject prefabWall;
     public GameObject prefabFloor;
+    public GameObject prefabExit;
     #endregion
 
     #region Scriptable Objects
@@ -150,6 +158,8 @@ public class DungeonManager : MonoBehaviour
                 placeNorthEastCorner(pathX, pathY - 1);
 
                 placeRoom(pathX, pathY, tileGridEndRoom);
+
+                placeExitFlag(pathX, pathY);
                 
                 break;
             }
@@ -169,6 +179,8 @@ public class DungeonManager : MonoBehaviour
                     placePrefab(worldX, worldY, prefabWall);
                 } else if(tileGridRoom.GetValue(roomX, roomY).tileType == DungeonUtils.TileType.Floor) {
                     placePrefab(worldX, worldY, prefabFloor);
+
+                    spawnEnemy(worldX, worldY);
                 }
             }
         }
@@ -218,6 +230,12 @@ public class DungeonManager : MonoBehaviour
         }
     }
 
+    private void placeExitFlag(int pathX, int pathY) {
+        int worldX = (roomWidth / 2) + getWorldPosFromPath(pathX) + wallThickness;
+        int worldY = (roomWidth / 2) + getWorldPosFromPath(pathY) + wallThickness;
+        Instantiate(prefabExit, new Vector2(worldX, worldY), Quaternion.identity);
+    }
+
     private int getWorldPosFromPath(int num) {
         return num * (roomWidth + wallThickness);
     }
@@ -226,6 +244,20 @@ public class DungeonManager : MonoBehaviour
         dungeon.SetValue(x, y, Instantiate(prefab, new Vector2(x * dungeon.Scale, y * dungeon.Scale), Quaternion.identity));
         dungeon.GetValue(x, y).transform.parent = gameObject.transform;
         dungeon.GetValue(x, y).name = dungeon.GetValue(x, y).GetComponent<TileGameObject>().tileType + ": (" + x + ", " + y + ")";
+    }
+
+    private void spawnEnemy(int x, int y) {
+        if(x <= roomWidth + wallThickness) { // Spawn Room Protection
+            return;
+        }
+
+        if (Random.Range(0.0f, 1.0f) < EnemySpawnChance) {
+            if(Random.Range(0.0f, 1.0f) < EnemyQuaterChompySpawnChance) {
+                Instantiate(PrefabEnemyQuarterChompy, new Vector2(x, y), Quaternion.identity);
+            } else {
+                Instantiate(PrefabEnemyChompyBoy, new Vector2(x, y), Quaternion.identity);
+            }
+        }
     }
 
     private TileGrid<char> setupPath(int start, int end) {

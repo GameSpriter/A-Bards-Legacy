@@ -724,9 +724,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomsX: 3
   roomsY: 3
+  EnemySpawnChance: 0.0075
+  PrefabEnemyChompyBoy: {fileID: 8006421403183465884, guid: 857c7c1e44b7bc44a9eb272b6f3e3b89,
+    type: 3}
+  PrefabEnemyQuarterChompy: {fileID: 4081126543561823318, guid: fabaeab221ecaa2499ae8d65d969aadf,
+    type: 3}
+  EnemyQuaterChompySpawnChance: 0.25
   prefabWall: {fileID: 3750169659694260681, guid: 1c57e8e4225b62144b006875c7e78be2,
     type: 3}
   prefabFloor: {fileID: 7511285029791515846, guid: f69f16e24180a1549a643755146fe3d0,
+    type: 3}
+  prefabExit: {fileID: 3798861156701438151, guid: 8d8aec40e4e6f714d8688613abf732cc,
     type: 3}
   scriptableStartRoom: {fileID: 11400000, guid: 6bf82fd84244a3748b9f458f87e549ee,
     type: 2}

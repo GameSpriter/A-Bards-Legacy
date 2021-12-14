@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -409,7 +409,6 @@ public class TilesetController : MonoBehaviour
             default:
                 setSprite(x, y, BrickWall_Solo);
                 break;
-
         }
     }
 
