@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class EighthNoteHealth : MonoBehaviour
 {
     [SerializeField] int enemyHealth = 10;
-
-    public GameObject arrow;
+    
 
     void Update()
     {

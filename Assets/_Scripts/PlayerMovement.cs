@@ -232,7 +232,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                 //    StartCoroutine(BackToSword(3f));
                 }
-                StartCoroutine(BackToSword(3f));
+                StartCoroutine(BackToSword(5f));
                 lastWeaponUsed = "Long sword";
             }
             else if (shortSwordActive == true)
@@ -255,7 +255,7 @@ public class PlayerMovement : MonoBehaviour
                 noteTracker.GetComponent<NoteTracker>().shortSwordChange = false;
                 noteTracker.GetComponent<NoteTracker>().longSwordChange = false;
                 noteTracker.GetComponent<NoteTracker>().bowChange = true;
-                StartCoroutine(BackToSword(50f));
+                StartCoroutine(BackToSword(10f));
                 lastWeaponUsed = "Bow";
             }
         }        

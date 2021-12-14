@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4081126543561823275}
   - component: {fileID: 4081126543561823274}
   - component: {fileID: 6322938630299431524}
-  - component: {fileID: 6322938630299431523}
   - component: {fileID: 6322938631117550784}
+  - component: {fileID: 8722967351270977514}
   m_Layer: 0
   m_Name: Quarter Chompy Boy
   m_TagString: EighthNoteEnemy
@@ -156,20 +156,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5547805, y: 0.5563878}
   m_EdgeRadius: 0
---- !u!114 &6322938630299431523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4081126543561823318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fabf5b7492402a34fa8a2b661dace09c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyHealth: 5
-  arrow: {fileID: 8268833200275349898, guid: 92a0e15b62c20c64fa4da9578208fc15, type: 3}
 --- !u!50 &6322938631117550784
 Rigidbody2D:
   serializedVersion: 4
@@ -191,6 +177,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &8722967351270977514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4081126543561823318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b044f9d2482302340af5e4f219226d0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 10
+  quarterSound: {fileID: 0}
 --- !u!1 &7289583517666816349
 GameObject:
   m_ObjectHideFlags: 0

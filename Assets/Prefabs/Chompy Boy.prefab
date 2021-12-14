@@ -70,8 +70,8 @@ GameObject:
   - component: {fileID: 8006421403183465953}
   - component: {fileID: 8006421403183465952}
   - component: {fileID: 1093264302}
-  - component: {fileID: 1093264297}
   - component: {fileID: 384132362}
+  - component: {fileID: 1207212243975854043}
   m_Layer: 0
   m_Name: Chompy Boy
   m_TagString: EighthNoteEnemy
@@ -176,7 +176,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70feb9fc8148b554384522e65b4aae6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inRange: 0
   player: {fileID: 0}
   playerPosition: {x: 0, y: 0}
   enemyPosition: {x: 0, y: 0}
@@ -214,19 +213,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5547805, y: 0.5563878}
   m_EdgeRadius: 0
---- !u!114 &1093264297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8006421403183465884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fabf5b7492402a34fa8a2b661dace09c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arrow: {fileID: 8268833200275349898, guid: 92a0e15b62c20c64fa4da9578208fc15, type: 3}
 --- !u!50 &384132362
 Rigidbody2D:
   serializedVersion: 4
@@ -248,3 +234,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1207212243975854043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8006421403183465884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b044f9d2482302340af5e4f219226d0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 10
